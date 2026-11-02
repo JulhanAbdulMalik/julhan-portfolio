@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="ogGlow" cx="50%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#0A2535" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#07090F" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#07090F"/>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+
+  <!-- Border line -->
+  <rect x="24" y="24" width="1152" height="582" rx="24" fill="none" stroke="#06B6D4" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- Badge -->
+  <g transform="translate(100, 110)">
+    <rect width="280" height="40" rx="20" fill="#0E1320" stroke="#06B6D4" stroke-opacity="0.4"/>
+    <circle cx="24" cy="20" r="5" fill="#10B981"/>
+    <text x="38" y="25" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="14" font-weight="600">Available for Freelance Projects</text>
+  </g>
+
+  <!-- Big Headline -->
+  <text x="100" y="240" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="58" font-weight="800">Julhan Abdul Malik</text>
+  <text x="100" y="315" fill="url(#textGrad)" font-family="Inter, sans-serif" font-size="44" font-weight="700">Web &amp; Mobile App Developer</text>
+  <text x="100" y="375" fill="#94A3B8" font-family="Inter, sans-serif" font-size="22" font-weight="400">Jasa pembuatan website profesional, aplikasi web manajemen bisnis, &amp; Flutter Android.</text>
+
+  <!-- Stat badges bottom -->
+  <g transform="translate(100, 450)">
+    <rect width="220" height="80" rx="12" fill="#0E1320" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="24" y="42" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="26" font-weight="700">6 Proyek</text>
+    <text x="24" y="66" fill="#64748B" font-family="Inter, sans-serif" font-size="13">Production-Ready</text>
+  </g>
+  <g transform="translate(340, 450)">
+    <rect width="220" height="80" rx="12" fill="#0E1320" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="24" y="42" fill="#67E8F9" font-family="Inter, sans-serif" font-size="26" font-weight="700">258+ Reviews</text>
+    <text x="24" y="66" fill="#64748B" font-family="Inter, sans-serif" font-size="13">Dicoding Code Reviewer</text>
+  </g>
+  <g transform="translate(580, 450)">
+    <rect width="220" height="80" rx="12" fill="#0E1320" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="24" y="42" fill="#38BDF8" font-family="Inter, sans-serif" font-size="26" font-weight="700">3.92 / 4.00</text>
+    <text x="24" y="66" fill="#64748B" font-family="Inter, sans-serif" font-size="13">IPK S1 Teknik Informatika</text>
+  </g>
+  <g transform="translate(820, 450)">
+    <rect width="280" height="80" rx="12" fill="#0E1320" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="24" y="42" fill="#34D399" font-family="Inter, sans-serif" font-size="22" font-weight="700">julhan.my.id</text>
+    <text x="24" y="66" fill="#64748B" font-family="Inter, sans-serif" font-size="13">Kunjungi &amp; Konsultasi Sekarang</text>
+  </g>
+</svg>
+

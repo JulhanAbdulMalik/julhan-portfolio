@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="yuBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1528"/>
+      <stop offset="100%" stop-color="#07090F"/>
+    </linearGradient>
+    <linearGradient id="purplePink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#yuBg)" stroke="#A855F7" stroke-opacity="0.3" stroke-width="2"/>
+  
+  <rect width="800" height="42" rx="16" fill="#0A0E1A" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <circle cx="28" cy="21" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="46" cy="21" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="64" cy="21" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="400" y="26" fill="#64748B" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">yuwanyie-picnic.com • Web App &amp; Business Management System (Next.js 16 + React 19 + Supabase)</text>
+
+  <!-- Left: Customer Storefront Preview -->
+  <g transform="translate(30, 65)">
+    <rect width="360" height="400" rx="10" fill="#0A0E1A" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <!-- Hero promo -->
+    <rect width="360" height="130" rx="10" fill="#2E1065" fill-opacity="0.4"/>
+    <text x="20" y="45" fill="#C084FC" font-family="Inter, sans-serif" font-size="16" font-weight="700">🧺 Yuwanyie Picnic Experience</text>
+    <text x="20" y="70" fill="#94A3B8" font-family="Inter, sans-serif" font-size="11">Customer Storefront, Galeri, &amp; Booking QRIS</text>
+    <g transform="translate(20, 85)">
+      <rect width="115" height="24" rx="12" fill="#A855F7"/>
+      <text x="57" y="16" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Book Picnic Now</text>
+    </g>
+
+    <!-- Catalog cards -->
+    <g transform="translate(20, 150)">
+      <rect width="150" height="110" rx="8" fill="#131829" stroke="#A855F7" stroke-opacity="0.2"/>
+      <rect x="12" y="12" width="126" height="50" rx="4" fill="#3B0764"/>
+      <text x="75" y="42" fill="#E9D5FF" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Sunset Package</text>
+      <text x="12" y="80" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="600">Romantic Sunset</text>
+      <text x="12" y="98" fill="#C084FC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Rp 350.000</text>
+    </g>
+    <g transform="translate(190, 150)">
+      <rect width="150" height="110" rx="8" fill="#131829" stroke="#A855F7" stroke-opacity="0.2"/>
+      <rect x="12" y="12" width="126" height="50" rx="4" fill="#3B0764"/>
+      <text x="75" y="42" fill="#E9D5FF" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Family Gathering</text>
+      <text x="12" y="80" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="600">Grand Picnic 6 Pax</text>
+      <text x="12" y="98" fill="#C084FC" font-family="Inter, sans-serif" font-size="11" font-weight="700">Rp 750.000</text>
+    </g>
+
+    <!-- Tech tags -->
+    <g transform="translate(20, 280)">
+      <rect width="320" height="100" rx="8" fill="#131829" stroke="#FFFFFF" stroke-opacity="0.05"/>
+      <text x="14" y="24" fill="#C084FC" font-family="Inter, sans-serif" font-size="11" font-weight="600">Fitur Storefront:</text>
+      <text x="14" y="48" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">✓ Bilingual i18n Dual-Language (next-intl)</text>
+      <text x="14" y="68" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">✓ Cloudinary CDN Image Optimizer</text>
+      <text x="14" y="88" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">✓ React Hook Form + Zod Validasi</text>
+    </g>
+  </g>
+
+  <!-- Right: Admin Business Analytics Dashboard -->
+  <g transform="translate(410, 65)">
+    <rect width="360" height="400" rx="10" fill="#0A0E1A" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <!-- Dashboard header -->
+    <rect width="360" height="45" rx="10" fill="#131829"/>
+    <text x="20" y="28" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="12" font-weight="600">💼 Admin Revenue &amp; Inventory Dashboard</text>
+
+    <!-- Metrics -->
+    <g transform="translate(20, 60)">
+      <rect width="150" height="65" rx="6" fill="#131C2E" stroke="#A855F7" stroke-opacity="0.2"/>
+      <text x="12" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Omset Bulan Ini</text>
+      <text x="12" y="48" fill="#34D399" font-family="Inter, sans-serif" font-size="16" font-weight="700">Rp 28.450.000</text>
+    </g>
+    <g transform="translate(190, 60)">
+      <rect width="150" height="65" rx="6" fill="#131C2E" stroke="#06B6D4" stroke-opacity="0.2"/>
+      <text x="12" y="22" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Booking QRIS/Bank</text>
+      <text x="12" y="48" fill="#67E8F9" font-family="Inter, sans-serif" font-size="16" font-weight="700">142 Pesanan</text>
+    </g>
+
+    <!-- Analytics Chart -->
+    <g transform="translate(20, 140)">
+      <rect width="320" height="150" rx="8" fill="#131829" stroke="#FFFFFF" stroke-opacity="0.04"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">Grafik Omset Harian (Recharts)</text>
+      <path d="M 20 120 Q 70 80 120 100 T 200 50 T 270 70 T 300 30" fill="none" stroke="url(#purplePink)" stroke-width="3"/>
+      <circle cx="120" cy="100" r="4" fill="#A855F7"/>
+      <circle cx="200" cy="50" r="4" fill="#EC4899"/>
+      <circle cx="300" cy="30" r="4" fill="#EC4899"/>
+    </g>
+
+    <!-- Backend stack -->
+    <g transform="translate(20, 305)">
+      <rect width="320" height="75" rx="8" fill="#0E1320" stroke="#A855F7" stroke-opacity="0.2"/>
+      <text x="14" y="24" fill="#C084FC" font-family="Inter, sans-serif" font-size="11" font-weight="600">Database &amp; Keamanan:</text>
+      <text x="14" y="46" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">⚡ Supabase Row Level Security (RLS)</text>
+      <text x="14" y="64" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">⚡ Next.js 16 App Router + React 19 + TypeScript</text>
+    </g>
+  </g>
+</svg>
+

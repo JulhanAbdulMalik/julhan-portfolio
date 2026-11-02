@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090F" />
+      <stop offset="50%" stop-color="#0A0E1A" />
+      <stop offset="100%" stop-color="#0E1320" />
+    </linearGradient>
+    <linearGradient id="cyanTeal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="amberGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="30" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad2)" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="250" cy="400" r="280" fill="#06B6D4" opacity="0.08" filter="url(#glow2)" />
+  <circle cx="950" cy="180" r="300" fill="#F59E0B" opacity="0.07" filter="url(#glow2)" />
+
+  <!-- Left Side: VS Code Editor Window Mockup -->
+  <g transform="translate(80, 80)">
+    <!-- Editor Window Body -->
+    <rect x="0" y="0" width="520" height="470" rx="18" fill="#0F1424" stroke="#1E293B" stroke-width="2" />
+
+    <!-- Window Title Bar -->
+    <path d="M 0 18 Q 0 0 18 0 L 502 0 Q 520 0 520 18 L 520 48 L 0 48 Z" fill="#131B2E" />
+    <!-- Window Control Dots -->
+    <circle cx="24" cy="24" r="6" fill="#EF4444" />
+    <circle cx="44" cy="24" r="6" fill="#F59E0B" />
+    <circle cx="64" cy="24" r="6" fill="#10B981" />
+    <!-- File Tab -->
+    <rect x="90" y="8" width="160" height="32" rx="8" fill="#0F1424" />
+    <text x="110" y="28" fill="#67E8F9" font-family="monospace" font-size="13">ReviewHook.tsx</text>
+    <text x="230" y="28" fill="#64748B" font-family="sans-serif" font-size="12">×</text>
+
+    <!-- Code Editor Content -->
+    <!-- Line numbers & code lines -->
+    <g font-family="Consolas, Monaco, monospace" font-size="13.5">
+      <!-- Line 1 -->
+      <text x="20" y="85" fill="#475569">01</text>
+      <text x="60" y="85" fill="#C586C0">import</text>
+      <text x="115" y="85" fill="#9CDCFE"> { useState, useEffect } </text>
+      <text x="290" y="85" fill="#C586C0">from</text>
+      <text x="330" y="85" fill="#CE9178">&quot;react&quot;</text>
+
+      <!-- Line 2 -->
+      <text x="20" y="115" fill="#475569">02</text>
+
+      <!-- Line 3: Clean Code Badge -->
+      <text x="20" y="145" fill="#475569">03</text>
+      <text x="60" y="145" fill="#6A9955">// ✅ Good: Immutability &amp; Clean Cleanup</text>
+
+      <!-- Line 4 -->
+      <text x="20" y="175" fill="#475569">04</text>
+      <text x="60" y="175" fill="#4EC9B0">export function </text>
+      <text x="180" y="175" fill="#DCDCAA">useDataPipeline</text>
+      <text x="300" y="175" fill="#D4D4D4">(query: string) {</text>
+
+      <!-- Line 5 -->
+      <text x="20" y="205" fill="#475569">05</text>
+      <text x="80" y="205" fill="#4EC9B0">const </text>
+      <text x="130" y="205" fill="#9CDCFE">[state, setState] </text>
+      <text x="270" y="205" fill="#D4D4D4">= </text>
+      <text x="290" y="205" fill="#DCDCAA">useState</text>
+      <text x="350" y="205" fill="#D4D4D4">(null);</text>
+
+      <!-- Line 6 -->
+      <text x="20" y="235" fill="#475569">06</text>
+      <text x="80" y="235" fill="#DCDCAA">useEffect</text>
+      <text x="155" y="235" fill="#D4D4D4">(() =&gt; {</text>
+
+      <!-- Line 7 -->
+      <text x="20" y="265" fill="#475569">07</text>
+      <text x="100" y="265" fill="#4EC9B0">let </text>
+      <text x="135" y="265" fill="#9CDCFE">isMounted </text>
+      <text x="220" y="265" fill="#D4D4D4">= </text>
+      <text x="240" y="265" fill="#569CD6">true</text>
+      <text x="275" y="265" fill="#D4D4D4">;</text>
+
+      <!-- Line 8 -->
+      <text x="20" y="295" fill="#475569">08</text>
+      <text x="100" y="295" fill="#C586C0">return </text>
+      <text x="155" y="295" fill="#D4D4D4">() =&gt; { isMounted = </text>
+      <text x="305" y="295" fill="#569CD6">false</text>
+      <text x="345" y="295" fill="#D4D4D4">; };</text>
+
+      <!-- Line 9 -->
+      <text x="20" y="325" fill="#475569">09</text>
+      <text x="80" y="325" fill="#D4D4D4">}, [query]);</text>
+
+      <!-- Line 10 -->
+      <text x="20" y="355" fill="#475569">10</text>
+      <text x="60" y="355" fill="#D4D4D4">}</text>
+    </g>
+
+    <!-- Reviewer Badge Stamp -->
+    <g transform="translate(180, 385)">
+      <rect x="0" y="0" width="300" height="55" rx="14" fill="#06B6D4" fill-opacity="0.15" stroke="#06B6D4" stroke-width="1.5" />
+      <text x="20" y="24" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">DICODING ACADEMY REVIEWER</text>
+      <text x="20" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13">258+ Project Submissions Reviewed</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Headline & Badge -->
+  <g transform="translate(680, 140)">
+    <!-- Pill Badge -->
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="#2E1B06" stroke="#F59E0B" stroke-width="1.5" />
+    <circle cx="18" cy="18" r="5" fill="#FCD34D" />
+    <text x="35" y="23" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Code Review &amp; Best Practice</text>
+
+    <!-- Main Title -->
+    <text x="0" y="80" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="34" font-weight="800" line-height="1.2">
+      <tspan x="0" dy="0">Review 258+ Proyek</tspan>
+      <tspan x="0" dy="48" fill="url(#cyanTeal2)">Web di Dicoding:</tspan>
+      <tspan x="0" dy="48">5 Kesalahan Coding &amp; Solusi</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="230" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="17" line-height="1.5">
+      <tspan x="0" dy="0">Membongkar anti-pattern React &amp; JS umum,</tspan>
+      <tspan x="0" dy="28">serta cara memperbaikinya standar enterprise.</tspan>
+    </text>
+
+    <!-- Author Credentials -->
+    <g transform="translate(0, 315)">
+      <circle cx="20" cy="20" r="20" fill="url(#amberGold)" />
+      <text x="20" y="25" fill="#000000" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">JM</text>
+      <text x="52" y="16" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Julhan Abdul Malik</text>
+      <text x="52" y="32" fill="#64748B" font-family="system-ui, sans-serif" font-size="12">Academy Code Reviewer • BNSP Certified</text>
+    </g>
+  </g>
+</svg>
+
