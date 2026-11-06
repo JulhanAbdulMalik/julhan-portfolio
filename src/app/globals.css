@@ -6,22 +6,22 @@
    CSS VARIABLES — Design Tokens
 ───────────────────────────────────────────────────────────── */
 :root {
-  --canvas-dark:  #0a0a0a;
-  --canvas-dark2: #111111;
-  --canvas-dark3: #1a1a1a;
+  --canvas-dark:  #000519;
+  --canvas-dark2: #020c24;
+  --canvas-dark3: #003347;
   --surface-light: #f8f8f8;
   --surface-white: #ffffff;
-  --accent:       #0ea5e9;
-  --accent-dark:  #0284c7;
-  --accent-light: #38bdf8;
+  --accent:       #007FA1; /* Brand 700 */
+  --accent-dark:  #003347; /* Brand 950 */
+  --accent-light: #07DFFF; /* Brand 400 */
   --ink-primary:   #ffffff;
   --ink-secondary: #a1a1aa;
   --ink-muted:     #71717a;
-  --dark-primary:  #0a0a0a;
-  --dark-secondary:#404040;
-  --dark-muted:    #737373;
-  --line-dark:     rgba(255,255,255,0.07);
-  --line-light:    rgba(0,0,0,0.07);
+  --dark-primary:  #000519;
+  --dark-secondary:#334155;
+  --dark-muted:    #64748b;
+  --line-dark:     rgba(255,255,255,0.08);
+  --line-light:    rgba(0,5,25,0.08);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -69,17 +69,17 @@ a {
   background: var(--canvas-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #007FA1;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: #07DFFF;
 }
 
 /* Selection */
 ::selection {
-  background-color: rgba(14, 165, 233, 0.25);
-  color: #ffffff;
+  background-color: rgba(7, 223, 255, 0.45);
+  color: #000519;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -108,13 +108,12 @@ a {
     background-color: var(--surface-white);
   }
 
-  /* Section inner container */
+  /* Section inner container — Uniform max-width aligned with Navbar & Section 1 */
   .section-inner {
-    max-width: 80rem; /* 1280px */
+    max-width: 84rem; /* 1344px */
     margin-left: auto;
     margin-right: auto;
-    padding-left: clamp(1.25rem, 4vw, 2.5rem);
-    padding-right: clamp(1.25rem, 4vw, 2.5rem);
+    width: 100%;
   }
 
   /* ─── Section Badge / Label ─────────────────────────── */
@@ -246,7 +245,7 @@ a {
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #ffffff;
     background-color: var(--accent);
     border: 1px solid transparent;
@@ -289,7 +288,7 @@ a {
   /* ─── Stat Number ───────────────────────────────────── */
   .stat-number {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1;
     color: var(--accent);
     letter-spacing: -0.03em;
@@ -381,7 +380,7 @@ a {
   /* ─── Watermark Text (Footer signature) ─────────────── */
   .footer-watermark {
     font-size: clamp(4rem, 12vw, 10rem);
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.035);

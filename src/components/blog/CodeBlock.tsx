@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { Check, Copy, Terminal, FileCode } from "lucide-react";
@@ -134,9 +134,9 @@ export function CodeBlock({
   const lines = code.trim().split("\n");
 
   return (
-    <div className="my-6 rounded-2xl overflow-hidden border border-white/[0.08] bg-[#0c0c0c] shadow-2xl transition-all hover:border-white/[0.2] group">
+    <div className="my-6 rounded-2xl overflow-hidden border border-[#007FA1]/30 bg-[#000519] shadow-2xl transition-all hover:border-[#007FA1]/60 group">
       {/* VS Code Title Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#141414] border-b border-white/[0.08] select-none">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#020c24] border-b border-white/[0.08] select-none">
         {/* Left: Window Dots + Active File Tab */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
@@ -147,11 +147,11 @@ export function CodeBlock({
 
           <div className="h-4 w-px bg-white/[0.08] mx-1" />
 
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#0c0c0c] border border-white/[0.08] text-xs text-white font-mono">
+          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#000519] border border-white/[0.08] text-xs text-white font-mono">
             {filename ? (
-              <FileCode className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <FileCode className="w-3.5 h-3.5 text-[#07DFFF]" />
             ) : (
-              <Terminal className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <Terminal className="w-3.5 h-3.5 text-[#07DFFF]" />
             )}
             <span>{filename || `${language}.ts`}</span>
           </div>
@@ -169,7 +169,7 @@ export function CodeBlock({
             className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
               copied
                 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
-                : "bg-[#141414] text-[#a1a1aa] hover:text-white hover:bg-white/[0.05] border border-white/[0.08]"
+                : "bg-[#020c24] text-[#a1a1aa] hover:text-white hover:bg-white/[0.05] border border-white/[0.08]"
             }`}
             title="Salin Kode ke Clipboard"
           >

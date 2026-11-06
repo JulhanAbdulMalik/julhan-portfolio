@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -45,7 +45,7 @@ export function PortfolioPreviewSection() {
   return (
     <section
       id="portfolio"
-      className="section-light py-20 sm:py-28 text-[#0a0a0a] border-t border-b border-black/[0.08] relative select-none"
+      className="section-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 text-[#000519] border-t border-b border-black/[0.08] relative"
     >
       <div className="section-inner space-y-12 sm:space-y-16">
         
@@ -53,14 +53,14 @@ export function PortfolioPreviewSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-black/[0.08]">
           <div className="space-y-4 max-w-2xl">
             <div className="section-badge section-badge-light">
-              <FolderKanban className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <FolderKanban className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Portfolio Unggulan</span>
             </div>
 
-            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-extrabold text-[#0a0a0a] leading-[1.08] tracking-[-0.03em]">
+            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-semibold text-[#000519] leading-[1.08] tracking-[-0.03em]">
               Karya nyata yang{" "}
               <br className="hidden sm:inline" />
-              <span className="text-[#0ea5e9]">
+              <span className="text-[#007FA1]">
                 teruji di industri.
               </span>
             </h2>
@@ -72,7 +72,7 @@ export function PortfolioPreviewSection() {
             </p>
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#0a0a0a] hover:text-[#0ea5e9] transition-colors group mt-1"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#000519] hover:text-[#007FA1] transition-colors group mt-1"
             >
               <span>Lihat Semua 6 Proyek Lengkap</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -85,7 +85,7 @@ export function PortfolioPreviewSection() {
           {previewProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-2xl overflow-hidden bg-white border border-black/[0.08] hover:border-[#0ea5e9]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+              className="rounded-2xl overflow-hidden bg-white border border-black/[0.08] hover:border-[#007FA1]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
             >
               {/* Image Frame with Status Badge */}
               <div className="relative aspect-[16/10] w-full bg-[#f1f1f1] overflow-hidden border-b border-black/[0.06]">
@@ -114,11 +114,11 @@ export function PortfolioPreviewSection() {
               {/* Card Body */}
               <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#0ea5e9] block">
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#007FA1] block">
                     {project.category}
                   </span>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0a0a0a] group-hover:text-[#0ea5e9] transition-colors leading-snug tracking-tight">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#000519] group-hover:text-[#007FA1] transition-colors leading-snug tracking-tight">
                     {project.title}
                   </h3>
 
@@ -144,7 +144,7 @@ export function PortfolioPreviewSection() {
                   <div className="flex items-center justify-between pt-1">
                     <Link
                       href="/portfolio"
-                      className="text-xs font-semibold text-[#0a0a0a] hover:text-[#0ea5e9] flex items-center gap-1 transition-colors"
+                      className="text-xs font-semibold text-[#000519] hover:text-[#007FA1] flex items-center gap-1 transition-colors"
                     >
                       <span>Pelajari Arsitektur</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -160,7 +160,7 @@ export function PortfolioPreviewSection() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-[#71717a] hover:text-[#0a0a0a] flex items-center gap-1 transition-colors"
+                        className="text-xs text-[#71717a] hover:text-[#000519] flex items-center gap-1 transition-colors"
                       >
                         <span>Live Demo</span>
                         <ExternalLink className="w-3.5 h-3.5" />

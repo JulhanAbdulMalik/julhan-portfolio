@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { BackToTop } from "@/components/layout/BackToTop";
 
 const plusJakartaSans = localFont({
@@ -78,12 +77,11 @@ export default function RootLayout({
     <html lang="id">
       <body
         className={`${plusJakartaSans.variable} font-sans antialiased min-h-screen flex flex-col`}
-        style={{ backgroundColor: "#0a0a0a", color: "#ffffff" }}
+        style={{ backgroundColor: "#000519", color: "#ffffff" }}
       >
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />
-        <FloatingWhatsApp />
         <BackToTop />
       </body>
     </html>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -70,7 +70,7 @@ export function PricingPreviewSection() {
   return (
     <section
       id="pricing"
-      className="section-dark py-20 sm:py-28 bg-[#0a0a0a] text-white border-t border-b border-white/[0.08] relative select-none"
+      className="section-dark py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 bg-[#000519] text-white border-t border-b border-white/[0.08] relative"
     >
       <div className="section-inner space-y-12 sm:space-y-16">
         
@@ -78,14 +78,14 @@ export function PricingPreviewSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/[0.08]">
           <div className="space-y-4 max-w-2xl">
             <div className="section-badge section-badge-dark">
-              <DollarSign className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>Investasi Transparan</span>
             </div>
 
-            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-extrabold text-white leading-[1.08] tracking-[-0.03em]">
+            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
               Investasi terjangkau dengan{" "}
               <br className="hidden sm:inline" />
-              <span className="text-[#0ea5e9]">
+              <span className="text-[#07DFFF]">
                 kualitas standar industri.
               </span>
             </h2>
@@ -96,12 +96,12 @@ export function PricingPreviewSection() {
             <p className="text-xs sm:text-sm text-[#71717a] font-normal sm:text-right">
               Pilih model pengerjaan yang sesuai:
             </p>
-            <div className="inline-flex p-1 rounded-lg bg-[#141414] border border-white/[0.1]">
+            <div className="inline-flex p-1 rounded-lg bg-[#020c24] border border-white/[0.1]">
               <button
                 onClick={() => setBillingType("project")}
                 className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
                   billingType === "project"
-                    ? "bg-[#0ea5e9] text-white"
+                    ? "bg-[#007FA1] text-white"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -111,7 +111,7 @@ export function PricingPreviewSection() {
                 onClick={() => setBillingType("maintenance")}
                 className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
                   billingType === "maintenance"
-                    ? "bg-[#0ea5e9] text-white"
+                    ? "bg-[#007FA1] text-white"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -133,14 +133,14 @@ export function PricingPreviewSection() {
                 key={plan.id}
                 className={`rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   isPopular
-                    ? "bg-[#141414] border-2 border-[#0ea5e9]/60 shadow-[0_16px_36px_rgba(0,0,0,0.6)]"
-                    : "bg-[#111111] border border-white/[0.08] hover:border-white/[0.20]"
+                    ? "bg-[#020c24] border-2 border-[#007FA1] shadow-[0_16px_36px_rgba(0,0,0,0.6)]"
+                    : "bg-[#010920] border border-white/[0.08] hover:border-white/[0.20]"
                 }`}
               >
                 {/* Popular Badge */}
                 {isPopular && (
                   <div className="absolute -top-3 left-6 z-10">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#0ea5e9] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
                       <Sparkles className="w-2.5 h-2.5" />
                       <span>Paling Diminati</span>
                     </span>
@@ -150,7 +150,7 @@ export function PricingPreviewSection() {
                 <div className="space-y-6">
                   {/* Plan Header */}
                   <div className="space-y-1.5">
-                    <h3 className="text-white font-bold text-xl tracking-tight">
+                    <h3 className="text-white font-semibold text-xl tracking-tight">
                       {plan.name}
                     </h3>
                     <p className="text-xs text-[#71717a] font-normal leading-relaxed">
@@ -163,10 +163,10 @@ export function PricingPreviewSection() {
                     <span className="text-[11px] font-mono uppercase text-[#71717a] block">
                       Estimasi Biaya Mulai
                     </span>
-                    <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    <div className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
                       {price}
                     </div>
-                    <span className="text-xs font-mono text-[#0ea5e9] block pt-1">
+                    <span className="text-xs font-mono text-[#07DFFF] block pt-1">
                       ⏱ {plan.duration}
                     </span>
                   </div>
@@ -179,7 +179,7 @@ export function PricingPreviewSection() {
                     <ul className="space-y-2.5">
                       {plan.features.map((feat, i) => (
                         <li key={i} className="flex items-start gap-2.5 text-xs text-[#d4d4d4] leading-relaxed">
-                          <Check className="w-4 h-4 text-[#0ea5e9] shrink-0 mt-0.5" />
+                          <Check className="w-4 h-4 text-[#07DFFF] shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -195,8 +195,8 @@ export function PricingPreviewSection() {
                     rel="noopener noreferrer"
                     className={`w-full py-3 px-4 rounded-md text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 group ${
                       isPopular
-                        ? "bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-md"
-                        : "bg-[#18181b] hover:bg-[#222222] border border-white/20 hover:border-white/40 text-white"
+                        ? "bg-[#007FA1] hover:bg-[#00A2C9] text-white shadow-md"
+                        : "bg-[#020c24] hover:bg-[#007FA1] border border-white/20 hover:border-white/40 text-white"
                     }`}
                   >
                     <span>{plan.ctaText}</span>
@@ -216,7 +216,7 @@ export function PricingPreviewSection() {
 
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#0ea5e9] hover:text-[#38bdf8] transition-colors group"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#07DFFF] hover:text-[#07DFFF] transition-colors group"
           >
             <span>Lihat Tabel Perbandingan Detail Seluruh Paket</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

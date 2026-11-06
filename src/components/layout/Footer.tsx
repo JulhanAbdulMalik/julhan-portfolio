@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -10,7 +10,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="section-dark" style={{ backgroundColor: "#111111" }}>
+    <footer className="section-dark px-6 sm:px-10 lg:px-16 xl:px-24" style={{ backgroundColor: "#000414" }}>
       {/* ── Main Grid ────────────────────────────────────────── */}
       <div className="section-inner pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
@@ -25,7 +25,7 @@ export function Footer() {
             {/* Identity */}
             <div>
               <p className="text-xs text-[#71717a] font-medium">Julhan Abdul Malik</p>
-              <p className="text-xs text-[#0ea5e9] mt-0.5">
+              <p className="text-xs text-[#07DFFF] mt-0.5">
                 Berbasis di Sukabumi, Jawa Barat
               </p>
             </div>
@@ -34,10 +34,10 @@ export function Footer() {
             <div>
               <Link
                 href="mailto:julhanabdulmalik@gmail.com"
-                className="text-[1.6rem] sm:text-[2rem] font-bold text-white hover:text-[#0ea5e9] transition-colors tracking-tight leading-none block"
+                className="text-[1.6rem] sm:text-[2rem] font-semibold text-white hover:text-[#07DFFF] transition-colors tracking-tight leading-none block"
               >
                 julhanabdulmalik
-                <span className="text-[#0ea5e9]">@gmail.com</span>
+                <span className="text-[#07DFFF]">@gmail.com</span>
               </Link>
               <Link
                 href={socialLinks.whatsapp}
@@ -95,7 +95,7 @@ export function Footer() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[15px] text-[#0ea5e9] hover:opacity-75 transition-opacity"
+                className="text-[15px] text-[#07DFFF] hover:opacity-75 transition-opacity"
               >
                 LinkedIn
               </Link>
@@ -103,7 +103,7 @@ export function Footer() {
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[15px] text-[#0ea5e9] hover:opacity-75 transition-opacity"
+                className="text-[15px] text-[#07DFFF] hover:opacity-75 transition-opacity"
               >
                 GitHub
               </Link>
@@ -143,7 +143,7 @@ export function Footer() {
               href={socialLinks.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-[#0ea5e9] hover:opacity-75 transition-opacity font-medium"
+              className="inline-flex items-center gap-1 text-xs text-[#07DFFF] hover:opacity-75 transition-opacity font-medium"
             >
               Mulai Proyek
               <ArrowUpRight className="w-3 h-3" />

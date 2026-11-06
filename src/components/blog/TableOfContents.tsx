@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { ListCollapse } from "lucide-react";
@@ -55,9 +55,9 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   };
 
   return (
-    <div className="p-5 rounded-2xl bg-[#111111] border border-white/[0.08] sticky top-28 space-y-4">
+    <div className="p-5 rounded-2xl bg-[#020c24] border border-white/[0.08] sticky top-28 space-y-4">
       <div className="flex items-center gap-2 pb-3 border-b border-white/[0.08] text-white font-semibold text-xs tracking-wider uppercase font-mono">
-        <ListCollapse className="w-4 h-4 text-[#0ea5e9]" />
+        <ListCollapse className="w-4 h-4 text-[#07DFFF]" />
         <span>Daftar Isi Artikel</span>
       </div>
 
@@ -73,7 +73,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                 item.level === 3 ? "pl-5" : ""
               } ${
                 isActive
-                  ? "text-white bg-[#0ea5e9]/15 font-bold border-l-2 border-[#0ea5e9]"
+                  ? "text-white bg-[#007FA1]/30 font-semibold border-l-2 border-[#007FA1]"
                   : "text-[#71717a] hover:text-white hover:bg-white/[0.03]"
               }`}
             >

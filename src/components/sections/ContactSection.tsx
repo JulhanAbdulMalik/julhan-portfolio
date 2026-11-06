@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="section-light py-20 sm:py-28 text-[#0a0a0a] border-t border-b border-black/[0.08] relative select-none"
+      className="section-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 text-[#000519] border-t border-b border-black/[0.08] relative"
     >
       <div className="section-inner space-y-12 sm:space-y-16">
         
@@ -64,14 +64,14 @@ export function ContactSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-black/[0.08]">
           <div className="space-y-4 max-w-2xl">
             <div className="section-badge section-badge-light">
-              <Mail className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <Mail className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Kontak Langsung</span>
             </div>
 
-            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-extrabold text-[#0a0a0a] leading-[1.08] tracking-[-0.03em]">
+            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-semibold text-[#000519] leading-[1.08] tracking-[-0.03em]">
               Ayo wujudkan ide{" "}
               <br className="hidden sm:inline" />
-              <span className="text-[#0ea5e9]">
+              <span className="text-[#007FA1]">
                 digital Anda bersama saya.
               </span>
             </h2>
@@ -93,7 +93,7 @@ export function ContactSection() {
               
               {/* Item 1: Email */}
               <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-black/[0.08] shadow-sm">
-                <div className="w-11 h-11 rounded-xl bg-[#0ea5e9]/10 text-[#0284c7] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-11 h-11 rounded-xl bg-[#007FA1]/10 text-[#007FA1] flex items-center justify-center shrink-0 mt-0.5">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="space-y-1 flex-1">
@@ -103,14 +103,14 @@ export function ContactSection() {
                   <div className="flex items-center gap-2">
                     <a
                       href="mailto:julhanabdulmalik@gmail.com"
-                      className="text-base sm:text-lg font-bold text-[#0a0a0a] hover:text-[#0ea5e9] transition-colors tracking-tight"
+                      className="text-base sm:text-lg font-semibold text-[#000519] hover:text-[#007FA1] transition-colors tracking-tight"
                     >
                       julhanabdulmalik@gmail.com
                     </a>
                     <button
                       type="button"
                       onClick={handleCopyEmail}
-                      className="p-1 rounded text-[#71717a] hover:text-[#0a0a0a] transition-colors"
+                      className="p-1 rounded text-[#71717a] hover:text-[#000519] transition-colors"
                       title="Salin Email"
                     >
                       {copiedEmail ? (
@@ -139,7 +139,7 @@ export function ContactSection() {
                     href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base sm:text-lg font-bold text-[#0a0a0a] hover:text-emerald-600 transition-colors tracking-tight block"
+                    className="text-base sm:text-lg font-semibold text-[#000519] hover:text-emerald-600 transition-colors tracking-tight block"
                   >
                     +62 831-1103-0309
                   </a>
@@ -158,11 +158,11 @@ export function ContactSection() {
                   <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
                     LOKASI & BASIS
                   </span>
-                  <p className="text-base sm:text-lg font-bold text-[#0a0a0a] tracking-tight">
+                  <p className="text-base sm:text-lg font-semibold text-[#000519] tracking-tight">
                     Sukabumi, Jawa Barat
                   </p>
                   <p className="text-xs text-[#52525b] leading-relaxed">
-                    Julhan Inovasi Digital • Zona Waktu WIB (UTC+7)
+                    julhan.my.id • Zona Waktu WIB (UTC+7)
                   </p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function ContactSection() {
                   href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full border border-black/[0.1] bg-white flex items-center justify-center text-[#52525b] hover:text-[#0a0a0a] hover:border-black/30 transition-all"
+                  className="w-8 h-8 rounded-full border border-black/[0.1] bg-white flex items-center justify-center text-[#52525b] hover:text-[#000519] hover:border-black/30 transition-all"
                   aria-label="GitHub"
                 >
                   <GithubIcon className="w-4 h-4" />
@@ -194,7 +194,7 @@ export function ContactSection() {
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full border border-black/[0.1] bg-white flex items-center justify-center text-[#52525b] hover:text-[#0284c7] hover:border-[#0284c7]/40 transition-all"
+                  className="w-8 h-8 rounded-full border border-black/[0.1] bg-white flex items-center justify-center text-[#52525b] hover:text-[#007FA1] hover:border-[#007FA1]/40 transition-all"
                   aria-label="LinkedIn"
                 >
                   <LinkedinIcon className="w-4 h-4" />
@@ -209,7 +209,7 @@ export function ContactSection() {
             <div className="rounded-2xl p-8 sm:p-10 bg-white border border-black/[0.08] shadow-sm space-y-6">
               
               <div className="space-y-1">
-                <h3 className="text-2xl font-bold text-[#0a0a0a] tracking-tight">
+                <h3 className="text-2xl font-semibold text-[#000519] tracking-tight">
                   Kirimkan Pesan Langsung
                 </h3>
                 <p className="text-xs sm:text-sm text-[#71717a] font-normal leading-relaxed">
@@ -223,7 +223,7 @@ export function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
-                      NAMA LENGKAP <span className="text-[#0ea5e9]">*</span>
+                      NAMA LENGKAP <span className="text-[#007FA1]">*</span>
                     </label>
                     <input
                       type="text"
@@ -231,13 +231,13 @@ export function ContactSection() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="Nama Anda atau Perusahaan"
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#0a0a0a] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/10 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#000519] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#007FA1] focus:ring-2 focus:ring-[#007FA1]/10 transition-all"
                     />
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
-                      ALAMAT EMAIL <span className="text-[#0ea5e9]">*</span>
+                      ALAMAT EMAIL <span className="text-[#007FA1]">*</span>
                     </label>
                     <input
                       type="email"
@@ -245,7 +245,7 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="email@perusahaan.com"
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#0a0a0a] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/10 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#000519] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#007FA1] focus:ring-2 focus:ring-[#007FA1]/10 transition-all"
                     />
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export function ContactSection() {
                   <select
                     value={formData.serviceType}
                     onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#0a0a0a] bg-white focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/10 transition-all cursor-pointer"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#000519] bg-white focus:outline-none focus:border-[#007FA1] focus:ring-2 focus:ring-[#007FA1]/10 transition-all cursor-pointer"
                   >
                     <option value="Website Profil / Landing Page">Website Profil Bisnis &amp; Landing Page</option>
                     <option value="Aplikasi Mobile Android (Flutter)">Aplikasi Mobile Android (Flutter)</option>
@@ -272,7 +272,7 @@ export function ContactSection() {
                 {/* Row 3: Message Details */}
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
-                    DETAIL KEBUTUHAN PROYEK <span className="text-[#0ea5e9]">*</span>
+                    DETAIL KEBUTUHAN PROYEK <span className="text-[#007FA1]">*</span>
                   </label>
                   <textarea
                     required
@@ -280,14 +280,14 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Ceritakan gambaran sistem, fitur utama yang diinginkan, target waktu peluncuran, atau estimasi anggaran..."
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#0a0a0a] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/10 transition-all resize-y"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-black/[0.14] text-sm text-[#000519] placeholder:text-[#a1a1aa] bg-white focus:outline-none focus:border-[#007FA1] focus:ring-2 focus:ring-[#007FA1]/10 transition-all resize-y"
                   />
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-lg bg-[#0ea5e9] hover:bg-[#0284c7] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-md transition-all duration-200 cursor-pointer group"
+                  className="w-full py-3.5 px-6 rounded-lg bg-[#007FA1] hover:bg-[#007FA1] text-white text-sm font-semibold flex items-center justify-center gap-2 shadow-md transition-all duration-200 cursor-pointer group"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Kirim Pesan via WhatsApp</span>

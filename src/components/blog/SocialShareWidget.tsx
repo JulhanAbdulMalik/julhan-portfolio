@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { Share2, Link2, Check, MessageSquare } from "lucide-react";
@@ -33,9 +33,9 @@ export function SocialShareWidget({ title, slug }: SocialShareWidgetProps) {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}&via=julhanmalik`;
 
   return (
-    <div className="p-5 rounded-2xl bg-[#111111] border border-white/[0.08] space-y-3">
+    <div className="p-5 rounded-2xl bg-[#020c24] border border-white/[0.08] space-y-3">
       <div className="flex items-center gap-2 text-white font-semibold text-xs tracking-wider uppercase font-mono pb-2 border-b border-white/[0.08]">
-        <Share2 className="w-3.5 h-3.5 text-[#0ea5e9]" />
+        <Share2 className="w-3.5 h-3.5 text-[#07DFFF]" />
         <span>Bagikan Artikel</span>
       </div>
 
@@ -67,9 +67,9 @@ export function SocialShareWidget({ title, slug }: SocialShareWidgetProps) {
           href={twitterUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#141414] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2] text-xs font-medium transition-colors"
+          className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-[#020c24] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2] text-xs font-medium transition-colors"
         >
-          <span className="font-bold text-xs">𝕏</span>
+          <span className="font-semibold text-xs">𝕏</span>
           <span>Twitter / X</span>
         </a>
 
@@ -79,8 +79,8 @@ export function SocialShareWidget({ title, slug }: SocialShareWidgetProps) {
           onClick={handleCopyLink}
           className={`flex items-center justify-center gap-1.5 p-2 rounded-xl border text-xs font-medium transition-colors cursor-pointer ${
             copied
-              ? "bg-[#0ea5e9]/20 border-[#0ea5e9] text-[#38bdf8]"
-              : "bg-[#141414] border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
+              ? "bg-[#007FA1]/30 border-[#007FA1] text-[#07DFFF]"
+              : "bg-[#020c24] border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
           }`}
         >
           {copied ? (

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export function BlogPostClient({
 }: BlogPostClientProps) {
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-28 pb-24 relative overflow-hidden select-none">
+    <div className="min-h-screen bg-[#000519] text-white pt-28 pb-24 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden">
       {/* Top Reading Progress Bar */}
       <ReadingProgressBar />
 
@@ -42,11 +42,11 @@ export function BlogPostClient({
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full pointer-events-none -z-0 opacity-15 blur-[140px]"
         style={{
-          background: "radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 70, 95, 0.65) 0%, transparent 70%)",
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      <div className="max-w-[84rem] mx-auto w-full relative z-10 space-y-12">
         {/* Back navigation */}
         <div>
           <Link
@@ -61,16 +61,16 @@ export function BlogPostClient({
         {/* Article Header & Meta */}
         <div className="space-y-6 max-w-4xl">
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-[#0ea5e9]/15 text-[#38bdf8] border border-[#0ea5e9]/30">
+            <span className="px-3 py-1 rounded-md text-xs font-mono font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
               {post.category}
             </span>
             <span className="flex items-center gap-1.5 text-xs text-[#71717a] font-mono">
-              <Calendar className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <Calendar className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>{post.publishedAt}</span>
             </span>
             <span className="text-[#71717a] text-xs">•</span>
             <span className="flex items-center gap-1.5 text-xs text-[#71717a] font-mono">
-              <Clock className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <Clock className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>
                 {post.readTimeMinutes} Menit Baca
               </span>
@@ -82,7 +82,7 @@ export function BlogPostClient({
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white leading-tight">
             {post.titleId}
           </h1>
 
@@ -92,7 +92,7 @@ export function BlogPostClient({
 
           {/* Author Badge */}
           <div className="flex items-center gap-3.5 pt-4 border-t border-white/[0.08]">
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-[#141414] border border-white/[0.1] shrink-0">
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-[#020c24] border border-white/[0.1] shrink-0">
               <Image
                 src={post.author.avatar}
                 alt={post.author.name}
@@ -106,7 +106,7 @@ export function BlogPostClient({
                 <span className="text-sm font-semibold text-white">
                   {post.author.name}
                 </span>
-                <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#0ea5e9]/20 text-[#38bdf8] border border-[#0ea5e9]/30">
+                <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/50">
                   Author &amp; Reviewer
                 </span>
               </div>
@@ -118,7 +118,7 @@ export function BlogPostClient({
         </div>
 
         {/* Featured Cover Banner */}
-        <div className="relative w-full h-64 sm:h-96 md:h-[420px] rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl bg-[#111111]">
+        <div className="relative w-full h-64 sm:h-96 md:h-[420px] rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl bg-[#020c24]">
           <Image
             src={post.coverImage}
             alt={post.titleId}
@@ -137,7 +137,7 @@ export function BlogPostClient({
               <>
                 {/* Section 1 */}
                 <section id="latar-belakang-bisnis" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     1. Mengapa Pilihan Tech Stack Berdampak Langsung ke Omzet
                     Bisnis?
                   </h2>
@@ -162,7 +162,7 @@ export function BlogPostClient({
                   <div className="p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-start gap-3 text-xs sm:text-sm text-cyan-200">
                     <Lightbulb className="w-5 h-5 text-accent-light shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-white block mb-0.5">
+                      <span className="font-semibold text-white block mb-0.5">
                         Prinsip Penting:
                       </span>
                       Teknologi terbaik bukan teknologi yang paling populer atau
@@ -175,7 +175,7 @@ export function BlogPostClient({
 
                 {/* Section 2 */}
                 <section id="perbandingan-stack" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     2. Perbandingan: WordPress vs Platform No-Code vs Custom
                     Modern Stack
                   </h2>
@@ -185,10 +185,10 @@ export function BlogPostClient({
                   </p>
 
                   {/* Comparison Table */}
-                  <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#111111] my-6">
+                  <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#020c24] my-6">
                     <table className="w-full text-left text-xs sm:text-sm border-collapse">
                       <thead>
-                        <tr className="border-b border-white/[0.08] bg-[#141414] text-white">
+                        <tr className="border-b border-white/[0.08] bg-[#020c24] text-white">
                           <th className="p-3.5 font-semibold">Parameter</th>
                           <th className="p-3.5 font-semibold">
                             WordPress (CMS Tradisional)
@@ -275,7 +275,7 @@ export function BlogPostClient({
 
                 {/* Section 3 */}
                 <section id="anatomi-modern-stack" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     3. Anatomi Custom Stack: Next.js 14 App Router &amp;
                     Supabase
                   </h2>
@@ -373,7 +373,7 @@ export async function processBookingOrder(payload: OrderPayload) {
 
                 {/* Section 4 */}
                 <section id="kapan-butuh-flutter" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     4. Kapan Bisnis Anda Membutuhkan Mobile App Flutter?
                   </h2>
                   <p>
@@ -392,7 +392,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
-                    <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] space-y-1.5">
+                    <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] space-y-1.5">
                       <div className="text-emerald-400 font-semibold text-xs flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4" />
                         <span>Akses Hardware &amp; Sensor</span>
@@ -404,7 +404,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] space-y-1.5">
+                    <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] space-y-1.5">
                       <div className="text-emerald-400 font-semibold text-xs flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4" />
                         <span>Offline-First Synchronization</span>
@@ -416,7 +416,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] space-y-1.5">
+                    <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] space-y-1.5">
                       <div className="text-emerald-400 font-semibold text-xs flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4" />
                         <span>Push Notifications Re-engagement</span>
@@ -427,7 +427,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] space-y-1.5">
+                    <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] space-y-1.5">
                       <div className="text-emerald-400 font-semibold text-xs flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4" />
                         <span>Branding &amp; Play Store Trust</span>
@@ -442,7 +442,7 @@ export async function processBookingOrder(payload: OrderPayload) {
 
                 {/* Section 5 */}
                 <section id="analisis-biaya-cloud" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     5. Analisis Biaya Server &amp; Pemeliharaan Jangka Panjang
                   </h2>
                   <p>
@@ -466,7 +466,7 @@ export async function processBookingOrder(payload: OrderPayload) {
 
                 {/* Section 6 */}
                 <section id="rekomendasi-matriks" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     6. Rekomendasi Tech Stack Berdasarkan Model Bisnis
                   </h2>
                   <ul className="list-disc pl-5 space-y-2">
@@ -502,7 +502,7 @@ export async function processBookingOrder(payload: OrderPayload) {
 
                 {/* Section 7 */}
                 <section id="kesimpulan" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     7. Kesimpulan &amp; Tindakan Selanjutnya
                   </h2>
                   <p>
@@ -525,7 +525,7 @@ export async function processBookingOrder(payload: OrderPayload) {
               <>
                 {/* Section 1 */}
                 <section id="pengantar-reviewer" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     1. Pengantar: Pengalaman sebagai Academy Code Reviewer
                   </h2>
                   <p>
@@ -549,7 +549,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                   <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3 text-xs sm:text-sm text-amber-200">
                     <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-white block mb-0.5">
+                      <span className="font-semibold text-white block mb-0.5">
                         Fokus Artikel:
                       </span>
                       Artikel ini merangkum 5 kesalahan paling fatal yang sering
@@ -562,7 +562,7 @@ export async function processBookingOrder(payload: OrderPayload) {
 
                 {/* Section 2 */}
                 <section id="kesalahan-1-mutasi-state" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     2. Kesalahan #1: Direct State Mutation (Mutasi State
                     Langsung)
                   </h2>
@@ -612,7 +612,7 @@ const handleAddTodo = (newTodo: string) => {
 
                 {/* Section 3 */}
                 <section id="kesalahan-2-useeffect-loop" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     3. Kesalahan #2: Infinite Loop &amp; Dependency Terabaikan
                     pada useEffect
                   </h2>
@@ -676,7 +676,7 @@ export function useDataFetcher(apiEndpoint: string) {
 
                 {/* Section 4 */}
                 <section id="kesalahan-3-prop-drilling" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     4. Kesalahan #3: Prop Drilling Berlebihan Tanpa State
                     Management Terpusat
                   </h2>
@@ -701,7 +701,7 @@ export function useDataFetcher(apiEndpoint: string) {
                   id="kesalahan-4-async-error-handling"
                   className="space-y-4"
                 >
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     5. Kesalahan #4: Pengabaian Error &amp; Loading State pada
                     Asynchronous API
                   </h2>
@@ -733,7 +733,7 @@ export function useDataFetcher(apiEndpoint: string) {
 
                 {/* Section 6 */}
                 <section id="kesalahan-5-semantic-html" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     6. Kesalahan #5: Div Soup &amp; Pengabaian Aksesibilitas
                     (A11y)
                   </h2>
@@ -754,7 +754,7 @@ export function useDataFetcher(apiEndpoint: string) {
 
                 {/* Section 7 */}
                 <section id="checklist-clean-code" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     7. Checklist Standar Clean Code Sebelum Naik ke Production
                   </h2>
                   <div className="space-y-2.5">
@@ -768,7 +768,7 @@ export function useDataFetcher(apiEndpoint: string) {
                     ].map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111111] border border-white/[0.08] text-xs sm:text-sm"
+                        className="flex items-start gap-2.5 p-3 rounded-xl bg-[#020c24] border border-white/[0.08] text-xs sm:text-sm"
                       >
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                         <span>{item}</span>
@@ -779,7 +779,7 @@ export function useDataFetcher(apiEndpoint: string) {
 
                 {/* Section 8 */}
                 <section id="kesimpulan" className="space-y-4">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight border-b border-white/[0.08] pb-3">
                     8. Kesimpulan
                   </h2>
                   <p>
@@ -796,9 +796,9 @@ export function useDataFetcher(apiEndpoint: string) {
             )}
 
             {/* Author Bio Card at Bottom */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#111111] border border-white/[0.08] space-y-4 mt-12">
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#020c24] border border-white/[0.08] space-y-4 mt-12">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-xl overflow-hidden bg-[#141414] border border-white/[0.1] shrink-0">
+                <div className="w-16 h-16 rounded-xl overflow-hidden bg-[#020c24] border border-white/[0.1] shrink-0">
                   <Image
                     src={post.author.avatar}
                     alt={post.author.name}
@@ -809,10 +809,10 @@ export function useDataFetcher(apiEndpoint: string) {
                 </div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-lg font-bold text-white tracking-tight">
+                    <h3 className="text-lg font-semibold text-white tracking-tight">
                       {post.author.name}
                     </h3>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#0ea5e9]/15 text-[#38bdf8] border border-[#0ea5e9]/30">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
                       Author
                     </span>
                   </div>
@@ -831,13 +831,13 @@ export function useDataFetcher(apiEndpoint: string) {
               {prevPost ? (
                 <Link
                   href={`/blog/${prevPost.slug}`}
-                  className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-left group"
+                  className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-left group"
                 >
-                  <span className="text-[11px] font-mono text-[#71717a] flex items-center gap-1 group-hover:text-[#0ea5e9]">
+                  <span className="text-[11px] font-mono text-[#71717a] flex items-center gap-1 group-hover:text-[#07DFFF]">
                     <ArrowLeft className="w-3 h-3" />
                     <span>Artikel Sebelumnya</span>
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#38bdf8] transition-colors line-clamp-1">
+                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#07DFFF] transition-colors line-clamp-1">
                     {prevPost.titleId}
                   </span>
                 </Link>
@@ -848,13 +848,13 @@ export function useDataFetcher(apiEndpoint: string) {
               {nextPost ? (
                 <Link
                   href={`/blog/${nextPost.slug}`}
-                  className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-right group"
+                  className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-right group"
                 >
-                  <span className="text-[11px] font-mono text-[#71717a] flex items-center justify-end gap-1 group-hover:text-[#0ea5e9]">
+                  <span className="text-[11px] font-mono text-[#71717a] flex items-center justify-end gap-1 group-hover:text-[#07DFFF]">
                     <span>Artikel Selanjutnya</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#38bdf8] transition-colors line-clamp-1">
+                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#07DFFF] transition-colors line-clamp-1">
                     {nextPost.titleId}
                   </span>
                 </Link>
@@ -876,8 +876,8 @@ export function useDataFetcher(apiEndpoint: string) {
             />
 
             {/* Sidebar Consultation Callout */}
-            <div className="p-5 rounded-2xl bg-[#141414] border border-white/[0.1] space-y-4 shadow-lg">
-              <div className="flex items-center gap-2 text-[#0ea5e9] text-xs font-semibold">
+            <div className="p-5 rounded-2xl bg-[#020c24] border border-white/[0.1] space-y-4 shadow-lg">
+              <div className="flex items-center gap-2 text-[#07DFFF] text-xs font-semibold">
                 <Sparkles className="w-4 h-4" />
                 <span>Punya Proyek Serupa?</span>
               </div>
@@ -890,7 +890,7 @@ export function useDataFetcher(apiEndpoint: string) {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 rounded-lg text-xs font-bold bg-[#0ea5e9] hover:bg-[#0284c7] text-white transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                className="w-full py-2.5 rounded-lg text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
               >
                 <span>Konsultasi via WhatsApp</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

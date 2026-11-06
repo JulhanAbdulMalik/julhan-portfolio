@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="section-light py-20 sm:py-28 text-[#0a0a0a] border-t border-b border-black/[0.08] relative select-none"
+      className="section-light py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 text-[#000519] border-t border-b border-black/[0.08] relative"
     >
       <div className="section-inner space-y-16 sm:space-y-20">
         
@@ -18,15 +18,15 @@ export function AboutSection() {
           <div className="space-y-4 max-w-2xl">
             {/* Section Badge */}
             <div className="section-badge section-badge-light">
-              <User className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <User className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Tentang Saya</span>
             </div>
 
             {/* Big Editorial Heading */}
-            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-extrabold text-[#0a0a0a] leading-[1.08] tracking-[-0.03em]">
+            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-semibold text-[#000519] leading-[1.08] tracking-[-0.03em]">
               Membangun solusi digital{" "}
               <br className="hidden sm:inline" />
-              <span className="text-[#0ea5e9]">
+              <span className="text-[#007FA1]">
                 untuk bisnis nyata.
               </span>
             </h2>
@@ -45,7 +45,7 @@ export function AboutSection() {
           <div className="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-black/[0.08] bg-[#fafafa]/60">
             <div>
               {/* Quote Mark */}
-              <span className="text-4xl sm:text-5xl font-serif text-[#0ea5e9] leading-none block mb-3 select-none">
+              <span className="text-4xl sm:text-5xl font-serif text-[#007FA1] leading-none block mb-3 select-none">
                 &ldquo;
               </span>
               <p className="text-sm sm:text-[15px] font-medium text-[#18181b] leading-relaxed italic">
@@ -55,7 +55,7 @@ export function AboutSection() {
 
             {/* Profile Avatar Card */}
             <div className="flex items-center gap-3.5 pt-8 mt-6 border-t border-black/[0.06]">
-              <div className="w-11 h-11 rounded-full overflow-hidden bg-[#0ea5e9]/10 border border-[#0ea5e9]/25 relative shrink-0">
+              <div className="w-11 h-11 rounded-full overflow-hidden bg-[#007FA1]/10 border border-[#007FA1]/25 relative shrink-0">
                 <Image
                   src="/images/profile/avatar-dummy.svg"
                   alt="Julhan Abdul Malik"
@@ -64,7 +64,7 @@ export function AboutSection() {
                 />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-[#0a0a0a] leading-tight">
+                <h4 className="text-sm font-semibold text-[#000519] leading-tight">
                   Julhan Abdul Malik
                 </h4>
                 <p className="text-xs text-[#71717a]">
@@ -91,11 +91,11 @@ export function AboutSection() {
                 TECH STACK & CREDENTIALS
               </span>
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="px-2.5 py-1 rounded-md bg-[#0a0a0a]/5 text-[11px] font-medium text-[#18181b]">Next.js 15</span>
-                <span className="px-2.5 py-1 rounded-md bg-[#0a0a0a]/5 text-[11px] font-medium text-[#18181b]">React 19</span>
-                <span className="px-2.5 py-1 rounded-md bg-[#0a0a0a]/5 text-[11px] font-medium text-[#18181b]">Flutter</span>
-                <span className="px-2.5 py-1 rounded-md bg-[#0a0a0a]/5 text-[11px] font-medium text-[#18181b]">PostgreSQL</span>
-                <span className="px-2.5 py-1 rounded-md bg-[#0ea5e9]/10 text-[#0284c7] font-semibold text-[11px]">BNSP Certified</span>
+                <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b]">Next.js 15</span>
+                <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b]">React 19</span>
+                <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b]">Flutter</span>
+                <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b]">PostgreSQL</span>
+                <span className="px-2.5 py-1 rounded-md bg-[#007FA1]/10 text-[#007FA1] font-semibold text-[11px]">BNSP Certified</span>
               </div>
             </div>
           </div>
@@ -115,13 +115,13 @@ export function AboutSection() {
             <div className="pt-6 mt-6">
               <Link
                 href="/portfolio"
-                className="flex items-center justify-between p-4 rounded-xl bg-[#0a0a0a] hover:bg-[#18181b] text-white transition-all duration-200 group shadow-md"
+                className="flex items-center justify-between p-4 rounded-xl bg-[#000519] hover:bg-[#020c24] text-white transition-all duration-200 group shadow-md"
               >
                 <div className="space-y-0.5">
                   <span className="text-[11px] text-[#a1a1aa] block font-mono">
                     Eksplorasi Karya
                   </span>
-                  <span className="text-sm font-bold tracking-tight text-white group-hover:text-[#38bdf8] transition-colors">
+                  <span className="text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors">
                     Lihat Portfolio & Studi Kasus
                   </span>
                 </div>
@@ -175,10 +175,10 @@ export function AboutSection() {
           {/* Header */}
           <div className="space-y-2">
             <div className="section-badge section-badge-light">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Standar Profesional</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a0a0a] tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-[#000519] tracking-tight">
               Prinsip kerja yang saya pegang.
             </h3>
             <p className="text-sm text-[#71717a] max-w-2xl font-normal">
@@ -190,10 +190,10 @@ export function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 border border-black/[0.08] rounded-2xl overflow-hidden bg-white shadow-sm divide-y md:divide-y-0 md:divide-x divide-black/[0.08]">
             {/* Principle 01 */}
             <div className="p-8 sm:p-10 space-y-3">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#d4d4d4] font-mono block">01</span>
+              <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">01</span>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#0ea5e9]" />
-                <h4 className="text-base sm:text-lg font-bold text-[#0a0a0a]">
+                <CheckCircle2 className="w-4 h-4 text-[#007FA1]" />
+                <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
                   Arsitektur Bersih & Teruji
                 </h4>
               </div>
@@ -204,10 +204,10 @@ export function AboutSection() {
 
             {/* Principle 02 */}
             <div className="p-8 sm:p-10 space-y-3">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#d4d4d4] font-mono block">02</span>
+              <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">02</span>
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-[#0ea5e9]" />
-                <h4 className="text-base sm:text-lg font-bold text-[#0a0a0a]">
+                <Zap className="w-4 h-4 text-[#007FA1]" />
+                <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
                   Transparan & Tepat Waktu
                 </h4>
               </div>
@@ -218,10 +218,10 @@ export function AboutSection() {
 
             {/* Principle 03 */}
             <div className="p-8 sm:p-10 space-y-3">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#d4d4d4] font-mono block">03</span>
+              <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">03</span>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#0ea5e9]" />
-                <h4 className="text-base sm:text-lg font-bold text-[#0a0a0a]">
+                <ShieldCheck className="w-4 h-4 text-[#007FA1]" />
+                <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
                   Berorientasi Nilai Bisnis
                 </h4>
               </div>

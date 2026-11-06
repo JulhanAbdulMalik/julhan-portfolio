@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
@@ -48,28 +48,28 @@ export default function BlogListPage() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#0a0a0a] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 relative overflow-hidden select-none">
+    <div className="w-full min-h-screen bg-[#000519] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden">
       {/* ── Soft Atmospheric Ambient (wpu.id style) ── */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full pointer-events-none -z-0 opacity-15 blur-[140px]"
         style={{
-          background: "radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 70, 95, 0.65) 0%, transparent 70%)",
         }}
       />
 
-      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 sm:space-y-20">
+      <div className="max-w-[84rem] mx-auto w-full relative z-10 space-y-16 sm:space-y-20">
         
         {/* ── 1. Page Header (wpu.id style) ── */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
-            <BookOpen className="w-3.5 h-3.5 text-[#0ea5e9]" />
+            <BookOpen className="w-3.5 h-3.5 text-[#07DFFF]" />
             <span>Knowledge Base &amp; Rekayasa Perangkat Lunak</span>
           </div>
 
-          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-extrabold text-white leading-[1.08] tracking-[-0.03em]">
+          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
             Catatan arsitektur,{" "}
             <br className="hidden sm:inline" />
-            <span className="text-[#0ea5e9]">
+            <span className="text-[#07DFFF]">
               tips coding &amp; pengalaman.
             </span>
           </h1>
@@ -89,7 +89,7 @@ export default function BlogListPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Cari artikel (mis: Next.js, React, Clean Code)..."
-              className="w-full pl-11 pr-10 py-3 rounded-xl bg-[#111111] border border-white/[0.08] text-white placeholder-[#71717a] text-xs sm:text-sm focus:outline-none focus:border-[#0ea5e9] transition-all shadow-sm"
+              className="w-full pl-11 pr-10 py-3 rounded-xl bg-[#020c24] border border-white/[0.08] text-white placeholder-[#71717a] text-xs sm:text-sm focus:outline-none focus:border-[#007FA1] transition-all shadow-sm"
             />
             {searchQuery && (
               <button
@@ -115,14 +115,14 @@ export default function BlogListPage() {
                   onClick={() => setSelectedCategory(cat.key)}
                   className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                     isSelected
-                      ? "bg-[#0ea5e9] text-white shadow-sm"
-                      : "bg-[#111111] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
+                      ? "bg-[#007FA1] text-white shadow-sm"
+                      : "bg-[#020c24] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
                   }`}
                 >
                   <span>{cat.labelId}</span>
                   <span
                     className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
-                      isSelected ? "bg-white/20 text-white font-bold" : "bg-white/[0.06] text-[#71717a]"
+                      isSelected ? "bg-white/20 text-white font-semibold" : "bg-white/[0.06] text-[#71717a]"
                     }`}
                   >
                     {count}
@@ -139,10 +139,10 @@ export default function BlogListPage() {
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="rounded-2xl bg-[#111111] border border-white/[0.08] hover:border-[#0ea5e9]/40 transition-all duration-300 flex flex-col overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.5)] group"
+                className="rounded-2xl bg-[#020c24] border border-white/[0.08] hover:border-[#007FA1] transition-all duration-300 flex flex-col overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.5)] group"
               >
                 {/* Article Cover Image */}
-                <Link href={`/blog/${post.slug}`} className="relative w-full h-52 sm:h-60 overflow-hidden block bg-[#0d0d0d] border-b border-white/[0.08]">
+                <Link href={`/blog/${post.slug}`} className="relative w-full h-52 sm:h-60 overflow-hidden block bg-[#000519] border-b border-white/[0.08]">
                   <Image
                     src={post.coverImage}
                     alt={post.titleId}
@@ -153,14 +153,14 @@ export default function BlogListPage() {
 
                   {/* Category pill on top left */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-md text-[10px] font-mono font-bold bg-black/70 text-[#0ea5e9] border border-[#0ea5e9]/30 backdrop-blur-md">
+                    <span className="px-3 py-1 rounded-md text-[10px] font-mono font-semibold bg-black/70 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md">
                       {post.category}
                     </span>
                   </div>
 
                   {/* Reading time on top right */}
                   <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-mono bg-black/70 text-[#a1a1aa] border border-white/[0.1] backdrop-blur-md">
-                    <Clock className="w-3 h-3 text-[#0ea5e9]" />
+                    <Clock className="w-3 h-3 text-[#07DFFF]" />
                     <span>
                       {post.readTimeMinutes} Menit Baca
                     </span>
@@ -173,7 +173,7 @@ export default function BlogListPage() {
                     {/* Meta bar: Date & Views */}
                     <div className="flex items-center gap-3 text-xs text-[#71717a] font-mono">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-[#0ea5e9]" />
+                        <Calendar className="w-3.5 h-3.5 text-[#07DFFF]" />
                         <span>{post.publishedAt}</span>
                       </span>
                       <span>•</span>
@@ -185,7 +185,7 @@ export default function BlogListPage() {
 
                     {/* Title */}
                     <Link href={`/blog/${post.slug}`}>
-                      <h2 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#38bdf8] transition-colors tracking-tight leading-snug line-clamp-2">
+                      <h2 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#07DFFF] transition-colors tracking-tight leading-snug line-clamp-2">
                         {post.titleId}
                       </h2>
                     </Link>
@@ -228,7 +228,7 @@ export default function BlogListPage() {
 
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-[#0ea5e9] group-hover:text-[#38bdf8] transition-colors"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#07DFFF] group-hover:text-[#07DFFF] transition-colors"
                     >
                       <span>Baca Artikel</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -241,10 +241,10 @@ export default function BlogListPage() {
         ) : (
           /* Empty Search State */
           <div className="text-center py-16 space-y-4 max-w-md mx-auto">
-            <div className="w-14 h-14 rounded-2xl bg-[#111111] border border-white/[0.08] flex items-center justify-center mx-auto text-[#71717a]">
+            <div className="w-14 h-14 rounded-2xl bg-[#020c24] border border-white/[0.08] flex items-center justify-center mx-auto text-[#71717a]">
               <Search className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-white tracking-tight">
+            <h3 className="text-lg font-semibold text-white tracking-tight">
               Artikel Tidak Ditemukan
             </h3>
             <p className="text-xs text-[#a1a1aa] leading-relaxed">
@@ -256,7 +256,7 @@ export default function BlogListPage() {
                 setSearchQuery("");
                 setSelectedCategory("All");
               }}
-              className="px-5 py-2 rounded-lg text-xs font-semibold bg-[#0ea5e9] text-white hover:bg-[#0284c7] transition-colors cursor-pointer"
+              className="px-5 py-2 rounded-lg text-xs font-semibold bg-[#007FA1] text-white hover:bg-[#00A2C9] transition-colors cursor-pointer"
             >
               Reset Semua Filter
             </button>
@@ -264,9 +264,9 @@ export default function BlogListPage() {
         )}
 
         {/* ── 4. Bottom Consultation Banner (wpu.id style) ── */}
-        <div className="rounded-2xl p-8 sm:p-12 border border-white/[0.1] bg-[#141414] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
+        <div className="rounded-2xl p-8 sm:p-12 border border-white/[0.1] bg-[#020c24] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
           <div className="max-w-2xl mx-auto space-y-3 relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
               Punya Pertanyaan Seputar Arsitektur atau Rencana Aplikasi Anda?
             </h3>
             <p className="text-[#a1a1aa] text-xs sm:text-sm leading-relaxed font-normal">
@@ -279,7 +279,7 @@ export default function BlogListPage() {
               href="https://wa.me/6283111030309?text=Halo%20Mas%20Julhan,%20saya%20membaca%20blog%20Anda%20dan%20ingin%20berdiskusi%20teknis."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg text-xs font-bold bg-[#0ea5e9] hover:bg-[#0284c7] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>Tanya Langsung via WhatsApp</span>

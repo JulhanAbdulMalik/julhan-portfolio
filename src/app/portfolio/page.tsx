@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -45,28 +45,28 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#0a0a0a] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 relative overflow-hidden select-none">
+    <div className="w-full min-h-screen bg-[#000519] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden">
       {/* ── Soft Atmospheric Ambient (wpu.id style) ── */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full pointer-events-none -z-0 opacity-15 blur-[140px]"
         style={{
-          background: "radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 70, 95, 0.65) 0%, transparent 70%)",
         }}
       />
 
-      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 sm:space-y-20">
+      <div className="max-w-[84rem] mx-auto w-full relative z-10 space-y-16 sm:space-y-20">
         
         {/* ── 1. Page Header (wpu.id style) ── */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
-            <Briefcase className="w-3.5 h-3.5 text-[#0ea5e9]" />
+            <Briefcase className="w-3.5 h-3.5 text-[#07DFFF]" />
             <span>Studi Kasus &amp; Hasil Karya Nyata</span>
           </div>
 
-          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-extrabold text-white leading-[1.08] tracking-[-0.03em]">
+          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
             Portfolio proyek &amp;{" "}
             <br className="hidden sm:inline" />
-            <span className="text-[#0ea5e9]">
+            <span className="text-[#07DFFF]">
               solusi digital teruji.
             </span>
           </h1>
@@ -77,26 +77,26 @@ export default function PortfolioPage() {
 
           {/* Quick Metrics Strip */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-2xl mx-auto">
-            <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-[#0ea5e9]">5+</div>
+            <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
+              <div className="text-2xl font-semibold text-[#07DFFF]">5+</div>
               <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
                 Proyek Teruji
               </div>
             </div>
-            <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-white">25.5k+</div>
+            <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
+              <div className="text-2xl font-semibold text-white">25.5k+</div>
               <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
                 Record Data Dikelola
               </div>
             </div>
-            <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-[#38bdf8]">100%</div>
+            <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
+              <div className="text-2xl font-semibold text-[#07DFFF]">100%</div>
               <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
                 Ketepatan Waktu
               </div>
             </div>
-            <div className="p-4 rounded-xl bg-[#111111] border border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-white">3.92</div>
+            <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
+              <div className="text-2xl font-semibold text-white">3.92</div>
               <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
                 IPK Akademik TI
               </div>
@@ -116,15 +116,15 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedCategory(cat.key)}
                 className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                   isSelected
-                    ? "bg-[#0ea5e9] text-white shadow-sm"
-                    : "bg-[#111111] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
+                    ? "bg-[#007FA1] text-white shadow-sm"
+                    : "bg-[#020c24] border border-white/[0.08] text-[#a1a1aa] hover:text-white hover:border-white/[0.2]"
                 }`}
               >
                 <span>{cat.labelId}</span>
                 <span
                   className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
                     isSelected
-                      ? "bg-white/20 text-white font-bold"
+                      ? "bg-white/20 text-white font-semibold"
                       : "bg-white/[0.06] text-[#71717a]"
                   }`}
                 >
@@ -151,10 +151,10 @@ export default function PortfolioPage() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-2xl bg-[#111111] border border-white/[0.08] hover:border-[#0ea5e9]/40 transition-all duration-300 flex flex-col overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.5)] group"
+              className="rounded-2xl bg-[#020c24] border border-white/[0.08] hover:border-[#007FA1] transition-all duration-300 flex flex-col overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.5)] group"
             >
               {/* Card Thumbnail Mockup */}
-              <div className="relative w-full h-56 sm:h-64 bg-[#0d0d0d] border-b border-white/[0.08] overflow-hidden flex items-center justify-center p-4">
+              <div className="relative w-full h-56 sm:h-64 bg-[#000519] border-b border-white/[0.08] overflow-hidden flex items-center justify-center p-4">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -187,7 +187,7 @@ export default function PortfolioPage() {
                   {project.categories.map((cat) => (
                     <span
                       key={cat}
-                      className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#0ea5e9]/15 text-[#38bdf8] border border-[#0ea5e9]/30 backdrop-blur-md"
+                      className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md"
                     >
                       {cat}
                     </span>
@@ -199,14 +199,14 @@ export default function PortfolioPage() {
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
                 <div className="space-y-3">
                   <div className="text-xs text-[#71717a] font-mono flex items-center gap-2">
-                    <span className="font-semibold text-[#0ea5e9]">
+                    <span className="font-semibold text-[#07DFFF]">
                       {project.client}
                     </span>
                     <span>•</span>
                     <span>{project.roleId}</span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#38bdf8] transition-colors tracking-tight leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#07DFFF] transition-colors tracking-tight leading-snug">
                     {project.title}
                   </h3>
 
@@ -220,9 +220,9 @@ export default function PortfolioPage() {
                   {project.metrics.slice(0, 2).map((m, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#141414] border border-white/[0.06] flex flex-col"
+                      className="p-3 rounded-xl bg-[#020c24] border border-white/[0.06] flex flex-col"
                     >
-                      <span className="text-base font-bold text-white tracking-tight">
+                      <span className="text-base font-semibold text-white tracking-tight">
                         {m.value}
                       </span>
                       <span className="text-[10px] font-mono text-[#71717a] truncate mt-0.5">
@@ -235,7 +235,7 @@ export default function PortfolioPage() {
                 {/* Tech Stack Pills */}
                 <div className="space-y-2">
                   <div className="text-[11px] font-mono text-[#71717a] flex items-center gap-1.5 uppercase tracking-wider">
-                    <Cpu className="w-3.5 h-3.5 text-[#0ea5e9]" />
+                    <Cpu className="w-3.5 h-3.5 text-[#07DFFF]" />
                     <span>Teknologi Utama:</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
@@ -258,7 +258,7 @@ export default function PortfolioPage() {
                     onClick={() => setActiveModalProject(project)}
                     className="px-4 py-2 rounded-lg bg-white/[0.06] hover:bg-white/[0.1] border border-white/20 text-white font-semibold text-xs tracking-tight transition-all flex items-center gap-2 cursor-pointer"
                   >
-                    <Eye className="w-3.5 h-3.5 text-[#0ea5e9]" />
+                    <Eye className="w-3.5 h-3.5 text-[#07DFFF]" />
                     <span>Detail Arsitektur</span>
                   </button>
 
@@ -271,8 +271,8 @@ export default function PortfolioPage() {
                         rel="noopener noreferrer"
                         className={`p-2 rounded-lg border transition-colors ${
                           project.isConfidential
-                            ? "bg-[#141414] text-[#71717a] border-white/[0.08] hover:text-white hover:border-white/[0.2]"
-                            : "bg-[#141414] text-[#0ea5e9] border-[#0ea5e9]/30 hover:bg-[#0ea5e9]/20"
+                            ? "bg-[#020c24] text-[#71717a] border-white/[0.08] hover:text-white hover:border-white/[0.2]"
+                            : "bg-[#020c24] text-[#07DFFF] border-[#007FA1]/50 hover:bg-[#007FA1]/20"
                         }`}
                         title={
                           project.isConfidential
@@ -289,7 +289,7 @@ export default function PortfolioPage() {
                         href={project.playStoreUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-[#141414] text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-colors"
+                        className="p-2 rounded-lg bg-[#020c24] text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-colors"
                         title="Google Play Store"
                       >
                         <Smartphone className="w-4 h-4" />
@@ -301,7 +301,7 @@ export default function PortfolioPage() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-[#141414] text-[#a1a1aa] border border-white/[0.08] hover:text-white hover:border-white/[0.2] transition-colors"
+                        className="p-2 rounded-lg bg-[#020c24] text-[#a1a1aa] border border-white/[0.08] hover:text-white hover:border-white/[0.2] transition-colors"
                         title="GitHub Repository"
                       >
                         <GithubIcon className="w-4 h-4" />
@@ -317,7 +317,7 @@ export default function PortfolioPage() {
         {/* ── 4. Deep-Dive Modal (Architecture & Specifications) ── */}
         {activeModalProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-            <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#141414] border border-white/[0.12] p-6 sm:p-8 space-y-6 shadow-2xl">
+            <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#020c24] border border-white/[0.12] p-6 sm:p-8 space-y-6 shadow-2xl">
               {/* Close Button */}
               <button
                 type="button"
@@ -330,7 +330,7 @@ export default function PortfolioPage() {
               {/* Modal Header */}
               <div className="space-y-2 pr-8">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-mono font-semibold text-[#0ea5e9]">
+                  <span className="text-xs font-mono font-semibold text-[#07DFFF]">
                     {activeModalProject.client}
                   </span>
                   <span className="text-xs text-[#71717a]">•</span>
@@ -343,7 +343,7 @@ export default function PortfolioPage() {
                     </span>
                   )}
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
                   {activeModalProject.title}
                 </h3>
                 <p className="text-xs text-[#71717a] font-mono">
@@ -352,7 +352,7 @@ export default function PortfolioPage() {
               </div>
 
               {/* Mockup Preview */}
-              <div className="relative w-full h-48 sm:h-64 rounded-xl bg-[#0d0d0d] border border-white/[0.08] overflow-hidden flex items-center justify-center p-4">
+              <div className="relative w-full h-48 sm:h-64 rounded-xl bg-[#000519] border border-white/[0.08] overflow-hidden flex items-center justify-center p-4">
                 <Image
                   src={activeModalProject.image}
                   alt={activeModalProject.title}
@@ -375,8 +375,8 @@ export default function PortfolioPage() {
 
               {/* Project Description */}
               <div className="space-y-2">
-                <h4 className="text-sm font-bold text-white flex items-center gap-2 tracking-tight">
-                  <Layers className="w-4 h-4 text-[#0ea5e9]" />
+                <h4 className="text-sm font-semibold text-white flex items-center gap-2 tracking-tight">
+                  <Layers className="w-4 h-4 text-[#07DFFF]" />
                   <span>Tentang Proyek &amp; Latar Belakang</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed font-normal">
@@ -386,16 +386,16 @@ export default function PortfolioPage() {
 
               {/* All Metrics Grid */}
               <div className="space-y-2">
-                <h4 className="text-sm font-bold text-white tracking-tight">
+                <h4 className="text-sm font-semibold text-white tracking-tight">
                   Metrik &amp; Capaian Kinerja
                 </h4>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {activeModalProject.metrics.map((m, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#111111] border border-white/[0.08]"
+                      className="p-3 rounded-xl bg-[#020c24] border border-white/[0.08]"
                     >
-                      <div className="text-base sm:text-lg font-bold text-[#0ea5e9] tracking-tight">
+                      <div className="text-base sm:text-lg font-semibold text-[#07DFFF] tracking-tight">
                         {m.value}
                       </div>
                       <div className="text-[10px] font-mono text-[#71717a] mt-1 leading-tight">
@@ -408,16 +408,16 @@ export default function PortfolioPage() {
 
               {/* Core Features List */}
               <div className="space-y-3">
-                <h4 className="text-sm font-bold text-white tracking-tight">
+                <h4 className="text-sm font-semibold text-white tracking-tight">
                   Fitur-Fitur Kunci Sistem
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {activeModalProject.featuresId.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111111] border border-white/[0.06] text-xs text-[#d4d4d8]"
+                      className="flex items-start gap-2.5 p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#d4d4d8]"
                     >
-                      <Check className="w-3.5 h-3.5 text-[#0ea5e9] shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-[#07DFFF] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -426,15 +426,15 @@ export default function PortfolioPage() {
 
               {/* Architecture & Engineering Highlights */}
               <div className="space-y-3">
-                <h4 className="text-sm font-bold text-white flex items-center gap-2 tracking-tight">
-                  <Cpu className="w-4 h-4 text-[#0ea5e9]" />
+                <h4 className="text-sm font-semibold text-white flex items-center gap-2 tracking-tight">
+                  <Cpu className="w-4 h-4 text-[#07DFFF]" />
                   <span>Sorotan Arsitektur &amp; Rekayasa</span>
                 </h4>
                 <div className="space-y-2">
                   {activeModalProject.architectureId.map((arch, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#111111] border border-white/[0.06] text-xs text-[#a1a1aa] leading-relaxed font-mono"
+                      className="p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#a1a1aa] leading-relaxed font-mono"
                     >
                       {arch}
                     </div>
@@ -444,14 +444,14 @@ export default function PortfolioPage() {
 
               {/* Full Tech Stack Pills */}
               <div className="space-y-2">
-                <h4 className="text-sm font-bold text-white tracking-tight">
+                <h4 className="text-sm font-semibold text-white tracking-tight">
                   Tech Stack Lengkap
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {activeModalProject.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#111111] border border-white/[0.08] text-[#a1a1aa]"
+                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#020c24] border border-white/[0.08] text-[#a1a1aa]"
                     >
                       {tech}
                     </span>
@@ -470,7 +470,7 @@ export default function PortfolioPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-xs font-bold bg-[#0ea5e9] hover:bg-[#0284c7] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
                 >
                   <span>Konsultasikan Sistem Serupa</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -481,9 +481,9 @@ export default function PortfolioPage() {
         )}
 
         {/* ── 5. Bottom Consultation Banner (wpu.id style) ── */}
-        <div className="p-8 sm:p-12 rounded-2xl bg-[#141414] border border-white/[0.1] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
+        <div className="p-8 sm:p-12 rounded-2xl bg-[#020c24] border border-white/[0.1] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
           <div className="max-w-2xl mx-auto space-y-3 relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
               Punya Ide Aplikasi atau Proyek Digital yang Ingin Diwujudkan?
             </h3>
             <p className="text-[#a1a1aa] text-xs sm:text-sm leading-relaxed font-normal">
@@ -498,7 +498,7 @@ export default function PortfolioPage() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-lg text-xs font-bold bg-[#0ea5e9] hover:bg-[#0284c7] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-lg text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
             >
               <span>Konsultasi Gratis via WhatsApp</span>
               <ArrowUpRight className="w-3.5 h-3.5" />

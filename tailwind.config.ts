@@ -11,9 +11,9 @@ const config: Config = {
       colors: {
         // ── Dark Section Surfaces ──────────────────────────
         canvas: {
-          dark: "#0a0a0a",       // near-black hero / dark sections
-          dark2: "#111111",      // slightly lighter dark (cards on dark)
-          dark3: "#1a1a1a",      // footer, elevated dark surface
+          dark: "#000519",       // deep midnight navy hero / dark sections
+          dark2: "#020c24",      // cards on dark
+          dark3: "#041232",      // footer, elevated dark surface
         },
         // ── Light Section Surfaces ─────────────────────────
         surface: {
@@ -21,12 +21,27 @@ const config: Config = {
           white: "#ffffff",      // pure white cards / form
           muted: "#f1f1f1",      // slightly deeper off-white
         },
+        // ── Official Brand Palette (Design Specification) ──
+        brand: {
+          50: "#E9FEFF",
+          100: "#C9FAFF",
+          200: "#99F5FF",
+          300: "#54EBFF",
+          400: "#07DFFF", // Primary electric cyan/blue highlight
+          500: "#00CDEF",
+          600: "#00A2C9",
+          700: "#007FA1", // Primary brand accent on light backgrounds
+          800: "#086582",
+          900: "#0C536D",
+          950: "#003347", // Deepest brand dark
+          DEFAULT: "#07DFFF",
+        },
         // ── Brand Accent ───────────────────────────────────
         accent: {
-          DEFAULT: "#0ea5e9",    // sky-500 — primary brand blue
-          dark: "#0284c7",       // sky-600 — darker blue
-          light: "#38bdf8",      // sky-400 — lighter highlight
-          subtle: "rgba(14,165,233,0.12)", // faint tint
+          DEFAULT: "#007FA1",    // primary brand deep cyan (Brand 700)
+          dark: "#003347",       // darker tone (Brand 950)
+          light: "#07DFFF",      // bright cyan (Brand 400)
+          subtle: "rgba(7,223,255,0.15)", // faint cyan tint
         },
         // ── Text — Dark Sections ───────────────────────────
         ink: {
@@ -37,16 +52,16 @@ const config: Config = {
         },
         // ── Text — Light Sections ──────────────────────────
         dark: {
-          primary: "#0a0a0a",
-          secondary: "#404040",
-          muted: "#737373",
-          faint: "#d4d4d4",
+          primary: "#000519",
+          secondary: "#334155",
+          muted: "#64748b",
+          faint: "#cbd5e1",
         },
         // ── Dividers ───────────────────────────────────────
         line: {
-          dark: "rgba(255,255,255,0.07)",   // divider on dark bg
-          light: "rgba(0,0,0,0.07)",        // divider on light bg
-          accent: "rgba(14,165,233,0.25)",  // accent divider
+          dark: "rgba(255,255,255,0.08)",   // divider on dark bg
+          light: "rgba(0,5,25,0.08)",        // divider on light bg
+          accent: "rgba(7,223,255,0.35)",     // accent divider (#07DFFF)
         },
       },
       fontFamily: {

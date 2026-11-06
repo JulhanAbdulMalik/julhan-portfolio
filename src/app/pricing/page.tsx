@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -20,28 +20,28 @@ export default function PricingPage() {
   const categories = Array.from(new Set(pricingMatrix.map((r) => r.category)));
 
   return (
-    <div className="w-full min-h-screen bg-[#0a0a0a] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 relative overflow-hidden select-none">
+    <div className="w-full min-h-screen bg-[#000519] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden">
       {/* ── Soft Atmospheric Ambient (wpu.id style) ── */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full pointer-events-none -z-0 opacity-15 blur-[140px]"
         style={{
-          background: "radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 70, 95, 0.65) 0%, transparent 70%)",
         }}
       />
 
-      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-20 sm:space-y-28">
+      <div className="max-w-[84rem] mx-auto w-full relative z-10 space-y-20 sm:space-y-28">
         
         {/* ── 1. Page Header (wpu.id style) ── */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
-            <DollarSign className="w-3.5 h-3.5 text-[#0ea5e9]" />
+            <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
             <span>Transparansi Biaya &amp; Garansi SLA</span>
           </div>
 
-          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-extrabold text-white leading-[1.08] tracking-[-0.03em]">
+          <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
             Investasi terjangkau dengan{" "}
             <br className="hidden sm:inline" />
-            <span className="text-[#0ea5e9]">
+            <span className="text-[#07DFFF]">
               nilai hasil maksimal.
             </span>
           </h1>
@@ -52,12 +52,12 @@ export default function PricingPage() {
 
           {/* Billing Switcher Toggle */}
           <div className="pt-4 flex items-center justify-center">
-            <div className="inline-flex p-1 rounded-lg bg-[#141414] border border-white/[0.1]">
+            <div className="inline-flex p-1 rounded-lg bg-[#020c24] border border-white/[0.1]">
               <button
                 onClick={() => setBillingType("project")}
                 className={`px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   billingType === "project"
-                    ? "bg-[#0ea5e9] text-white shadow-sm"
+                    ? "bg-[#007FA1] text-white shadow-sm"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -67,7 +67,7 @@ export default function PricingPage() {
                 onClick={() => setBillingType("maintenance")}
                 className={`px-5 py-2 rounded-md text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   billingType === "maintenance"
-                    ? "bg-[#0ea5e9] text-white shadow-sm"
+                    ? "bg-[#007FA1] text-white shadow-sm"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -81,10 +81,10 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           
           {/* Card 1: Starter */}
-          <div className="rounded-2xl p-8 bg-[#111111] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl p-8 bg-[#020c24] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all duration-300">
             <div className="space-y-6">
               <div className="space-y-1.5">
-                <h3 className="text-xl font-bold text-white tracking-tight">Paket Starter</h3>
+                <h3 className="text-xl font-semibold text-white tracking-tight">Paket Starter</h3>
                 <p className="text-[#71717a] text-xs font-normal">
                   Landing Page &amp; Profil Bisnis UMKM
                 </p>
@@ -94,10 +94,10 @@ export default function PricingPage() {
                 <span className="text-[11px] font-mono uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
-                <div className="text-3xl font-extrabold text-white tracking-tight">
+                <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 500.000" : "Rp 250.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#0ea5e9] block pt-1">
+                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
                   ⏱ 3 - 7 Hari Kerja
                 </span>
               </div>
@@ -116,7 +116,7 @@ export default function PricingPage() {
                     "Garansi Bug Fix 14 Hari Pasca Rilis",
                   ].map((f, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-xs text-[#d4d4d8]">
-                      <Check className="w-4 h-4 text-[#0ea5e9] shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-[#07DFFF] shrink-0 mt-0.5" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -131,7 +131,7 @@ export default function PricingPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#18181b] hover:bg-[#222222] border border-white/20 hover:border-white/40 text-white flex items-center justify-center gap-2 transition-all"
+                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#020c24] hover:bg-[#007FA1] border border-white/20 hover:border-white/40 text-white flex items-center justify-center gap-2 transition-all"
               >
                 <span>Pilih Starter Plan</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -140,9 +140,9 @@ export default function PricingPage() {
           </div>
 
           {/* Card 2: Professional (Popular) */}
-          <div className="rounded-2xl p-8 bg-[#141414] border-2 border-[#0ea5e9]/60 shadow-[0_16px_36px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-all duration-300 relative">
+          <div className="rounded-2xl p-8 bg-[#020c24] border-2 border-[#007FA1] shadow-[0_16px_36px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-all duration-300 relative">
             <div className="absolute -top-3 left-6 z-10">
-              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#0ea5e9] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
+              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
                 <Sparkles className="w-2.5 h-2.5" />
                 <span>Paling Populer &amp; Diminati</span>
               </span>
@@ -150,7 +150,7 @@ export default function PricingPage() {
 
             <div className="space-y-6">
               <div className="space-y-1.5">
-                <h3 className="text-xl font-bold text-white tracking-tight">Paket Professional / Growth</h3>
+                <h3 className="text-xl font-semibold text-white tracking-tight">Paket Professional / Growth</h3>
                 <p className="text-[#71717a] text-xs font-normal">
                   Toko Online &amp; Dashboard Manajemen
                 </p>
@@ -160,10 +160,10 @@ export default function PricingPage() {
                 <span className="text-[11px] font-mono uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
-                <div className="text-3xl font-extrabold text-white tracking-tight">
+                <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 1.500.000" : "Rp 500.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#0ea5e9] block pt-1">
+                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
                   ⏱ 10 - 20 Hari Kerja
                 </span>
               </div>
@@ -182,7 +182,7 @@ export default function PricingPage() {
                     "Pelatihan Staf Pengoperasian & Garansi 30 Hari",
                   ].map((f, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-xs text-[#d4d4d8]">
-                      <Check className="w-4 h-4 text-[#0ea5e9] shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-[#07DFFF] shrink-0 mt-0.5" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -197,7 +197,7 @@ export default function PricingPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#0ea5e9] hover:bg-[#0284c7] text-white flex items-center justify-center gap-2 shadow-md transition-all"
+                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white flex items-center justify-center gap-2 shadow-md transition-all"
               >
                 <span>Pilih Professional Plan</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -206,10 +206,10 @@ export default function PricingPage() {
           </div>
 
           {/* Card 3: Enterprise Bundle */}
-          <div className="rounded-2xl p-8 bg-[#111111] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all duration-300">
+          <div className="rounded-2xl p-8 bg-[#020c24] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all duration-300">
             <div className="space-y-6">
               <div className="space-y-1.5">
-                <h3 className="text-xl font-bold text-white tracking-tight">Bundle Web + Mobile App</h3>
+                <h3 className="text-xl font-semibold text-white tracking-tight">Bundle Web + Mobile App</h3>
                 <p className="text-[#71717a] text-xs font-normal">
                   Ekosistem Web &amp; Aplikasi Android Flutter
                 </p>
@@ -219,10 +219,10 @@ export default function PricingPage() {
                 <span className="text-[11px] font-mono uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
-                <div className="text-3xl font-extrabold text-white tracking-tight">
+                <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 3.500.000" : "Rp 950.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#0ea5e9] block pt-1">
+                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
                   ⏱ 21 - 45 Hari Kerja
                 </span>
               </div>
@@ -256,7 +256,7 @@ export default function PricingPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#18181b] hover:bg-[#222222] border border-white/20 hover:border-white/40 text-white flex items-center justify-center gap-2 transition-all"
+                className="w-full py-3 px-4 rounded-md text-xs font-semibold bg-[#020c24] hover:bg-[#007FA1] border border-white/20 hover:border-white/40 text-white flex items-center justify-center gap-2 transition-all"
               >
                 <span>Diskusikan Bundle Ini</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -269,7 +269,7 @@ export default function PricingPage() {
         {/* ── 3. Full Comparison Matrix Table (wpu.id style) ── */}
         <div className="space-y-8 pt-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
               Tabel Komparasi Fitur Lengkap
             </h2>
             <p className="text-[#a1a1aa] text-xs sm:text-sm font-normal">
@@ -277,17 +277,17 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#111111] shadow-lg">
+          <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#020c24] shadow-lg">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-white/[0.08] bg-[#141414] text-[11px] font-mono uppercase tracking-wider text-[#71717a]">
+                <tr className="border-b border-white/[0.08] bg-[#020c24] text-[11px] font-mono uppercase tracking-wider text-[#71717a]">
                   <th className="py-4 px-6 font-semibold w-2/5">
                     Kategori &amp; Fitur
                   </th>
                   <th className="py-4 px-4 text-center font-semibold w-1/5">
                     Starter
                   </th>
-                  <th className="py-4 px-4 text-center font-semibold w-1/5 text-[#0ea5e9]">
+                  <th className="py-4 px-4 text-center font-semibold w-1/5 text-[#07DFFF]">
                     Professional
                   </th>
                   <th className="py-4 px-4 text-center font-semibold w-1/5 text-emerald-400">
@@ -298,7 +298,7 @@ export default function PricingPage() {
               <tbody className="divide-y divide-white/[0.06] text-xs">
                 {categories.map((category) => (
                   <React.Fragment key={category}>
-                    <tr className="bg-white/[0.02] font-semibold text-[#0ea5e9]">
+                    <tr className="bg-white/[0.02] font-semibold text-[#07DFFF]">
                       <td colSpan={4} className="py-3 px-6 text-[11px] font-mono uppercase tracking-wider">
                         {category}
                       </td>
@@ -313,7 +313,7 @@ export default function PricingPage() {
                           <td className="py-3.5 px-4 text-center">
                             {typeof row.starter === "boolean" ? (
                               row.starter ? (
-                                <Check className="w-4 h-4 text-[#0ea5e9] mx-auto" />
+                                <Check className="w-4 h-4 text-[#07DFFF] mx-auto" />
                               ) : (
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
@@ -321,10 +321,10 @@ export default function PricingPage() {
                               <span className="font-mono text-[#a1a1aa]">{row.starter}</span>
                             )}
                           </td>
-                          <td className="py-3.5 px-4 text-center bg-[#0ea5e9]/[0.03]">
+                          <td className="py-3.5 px-4 text-center bg-[#007FA1]/[0.03]">
                             {typeof row.pro === "boolean" ? (
                               row.pro ? (
-                                <Check className="w-4 h-4 text-[#0ea5e9] mx-auto" />
+                                <Check className="w-4 h-4 text-[#07DFFF] mx-auto" />
                               ) : (
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
@@ -340,7 +340,7 @@ export default function PricingPage() {
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
                             ) : (
-                              <span className="font-mono font-bold text-white">{row.bundle}</span>
+                              <span className="font-mono font-semibold text-white">{row.bundle}</span>
                             )}
                           </td>
                         </tr>
@@ -356,10 +356,10 @@ export default function PricingPage() {
         <div className="space-y-8 pt-4">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#0ea5e9]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>Komitmen &amp; Jaminan Klien</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
               3 Prinsip Transparansi Tanpa Risiko
             </h2>
           </div>
@@ -368,12 +368,12 @@ export default function PricingPage() {
             {pricingTerms.map((term, i) => (
               <div
                 key={i}
-                className="rounded-2xl p-6 bg-[#111111] border border-white/[0.08] hover:border-white/[0.18] space-y-3 transition-all"
+                className="rounded-2xl p-6 bg-[#020c24] border border-white/[0.08] hover:border-white/[0.18] space-y-3 transition-all"
               >
-                <div className="text-xs font-mono font-bold text-[#0ea5e9]">
+                <div className="text-xs font-mono font-semibold text-[#07DFFF]">
                   0{i + 1}
                 </div>
-                <h4 className="text-white font-bold text-base tracking-tight">{term.titleId}</h4>
+                <h4 className="text-white font-semibold text-base tracking-tight">{term.titleId}</h4>
                 <p className="text-[#a1a1aa] text-xs leading-relaxed font-normal">
                   {term.descId}
                 </p>
@@ -383,9 +383,9 @@ export default function PricingPage() {
         </div>
 
         {/* ── 5. Bottom Final Consultation CTA (wpu.id style) ── */}
-        <div className="rounded-2xl p-8 sm:p-12 border border-white/[0.1] bg-[#141414] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
+        <div className="rounded-2xl p-8 sm:p-12 border border-white/[0.1] bg-[#020c24] text-center space-y-6 relative overflow-hidden shadow-[0_16px_36px_rgba(0,0,0,0.6)]">
           <div className="space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
               Butuh Estimasi Biaya Khusus?
             </h3>
             <p className="text-[#a1a1aa] text-xs sm:text-sm max-w-xl mx-auto font-normal">
@@ -405,7 +405,7 @@ export default function PricingPage() {
               href="https://wa.me/6283111030309?text=Halo%20Julhan,%20saya%20ingin%20konsultasi%20penawaran%20harga%20pembuatan%20website/aplikasi."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-lg bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold text-xs tracking-wide transition-all flex items-center gap-2 shadow-sm"
+              className="px-5 py-2.5 rounded-lg bg-[#007FA1] hover:bg-[#00A2C9] text-white font-semibold text-xs tracking-wide transition-all flex items-center gap-2 shadow-sm"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>Konsultasi via WhatsApp</span>

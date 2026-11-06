@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#07090F" />
@@ -69,9 +69,9 @@
     <text x="490" y="256" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle">PostgreSQL Cloud</text>
 
     <!-- Mobile Satellite: Flutter -->
-    <rect x="180" y="320" width="220" height="60" rx="14" fill="#101726" stroke="#38BDF8" stroke-width="1.5" />
-    <text x="290" y="356" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle">Flutter Cross-Platform</text>
-    <path d="M 290 280 L 290 320" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4,4" opacity="0.6" />
+    <rect x="180" y="320" width="220" height="60" rx="14" fill="#101726" stroke="#07DFFF" stroke-width="1.5" />
+    <text x="290" y="356" fill="#07DFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle">Flutter Cross-Platform</text>
+    <path d="M 290 280 L 290 320" stroke="#07DFFF" stroke-width="2" stroke-dasharray="4,4" opacity="0.6" />
   </g>
 
   <!-- Right Side: Headline & Badge -->
