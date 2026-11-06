@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -52,7 +52,7 @@ export function ServicesHubSection() {
   return (
     <section
       id="services"
-      className="section-dark py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 bg-[#000519] text-white border-t border-b border-white/[0.08] relative"
+      className="section-dark py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 bg-[#000519] text-white border-t border-b border-dashed border-white/15 relative"
     >
       <div className="section-inner space-y-12 sm:space-y-16">
         

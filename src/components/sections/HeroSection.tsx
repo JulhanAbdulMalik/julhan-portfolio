@@ -238,7 +238,7 @@ export function HeroSection() {
       </div>
 
       {/* ── Bottom Bar: Identity & CTA (wpu.id signature layout) ── */}
-      <div className="max-w-[84rem] mx-auto w-full pt-4 sm:pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 relative z-10">
+      <div className="max-w-[84rem] mx-auto w-full pt-4 sm:pt-6 border-t border-dashed border-white/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 relative z-10">
         {/* Bottom Left: Brand Signature */}
         <div className="flex items-center gap-3">
           <span className="w-6 h-[1.5px] bg-[#007FA1] inline-block shrink-0" />
