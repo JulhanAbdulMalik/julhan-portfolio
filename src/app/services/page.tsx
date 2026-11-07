@@ -36,7 +36,7 @@ export default function ServicesPage() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-[#07DFFF]" />
-            <span>Daftar Layanan Lengkap</span>
+            <span>Complete Service Catalog</span>
           </div>
 
           <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
@@ -57,7 +57,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div className="space-y-1">
               <span className="text-xs uppercase tracking-wider text-[#71717a]">
-                KATALOG LAYANAN
+                SERVICE CATALOG
               </span>
               <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
                 Pilihan Layanan &amp; Cakupan Pekerjaan

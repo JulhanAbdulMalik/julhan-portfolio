@@ -138,7 +138,7 @@ export function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="text-[11px] font-medium text-[#a1a1aa]">Solusi Digital</span>
+              <span className="text-[11px] font-medium text-[#a1a1aa]">Digital Solutions</span>
             </div>
             <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-semibold uppercase border border-emerald-500/25">
               Active

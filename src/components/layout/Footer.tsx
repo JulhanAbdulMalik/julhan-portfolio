@@ -31,8 +31,8 @@ export function Footer() {
 
           {/* Col 1 — Brand & Contact Primary (6 columns on lg) */}
           <div className="lg:col-span-6 p-8 sm:p-10 lg:p-12 space-y-6 flex flex-col justify-between">
-            <div className="space-y-4 max-w-md">
-              <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+            <div className="space-y-4">
+              <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-none">
                 Membangun website &amp; aplikasi mobile yang benar-benar bekerja untuk bisnis nyata.
               </p>
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
               <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Layanan
               </Link>
-              <Link href="/portfolio" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+              <Link href="/#portfolio" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Portfolio
               </Link>
               <Link href="/pricing" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
@@ -102,7 +102,7 @@ export function Footer() {
               <Link href="/blog" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Blog
               </Link>
-              <Link href="/contact" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+              <Link href="/#contact" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Kontak
               </Link>
             </nav>

@@ -211,26 +211,27 @@ export const portfolioProjects: PortfolioProject[] = [
       "PostgreSQL relational database with geospatial indexing for nearby farm discovery",
     ],
     playStoreUrl: "https://play.google.com/store/apps",
+    liveUrl: "https://panenkita.web.id",
     githubUrl: "https://github.com/JulhanMalik",
     featured: true,
   },
   {
     id: "yuwanyie-picnic",
-    slug: "yuwanyie-picnic-fnb-system",
-    title: "Yuwanyie Picnic - F&B Digital Booking & Storefront",
+    slug: "yuwanyie-picnic-aesthetic-booking",
+    title: "Yuwanyie Picnic - Aesthetic Picnic Experience & Digital Booking",
     client: "Yuwanyie Picnic Sukabumi",
     year: "2024",
     categories: ["Web App", "Landing Page"],
     roleId: "Lead Full-Stack Web Developer",
     roleEn: "Lead Full-Stack Web Developer",
     taglineId:
-      "Platform reservasi kuliner outdoor & checkout QRIS otomatis yang meningkatkan penjualan 40%.",
+      "Platform web reservasi & rental paket piknik estetik dengan sistem checkout QRIS otomatis.",
     taglineEn:
-      "Outdoor picnic culinary reservation platform & automated QRIS checkout boosting sales by 40%.",
+      "Aesthetic picnic experience booking platform & automated QRIS checkout system.",
     descriptionId:
-      "Website interaktif dan sistem manajemen operasional online untuk penyedia layanan piknik dan kuliner outdoor di Sukabumi. Menggantikan proses pemesanan manual via chat yang rawan miskomunikasi menjadi alur reservasi otomatis 24/7.",
+      "Platform web interaktif dan sistem reservasi online otomatis untuk layanan sewa paket piknik estetik. Menghadirkan katalog set dekorasi, pemilihan jadwal slot real-time, integrasi pembayaran QRIS dinamis, serta admin dashboard analitik berbasis Supabase.",
     descriptionEn:
-      "An interactive consumer web application and back-office management system for a boutique picnic and culinary experience brand. Automated the previously manual WhatsApp booking workflow into an intuitive 24/7 self-service portal.",
+      "Interactive web application and automated booking platform for an aesthetic picnic experience and rental brand. Features a curated setup catalog, real-time slot calendar, automated dynamic QRIS payments, and an executive management dashboard powered by Supabase.",
     image: "/images/projects/yuwanyie-picnic.svg",
     techStack: [
       "Next.js 16",
@@ -266,14 +267,14 @@ export const portfolioProjects: PortfolioProject[] = [
       },
     ],
     featuresId: [
-      "Katalog interaktif menu makanan, paket dekorasi piknik, dan add-on perlengkapan",
+      "Katalog interaktif paket set piknik estetik, dekorasi tematik, dan add-on perlengkapan",
       "Kalender pemilihan slot tanggal & jam reservasi dengan validasi kuota real-time",
       "Integrasi QRIS dinamis untuk pembayaran instan dan konfirmasi otomatis ke WhatsApp admin",
       "Admin portal terlindungi Supabase Row-Level Security (RLS) untuk update status order",
       "Dukungan multibahasa seamless (Indonesia & Inggris) via next-intl",
     ],
     featuresEn: [
-      "Interactive digital catalog for picnic packages, culinary sets, and custom equipment add-ons",
+      "Interactive digital catalog for aesthetic picnic packages, themed sets, and custom equipment add-ons",
       "Real-time slot reservation calendar with instant capacity and slot availability checking",
       "Dynamic QRIS integration for instant digital payments and automated WhatsApp confirmation",
       "Secure admin dashboard protected with Supabase Row-Level Security (RLS) for order triage",
@@ -296,7 +297,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: "bhumi",
     slug: "bhumi-environmental-game-landing",
-    title: "Bhumi - Environmental Edu-Game Official Website",
+    title: "Bhumi - Environmental Education Game Official Website",
     client: "Kolaborasi Riset Universitas Negeri Padang (UNP)",
     year: "2023",
     categories: ["Landing Page"],

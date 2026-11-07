@@ -9,9 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/services",
     "/pricing",
-    "/portfolio",
     "/blog",
-    "/contact",
     "/privacy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,

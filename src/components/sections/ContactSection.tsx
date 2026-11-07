@@ -78,7 +78,7 @@ export function ContactSection() {
           <div className="space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
               <Mail className="w-3.5 h-3.5 text-[#007FA1]" />
-              <span>Kontak Langsung</span>
+              <span>Get in Touch</span>
             </div>
 
             <h2 className="text-[2rem] sm:text-[2.6rem] lg:text-[3.1rem] xl:text-[3.5rem] font-semibold text-[#000519] leading-[1.12] tracking-[-0.03em]">
@@ -90,7 +90,7 @@ export function ContactSection() {
           </div>
 
           {/* Bagian Bawah: Deskripsi */}
-          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-none">
             Punya pertanyaan teknis, rencana proyek website atau aplikasi mobile, atau ingin mendiskusikan estimasi biaya? Saya siap membantu.
           </p>
         </div>

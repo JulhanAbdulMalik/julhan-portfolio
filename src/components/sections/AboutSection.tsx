@@ -36,7 +36,7 @@ export function AboutSection() {
             <div className="space-y-3.5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
                 <User className="w-3.5 h-3.5 text-[#007FA1]" />
-                <span>Tentang Saya</span>
+                <span>About Me</span>
               </div>
 
               <h2 className="text-[2rem] sm:text-[2.6rem] lg:text-[3.1rem] xl:text-[3.5rem] font-semibold text-[#000519] leading-[1.12] tracking-[-0.03em]">
@@ -147,28 +147,29 @@ export function AboutSection() {
           {/* Row A - Col 3: Credentials Story (Top Right) - DIBUAT LEBIH TINGGI */}
           <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300">
             <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
-              Berpengalaman sebagai Code Reviewer di Dicoding Indonesia dan bersertifikasi BNSP, memastikan setiap deliverable memiliki standar keamanan, maintainability, serta performa tinggi.
+              Berpengalaman sebagai Academy Code Reviewer di Dicoding Indonesia dan bersertifikasi BNSP, memastikan setiap deliverable memiliki standar keamanan, maintainability, serta performa tinggi.
             </p>
           </div>
 
           {/* Row B - Col 2: Tech Badges Strip (Bottom Middle) - DIBUAT PENDEK / RAMPING */}
-          <div className="lg:col-span-4 py-3.5 px-6 sm:py-4 sm:px-8 min-h-[72px] sm:min-h-[78px] bg-[#fafafa]/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300">
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b] border border-black/[0.04]">Next.js 15</span>
-              <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b] border border-black/[0.04]">React 19</span>
-              <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b] border border-black/[0.04]">Flutter</span>
-              <span className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#18181b] border border-black/[0.04]">PostgreSQL</span>
+          <div className="lg:col-span-4 py-3.5 px-3 sm:py-4 sm:px-4 lg:px-2 xl:px-4 min-h-[72px] sm:min-h-[78px] bg-[#fafafa]/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300">
+            <div className="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-2 lg:gap-1.5 xl:gap-2">
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Next.js 15</span>
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">TypeScript</span>
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Flutter</span>
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">PostgreSQL</span>
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Prisma ORM</span>
             </div>
           </div>
 
           {/* Row B - Col 3: Solid Dark CTA Box (Bottom Right) - DIBUAT PENDEK / RAMPING */}
           <Link
-            href="/portfolio"
+            href="/#portfolio"
             className="lg:col-span-4 py-3.5 px-6 sm:py-4 sm:px-8 min-h-[72px] sm:min-h-[78px] bg-[#000519] hover:bg-[#020c24] text-white flex items-center justify-between gap-4 transition-all duration-200 group cursor-pointer"
           >
             <div className="space-y-0.5">
               <span className="text-[10px] text-[#a1a1aa] block uppercase tracking-wider">
-                Eksplorasi Karya
+                Explore Works
               </span>
               <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors line-clamp-1">
                 Lihat Portfolio & Studi Kasus
@@ -206,7 +207,7 @@ export function AboutSection() {
               258+
             </div>
             <p className="text-xs text-[#52525b] leading-relaxed font-normal">
-              Submission code reviewer di Dicoding Academy Indonesia.
+              Submission code reviewer di Dicoding Indonesia.
             </p>
           </div>
 
@@ -245,7 +246,7 @@ export function AboutSection() {
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
               <ShieldCheck className="w-3.5 h-3.5 text-[#007FA1]" />
-              <span>Standar Profesional</span>
+              <span>Professional Standards</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#000519] tracking-tight">
@@ -255,7 +256,7 @@ export function AboutSection() {
           </div>
 
           {/* Bagian Bawah: Deskripsi */}
-          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal">
             Komitmen profesional untuk memastikan setiap proyek yang dibangun kokoh, aman, terstandarisasi, dan dapat diskalakan untuk jangka panjang.
           </p>
         </div>

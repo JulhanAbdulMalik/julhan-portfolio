@@ -63,7 +63,7 @@ export default function BlogListPage() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
             <BookOpen className="w-3.5 h-3.5 text-[#07DFFF]" />
-            <span>Knowledge Base &amp; Rekayasa Perangkat Lunak</span>
+            <span>Software Engineering &amp; Knowledge Base</span>
           </div>
 
           <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">

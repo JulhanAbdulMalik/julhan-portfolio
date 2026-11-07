@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
 
-  <rect width="800" height="500" rx="16" fill="url(#panenBg)" stroke="#10B981" stroke-opacity="0.3" stroke-width="2"/>
+  <rect width="800" height="500" rx="16" fill="url(#panenBg)"/>
   
   <!-- Header -->
   <rect width="800" height="42" rx="16" fill="#0A0E1A" stroke="#FFFFFF" stroke-opacity="0.06"/>

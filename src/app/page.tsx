@@ -14,11 +14,11 @@ export default function Home() {
       {/* 2. About & Stats Section (Light Mode + Thin Grid Lines - wpu.id style) */}
       <AboutSection />
 
-      {/* 3. Services Section (Dark) */}
-      <ServicesHubSection />
-
-      {/* 4. Portfolio Section (Light + Grid) */}
+      {/* 3. Portfolio Section (Dark Blueprint - Horizontal Rows) */}
       <PortfolioPreviewSection />
+
+      {/* 4. Services Section (Light Grid - 3 Columns) */}
+      <ServicesHubSection />
 
       {/* 5. Pricing Section (Dark) */}
       <PricingPreviewSection />

@@ -92,7 +92,7 @@ export function PricingPreviewSection() {
           <div className="space-y-3.5 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
               <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
-              <span>Investasi Transparan</span>
+              <span>Transparent Pricing</span>
             </div>
 
             <h2 className="text-[2rem] sm:text-[2.6rem] lg:text-[3.1rem] xl:text-[3.5rem] font-semibold text-white leading-[1.12] tracking-[-0.03em]">
@@ -159,7 +159,7 @@ export function PricingPreviewSection() {
                   <div className="absolute top-6 right-6 sm:top-8 sm:right-8 z-10 pointer-events-none">
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#007FA1]/30 border border-[#007FA1]/60 text-[#07DFFF] flex items-center gap-1.5 uppercase tracking-wider">
                       <Sparkles className="w-3 h-3 text-[#07DFFF]" />
-                      <span>Paling Diminati</span>
+                      <span>Most Popular</span>
                     </span>
                   </div>
                 )}

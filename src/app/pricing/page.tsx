@@ -35,7 +35,7 @@ export default function PricingPage() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="section-badge section-badge-dark inline-flex items-center gap-1.5">
             <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
-            <span>Transparansi Biaya &amp; Garansi SLA</span>
+            <span>Transparent Pricing &amp; SLA Guarantee</span>
           </div>
 
           <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
