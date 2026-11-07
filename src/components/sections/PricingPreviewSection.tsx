@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -70,38 +70,54 @@ export function PricingPreviewSection() {
   return (
     <section
       id="pricing"
-      className="section-dark py-20 sm:py-28 px-6 sm:px-10 lg:px-16 xl:px-24 bg-[#000519] text-white border-t border-b border-white/[0.08] relative"
+      className="pt-0 pb-0 px-6 sm:px-10 lg:px-16 xl:px-24 text-white relative bg-[#000519] border-b border-dashed border-white/15"
     >
-      <div className="section-inner space-y-12 sm:space-y-16">
+      {/* ── Main Unified Architectural Grid Table (Kotak Siku 90° + Garis Strip Putus-Putus Dark Blueprint) ── */}
+      <div className="max-w-[84rem] mx-auto w-full border border-dashed border-white/15 bg-[#000519] rounded-none shadow-none">
         
-        {/* ── Top Header Row (wpu.id style) ── */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/[0.08]">
-          <div className="space-y-4 max-w-2xl">
-            <div className="section-badge section-badge-dark">
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 0: Top Spacer Row (Baris Margin Kosong di Awal Section 5)
+            Memberikan ruang napas (breathing room) di awal section tanpa garis tengah
+        ════════════════════════════════════════════════════════════════ */}
+        <div
+          className="w-full border-b border-dashed border-white/15 h-[60px] lg:h-[80px]"
+          aria-hidden="true"
+        />
+
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 1: Header Row (Investasi Transparan: Judul & Toggle Switcher)
+            Satu blok utuh presisi dengan garis strip putus-putus
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-white/15 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div className="space-y-3.5 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
               <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>Investasi Transparan</span>
             </div>
 
-            <h2 className="text-[1.85rem] sm:text-[3.2rem] lg:text-[3.8rem] font-semibold text-white leading-[1.08] tracking-[-0.03em]">
+            <h2 className="text-[2rem] sm:text-[2.6rem] lg:text-[3.1rem] xl:text-[3.5rem] font-semibold text-white leading-[1.12] tracking-[-0.03em]">
               Investasi terjangkau dengan{" "}
-              <br className="hidden sm:inline" />
               <span className="text-[#07DFFF]">
                 kualitas standar industri.
               </span>
             </h2>
+
+            <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal pt-1">
+              Pilihan skema pembayaran transparan tanpa biaya tersembunyi, disesuaikan dengan skala dan tahapan bisnis Anda.
+            </p>
           </div>
 
           {/* Toggle Switcher */}
-          <div className="flex flex-col sm:items-end gap-3">
-            <p className="text-xs sm:text-sm text-[#71717a] font-normal sm:text-right">
-              Pilih model pengerjaan yang sesuai:
-            </p>
-            <div className="inline-flex p-1 rounded-lg bg-[#020c24] border border-white/[0.1]">
+          <div className="flex flex-col sm:items-end gap-2.5 shrink-0">
+            <span className="text-xs text-[#71717a] font-normal sm:text-right font-mono">
+              PILIH MODEL PENGERJAAN:
+            </span>
+            <div className="inline-flex p-1 rounded-lg bg-[#020c24] border border-white/15">
               <button
                 onClick={() => setBillingType("project")}
                 className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
                   billingType === "project"
-                    ? "bg-[#007FA1] text-white"
+                    ? "bg-[#007FA1] text-white shadow-sm"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -111,7 +127,7 @@ export function PricingPreviewSection() {
                 onClick={() => setBillingType("maintenance")}
                 className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
                   billingType === "maintenance"
-                    ? "bg-[#007FA1] text-white"
+                    ? "bg-[#007FA1] text-white shadow-sm"
                     : "text-[#a1a1aa] hover:text-white"
                 }`}
               >
@@ -121,8 +137,11 @@ export function PricingPreviewSection() {
           </div>
         </div>
 
-        {/* ── 3 Pricing Cards Grid (Clean wpu.id card aesthetics) ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 2: 3 Pricing Plans Columns (Tabel 3 Kolom Siku 90° wpu.id)
+            Setiap kolom paket dipisahkan garis putus-putus presisi tinggi
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-dashed divide-white/15 border-b border-dashed border-white/15 items-stretch">
           {plans.map((plan) => {
             const isPopular = plan.popular;
             const price =
@@ -131,17 +150,15 @@ export function PricingPreviewSection() {
             return (
               <div
                 key={plan.id}
-                className={`rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
-                  isPopular
-                    ? "bg-[#020c24] border-2 border-[#007FA1] shadow-[0_16px_36px_rgba(0,0,0,0.6)]"
-                    : "bg-[#010920] border border-white/[0.08] hover:border-white/[0.20]"
+                className={`p-8 sm:p-10 flex flex-col justify-between space-y-8 transition-colors relative ${
+                  isPopular ? "bg-[#020c24]/80" : "bg-[#000519] hover:bg-white/[0.015]"
                 }`}
               >
                 {/* Popular Badge */}
                 {isPopular && (
-                  <div className="absolute -top-3 left-6 z-10">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
-                      <Sparkles className="w-2.5 h-2.5" />
+                  <div className="absolute top-4 right-6 z-10">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1]/30 border border-[#007FA1]/60 text-[#07DFFF] flex items-center gap-1.5 uppercase tracking-wider">
+                      <Sparkles className="w-3 h-3 text-[#07DFFF]" />
                       <span>Paling Diminati</span>
                     </span>
                   </div>
@@ -159,11 +176,11 @@ export function PricingPreviewSection() {
                   </div>
 
                   {/* Price Row */}
-                  <div className="pt-4 border-t border-white/[0.08] space-y-1">
-                    <span className="text-[11px] font-mono uppercase text-[#71717a] block">
+                  <div className="pt-4 border-t border-dashed border-white/15 space-y-1">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#71717a] block">
                       Estimasi Biaya Mulai
                     </span>
-                    <div className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    <div className="text-3xl sm:text-4xl font-semibold text-white tracking-tight font-mono">
                       {price}
                     </div>
                     <span className="text-xs font-mono text-[#07DFFF] block pt-1">
@@ -172,8 +189,8 @@ export function PricingPreviewSection() {
                   </div>
 
                   {/* Deliverables */}
-                  <div className="pt-4 border-t border-white/[0.08] space-y-3">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                  <div className="pt-5 border-t border-dashed border-white/15 space-y-3">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
                       FITUR & LAYANAN TERMASUK:
                     </span>
                     <ul className="space-y-2.5">
@@ -188,19 +205,19 @@ export function PricingPreviewSection() {
                 </div>
 
                 {/* CTA Action */}
-                <div className="pt-8 border-t border-white/[0.08] mt-8">
+                <div className="pt-6 border-t border-dashed border-white/15">
                   <a
                     href={`https://wa.me/6283111030309?text=${encodeURIComponent(plan.waMessage)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-3 px-4 rounded-md text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 group ${
+                    className={`w-full py-2.5 sm:py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200 group ${
                       isPopular
-                        ? "bg-[#007FA1] hover:bg-[#00A2C9] text-white shadow-md"
-                        : "bg-[#020c24] hover:bg-[#007FA1] border border-white/20 hover:border-white/40 text-white"
+                        ? "bg-[#007FA1] hover:bg-[#009ac2] text-white shadow-sm"
+                        : "bg-transparent hover:bg-white/10 border border-dashed border-white/30 hover:border-white text-white"
                     }`}
                   >
                     <span>{plan.ctaText}</span>
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
                   </a>
                 </div>
               </div>
@@ -208,20 +225,32 @@ export function PricingPreviewSection() {
           })}
         </div>
 
-        {/* ── Bottom Link ── */}
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-xs sm:text-sm text-[#71717a]">
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 3: Bottom Callout Bar
+            Menghubungkan ke tabel perbandingan detail seluruh paket
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="p-6 sm:p-8 lg:p-10 border-b border-dashed border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#020c24]/30">
+          <p className="text-xs sm:text-sm text-[#a1a1aa]">
             Memerlukan spesifikasi khusus atau penyesuaian anggaran bertahap?
           </p>
 
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#07DFFF] hover:text-[#07DFFF] transition-colors group"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg bg-transparent hover:bg-white/10 border border-dashed border-white/50 hover:border-white text-xs sm:text-sm font-semibold text-white transition-all duration-200 group shrink-0"
           >
             <span>Lihat Tabel Perbandingan Detail Seluruh Paket</span>
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
           </Link>
         </div>
+
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 4: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 5)
+            Memberikan ruang napas (breathing room) di akhir section tanpa garis tengah
+        ════════════════════════════════════════════════════════════════ */}
+        <div
+          className="w-full border-t border-dashed border-white/15 h-[60px] lg:h-[80px]"
+          aria-hidden="true"
+        />
 
       </div>
     </section>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -10,128 +10,169 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="section-dark px-6 sm:px-10 lg:px-16 xl:px-24" style={{ backgroundColor: "#000414" }}>
-      {/* ── Main Grid ────────────────────────────────────────── */}
-      <div className="section-inner pt-16 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+    <footer className="pt-0 pb-0 px-6 sm:px-10 lg:px-16 xl:px-24 bg-[#000519] text-white relative">
+      {/* ── Main Unified Architectural Grid Table (Kotak Siku 90° + Garis Strip Putus-Putus Dark Blueprint) ── */}
+      <div className="max-w-[84rem] mx-auto w-full border border-dashed border-white/15 bg-[#000519] rounded-none shadow-none">
+        
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 0: Top Spacer Row (Baris Margin Kosong di Awal Footer)
+            Memberikan ruang napas (breathing room) di awal footer tanpa garis tengah
+        ════════════════════════════════════════════════════════════════ */}
+        <div
+          className="w-full border-b border-dashed border-white/15 h-[60px] lg:h-[80px]"
+          aria-hidden="true"
+        />
 
-          {/* Col 1 — Brand (5 columns) */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Tagline */}
-            <p className="text-[15px] text-[#d4d4d4] leading-relaxed max-w-sm">
-              Membangun website & aplikasi mobile yang benar-benar bekerja untuk bisnis nyata.
-            </p>
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 1: Main Footer Content Columns
+            Dipisahkan rapi dengan garis vertikal strip putus-putus
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 divide-y md:divide-y-0 lg:divide-x divide-dashed divide-white/15 border-b border-dashed border-white/15">
 
-            {/* Identity */}
-            <div>
-              <p className="text-xs text-[#71717a] font-medium">Julhan Abdul Malik</p>
-              <p className="text-xs text-[#07DFFF] mt-0.5">
-                Berbasis di Sukabumi, Jawa Barat
+          {/* Col 1 — Brand & Contact Primary (6 columns on lg) */}
+          <div className="lg:col-span-6 p-8 sm:p-10 lg:p-12 space-y-6 flex flex-col justify-between">
+            <div className="space-y-4 max-w-md">
+              <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+                Membangun website &amp; aplikasi mobile yang benar-benar bekerja untuk bisnis nyata.
               </p>
+              <div>
+                <p className="text-xs text-[#71717a] font-medium font-mono uppercase tracking-wider">
+                  JULHAN ABDUL MALIK
+                </p>
+                <p className="text-xs text-[#07DFFF] mt-0.5">
+                  Web &amp; Mobile App Developer • Berbasis di Sukabumi, Jawa Barat
+                </p>
+              </div>
             </div>
 
-            {/* Big Email */}
-            <div>
+            {/* Big Email & WhatsApp Fast Track */}
+            <div className="space-y-2 pt-2">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                SALURAN KOMUNIKASI RESMI
+              </span>
               <Link
                 href="mailto:julhanabdulmalik@gmail.com"
-                className="text-[1.6rem] sm:text-[2rem] font-semibold text-white hover:text-[#07DFFF] transition-colors tracking-tight leading-none block"
+                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white hover:text-[#07DFFF] transition-colors tracking-tight leading-none block font-mono"
               >
-                julhanabdulmalik
-                <span className="text-[#07DFFF]">@gmail.com</span>
+                julhanabdulmalik<span className="text-[#07DFFF]">@gmail.com</span>
               </Link>
               <Link
                 href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#a1a1aa] hover:text-white transition-colors mt-2 block"
+                className="text-sm text-[#a1a1aa] hover:text-white transition-colors block font-mono pt-1"
               >
                 +62 831-1103-0309
               </Link>
             </div>
 
-            {/* Social icons */}
-            <div className="flex items-center gap-4">
+            {/* Social Icons (Gaya Presisi Seragam dengan Section 2) */}
+            <div className="flex items-center gap-2 pt-2">
               <Link
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-[#71717a] hover:text-white transition-colors"
+                aria-label="GitHub Julhan Abdul Malik"
+                className="p-2 rounded-lg border border-white/15 hover:border-white/40 hover:bg-white/10 text-[#a1a1aa] hover:text-white transition-all"
               >
-                <GithubIcon className="w-5 h-5" />
+                <GithubIcon className="w-4 h-4" />
               </Link>
               <Link
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-[#71717a] hover:text-white transition-colors"
+                aria-label="LinkedIn Julhan Abdul Malik"
+                className="p-2 rounded-lg border border-white/15 hover:border-white/40 hover:bg-white/10 text-[#a1a1aa] hover:text-[#07DFFF] transition-all"
               >
-                <LinkedinIcon className="w-5 h-5" />
+                <LinkedinIcon className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Col 2 — Navigation (3 columns) */}
-          <div className="lg:col-span-3">
-            <nav className="flex flex-col gap-3">
-              <Link href="/"          className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Beranda</Link>
-              <Link href="/services"  className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Layanan</Link>
-              <Link href="/portfolio" className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Portfolio</Link>
-              <Link href="/pricing"   className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Harga</Link>
-              <Link href="/blog"      className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Blog</Link>
-              <Link href="/contact"   className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">Kontak</Link>
+          {/* Col 2 — Navigation Menu (3 columns on lg) */}
+          <div className="lg:col-span-3 p-8 sm:p-10 lg:p-12 space-y-4">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
+              NAVIGASI UTAMA
+            </span>
+            <nav className="flex flex-col space-y-2.5">
+              <Link href="/" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Beranda
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Layanan
+              </Link>
+              <Link href="/portfolio" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/pricing" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Harga
+              </Link>
+              <Link href="/blog" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Blog
+              </Link>
+              <Link href="/contact" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Kontak
+              </Link>
             </nav>
           </div>
 
-          {/* Col 3 — Follow + Services (4 columns) */}
-          <div className="lg:col-span-4 flex flex-col gap-8">
-            {/* Follow */}
-            <div className="flex flex-col gap-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#71717a] mb-1">
-                Ikuti Saya
-              </p>
-              <Link
-                href={socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[15px] text-[#07DFFF] hover:opacity-75 transition-opacity"
-              >
-                LinkedIn
-              </Link>
-              <Link
-                href={socialLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[15px] text-[#07DFFF] hover:opacity-75 transition-opacity"
-              >
-                GitHub
-              </Link>
+          {/* Col 3 — Layanan & Ikuti Saya (3 columns on lg) */}
+          <div className="lg:col-span-3 p-8 sm:p-10 lg:p-12 space-y-6">
+            <div className="space-y-3">
+              <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
+                LAYANAN SAYA
+              </span>
+              <div className="flex flex-col space-y-2.5">
+                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
+                  Website Profesional
+                </Link>
+                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
+                  Aplikasi Mobile (Flutter)
+                </Link>
+                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
+                  Sistem Admin Dashboard
+                </Link>
+              </div>
             </div>
 
-            {/* Services */}
-            <div className="flex flex-col gap-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#71717a] mb-1">
-                Layanan Saya
-              </p>
-              <Link href="/services" className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">
-                Website Profesional
-              </Link>
-              <Link href="/services" className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">
-                Aplikasi Mobile (Flutter)
-              </Link>
-              <Link href="/services" className="text-[15px] text-[#a1a1aa] hover:text-white transition-colors">
-                UI/UX Design
-              </Link>
+            <div className="space-y-3 pt-3 border-t border-dashed border-white/10">
+              <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
+                IKUTI SAYA
+              </span>
+              <div className="flex flex-col space-y-2">
+                <Link
+                  href={socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#07DFFF] hover:underline transition-all inline-flex items-center gap-1"
+                >
+                  <span>LinkedIn</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link
+                  href={socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#07DFFF] hover:underline transition-all inline-flex items-center gap-1"
+                >
+                  <span>GitHub</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           </div>
+
         </div>
 
-        {/* ── Divider + Bottom Bar ─────────────────────────── */}
-        <div className="mt-12 pt-6 border-t border-white/[0.07] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 2: Divider + Bottom Copyright Bar
+            Menampilkan hak cipta & tombol CTA konsisten
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="p-6 sm:p-8 lg:p-10 border-b border-dashed border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#020c24]/30">
           <p className="text-xs text-[#71717a]">
             © {year} Julhan Abdul Malik. Semua hak dilindungi.
           </p>
+
           <div className="flex items-center gap-5">
             <Link
               href="/privacy"
@@ -143,20 +184,24 @@ export function Footer() {
               href={socialLinks.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-[#07DFFF] hover:opacity-75 transition-opacity font-medium"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg bg-transparent hover:bg-white/10 border border-dashed border-white/50 hover:border-white text-xs sm:text-sm font-semibold text-white transition-all duration-200 group shrink-0"
             >
-              Mulai Proyek
-              <ArrowUpRight className="w-3 h-3" />
+              <span>Mulai Proyek</span>
+              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* ── Signature Watermark ──────────────────────────────── */}
-      <div className="overflow-hidden">
-        <p className="footer-watermark px-6 lg:px-10 pb-2">
-          JULHAN A MALIK
-        </p>
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 3: Signature Watermark
+            Watermark tipografi arsitektur besar
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="overflow-hidden border-b border-dashed border-white/15 py-4 sm:py-6 text-center select-none bg-[#000519]">
+          <p className="footer-watermark leading-none text-center">
+            JULHAN A MALIK
+          </p>
+        </div>
+
       </div>
     </footer>
   );
