@@ -34,7 +34,7 @@ export function AboutSection() {
           {/* Sisi Kiri (lg: 8 cols): Badge + Judul Besar di Atas, Deskripsi di Bawah */}
           <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 xl:p-14 lg:border-r border-dashed border-neutral-300 flex flex-col justify-center space-y-5 sm:space-y-6">
             <div className="space-y-3.5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
                 <User className="w-3.5 h-3.5 text-[#007FA1]" />
                 <span>Tentang Saya</span>
               </div>
@@ -167,7 +167,7 @@ export function AboutSection() {
             className="lg:col-span-4 py-3.5 px-6 sm:py-4 sm:px-8 min-h-[72px] sm:min-h-[78px] bg-[#000519] hover:bg-[#020c24] text-white flex items-center justify-between gap-4 transition-all duration-200 group cursor-pointer"
           >
             <div className="space-y-0.5">
-              <span className="text-[10px] text-[#a1a1aa] block font-mono uppercase tracking-wider">
+              <span className="text-[10px] text-[#a1a1aa] block uppercase tracking-wider">
                 Eksplorasi Karya
               </span>
               <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors line-clamp-1">
@@ -186,7 +186,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-dashed divide-neutral-300 border-b border-dashed border-neutral-300">
           {/* Metric 1 */}
           <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#71717a] block font-semibold">
+            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
               YEARS OF EXPERIENCE
             </span>
             <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
@@ -199,7 +199,7 @@ export function AboutSection() {
 
           {/* Metric 2 */}
           <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#71717a] block font-semibold">
+            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
               CODE REVIEWS COMPLETED
             </span>
             <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
@@ -212,7 +212,7 @@ export function AboutSection() {
 
           {/* Metric 3 */}
           <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#71717a] block font-semibold">
+            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
               CLIENT SATISFACTION
             </span>
             <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
@@ -225,7 +225,7 @@ export function AboutSection() {
 
           {/* Metric 4 */}
           <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#71717a] block font-semibold">
+            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
               CAMPUS RECORDS MANAGED
             </span>
             <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
@@ -243,7 +243,7 @@ export function AboutSection() {
         <div className="p-8 sm:p-10 lg:p-12 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
               <ShieldCheck className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Standar Profesional</span>
             </div>
@@ -267,7 +267,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-dashed divide-neutral-300">
           {/* Principle 01 */}
           <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">
+            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
               01
             </span>
             <div className="flex items-center gap-2">
@@ -283,7 +283,7 @@ export function AboutSection() {
 
           {/* Principle 02 */}
           <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">
+            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
               02
             </span>
             <div className="flex items-center gap-2">
@@ -299,7 +299,7 @@ export function AboutSection() {
 
           {/* Principle 03 */}
           <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] font-mono block">
+            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
               03
             </span>
             <div className="flex items-center gap-2">

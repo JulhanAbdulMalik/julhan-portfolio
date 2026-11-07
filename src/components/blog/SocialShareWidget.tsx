@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { Share2, Link2, Check, MessageSquare } from "lucide-react";
@@ -34,7 +34,7 @@ export function SocialShareWidget({ title, slug }: SocialShareWidgetProps) {
 
   return (
     <div className="p-5 rounded-2xl bg-[#020c24] border border-white/[0.08] space-y-3">
-      <div className="flex items-center gap-2 text-white font-semibold text-xs tracking-wider uppercase font-mono pb-2 border-b border-white/[0.08]">
+      <div className="flex items-center gap-2 text-white font-semibold text-xs tracking-wider uppercase pb-2 border-b border-white/[0.08]">
         <Share2 className="w-3.5 h-3.5 text-[#07DFFF]" />
         <span>Bagikan Artikel</span>
       </div>

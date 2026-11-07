@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -173,7 +173,7 @@ export function Navbar() {
               <div className="w-full my-auto py-4 space-y-8 sm:space-y-10">
                 {/* Navigation Links Column */}
                 <div className="flex flex-col space-y-3 sm:space-y-4">
-                  <span className="text-[11px] font-mono tracking-widest uppercase text-[#71717a] block pb-1 font-semibold">
+                  <span className="text-[11px] tracking-widest uppercase text-[#71717a] block pb-1 font-semibold">
                     Navigasi Utama
                   </span>
                   {navItems.map((item, index) => {
@@ -198,7 +198,7 @@ export function Navbar() {
                           {item.name}
                         </span>
                         {isActive && (
-                          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/20 uppercase tracking-wider font-semibold ml-2">
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/20 uppercase tracking-wider font-semibold ml-2">
                             Aktif
                           </span>
                         )}

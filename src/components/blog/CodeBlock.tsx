@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { Check, Copy, Terminal, FileCode } from "lucide-react";
@@ -147,7 +147,7 @@ export function CodeBlock({
 
           <div className="h-4 w-px bg-white/[0.08] mx-1" />
 
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#000519] border border-white/[0.08] text-xs text-white font-mono">
+          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#000519] border border-white/[0.08] text-xs text-white">
             {filename ? (
               <FileCode className="w-3.5 h-3.5 text-[#07DFFF]" />
             ) : (
@@ -159,14 +159,14 @@ export function CodeBlock({
 
         {/* Right: Language indicator & Copy button */}
         <div className="flex items-center gap-3">
-          <span className="text-[11px] font-mono uppercase text-[#71717a] hidden sm:inline-block">
+          <span className="text-[11px] uppercase text-[#71717a] hidden sm:inline-block">
             {language}
           </span>
 
           <button
             type="button"
             onClick={handleCopy}
-            className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg text-xs transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
               copied
                 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
                 : "bg-[#020c24] text-[#a1a1aa] hover:text-white hover:bg-white/[0.05] border border-white/[0.08]"
@@ -189,7 +189,7 @@ export function CodeBlock({
       </div>
 
       {/* Code Editor Body */}
-      <div className="overflow-x-auto p-4 sm:p-5 font-mono text-[13px] leading-relaxed select-text">
+      <div className="overflow-x-auto p-4 sm:p-5 text-[13px] leading-relaxed select-text">
         <table className="w-full border-collapse">
           <tbody>
             {lines.map((line, idx) => {
@@ -197,7 +197,7 @@ export function CodeBlock({
               return (
                 <tr key={idx} className="hover:bg-white/[0.02]">
                   {showLineNumbers && (
-                    <td className="w-8 pr-4 text-right text-text-muted/40 select-none text-xs align-top font-mono">
+                    <td className="w-8 pr-4 text-right text-text-muted/40 select-none text-xs align-top">
                       {String(idx + 1).padStart(2, "0")}
                     </td>
                   )}

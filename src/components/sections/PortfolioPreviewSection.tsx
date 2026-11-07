@@ -66,7 +66,7 @@ export function PortfolioPreviewSection() {
         <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
               <FolderKanban className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Portfolio Unggulan</span>
             </div>
@@ -109,7 +109,7 @@ export function PortfolioPreviewSection() {
                   {/* Status Badge overlay */}
                   <div className="absolute top-3 left-3 z-10">
                     <span
-                      className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold backdrop-blur-md border shadow-sm ${
+                      className={`px-2.5 py-1 rounded-full text-[10px] font-semibold backdrop-blur-md border shadow-sm ${
                         project.isConfidential
                           ? "bg-white/95 border-amber-500/40 text-amber-800"
                           : "bg-white/95 border-emerald-500/40 text-emerald-800"
@@ -122,7 +122,7 @@ export function PortfolioPreviewSection() {
 
                 {/* Details */}
                 <div className="space-y-2.5">
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#007FA1] block">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#007FA1] block">
                     {project.category}
                   </span>
 
@@ -143,7 +143,7 @@ export function PortfolioPreviewSection() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 rounded-md bg-[#000519]/5 text-[10px] font-mono font-medium text-[#404040] border border-black/[0.04]"
+                      className="px-2 py-0.5 rounded-md bg-[#000519]/5 text-[10px] font-medium text-[#404040] border border-black/[0.04]"
                     >
                       {tech}
                     </span>
@@ -161,7 +161,7 @@ export function PortfolioPreviewSection() {
                   </Link>
 
                   {project.isConfidential ? (
-                    <span className="text-[11px] text-[#71717a] flex items-center gap-1 font-mono">
+                    <span className="text-[11px] text-[#71717a] flex items-center gap-1">
                       <ShieldAlert className="w-3.5 h-3.5 text-amber-500" />
                       <span>Data Internal</span>
                     </span>
@@ -202,10 +202,10 @@ export function PortfolioPreviewSection() {
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 4: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 4)
-            Memberikan ruang napas (breathing room) di akhir section tanpa garis tengah
+            Memberikan ruang napas (breathing room) di akhir section tanpa garis dobel
         ════════════════════════════════════════════════════════════════ */}
         <div
-          className="w-full border-t border-dashed border-neutral-300 h-[60px] lg:h-[80px]"
+          className="w-full h-[60px] lg:h-[80px]"
           aria-hidden="true"
         />
 

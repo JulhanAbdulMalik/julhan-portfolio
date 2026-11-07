@@ -73,7 +73,7 @@ export function ServicesHubSection() {
         <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-white/15 flex flex-col justify-center space-y-4 sm:space-y-5">
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
               <Layers className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>Layanan Unggulan</span>
             </div>
@@ -119,10 +119,10 @@ export function ServicesHubSection() {
               {/* Middle Column: Details & Value */}
               <div className="flex-1 space-y-2.5">
                 <div className="flex items-center gap-3">
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#007FA1]/30 border border-[#007FA1]/50 text-[#07DFFF] text-[11px] font-mono font-medium">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#007FA1]/30 border border-[#007FA1]/50 text-[#07DFFF] text-[11px] font-medium">
                     {item.tag}
                   </span>
-                  <span className="text-xs text-[#71717a] font-mono">
+                  <span className="text-xs text-[#71717a]">
                     {item.time}
                   </span>
                 </div>
@@ -174,10 +174,10 @@ export function ServicesHubSection() {
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 5: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 3)
-            Memberikan ruang napas (breathing room) di akhir section tanpa garis tengah
+            Memberikan ruang napas (breathing room) di akhir section tanpa garis dobel
         ════════════════════════════════════════════════════════════════ */}
         <div
-          className="w-full border-t border-dashed border-white/15 h-[60px] lg:h-[80px]"
+          className="w-full h-[60px] lg:h-[80px]"
           aria-hidden="true"
         />
 

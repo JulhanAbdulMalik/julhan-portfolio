@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           <p className="mt-4 text-sm sm:text-base text-[#52525b] max-w-2xl leading-relaxed">
             Saya menghormati privasi Anda. Halaman ini menjelaskan bagaimana data Anda dikelola dengan transparansi penuh, aman, dan tanpa pelacak iklan pihak ketiga.
           </p>
-          <p className="mt-2 text-xs font-mono text-[#71717a]">
+          <p className="mt-2 text-xs text-[#71717a]">
             Terakhir diperbarui: 2 November 2026
           </p>
         </div>

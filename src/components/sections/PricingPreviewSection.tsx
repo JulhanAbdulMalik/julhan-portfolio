@@ -29,7 +29,7 @@ export function PricingPreviewSection() {
     },
     {
       id: "growth",
-      name: "Paket Professional / Growth",
+      name: "Paket Professional",
       target: "Toko Online & Dashboard Manajemen",
       projectPrice: "Rp 1.500.000",
       maintenancePrice: "Rp 500.000 /bln",
@@ -90,7 +90,7 @@ export function PricingPreviewSection() {
         ════════════════════════════════════════════════════════════════ */}
         <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-white/15 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3.5 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
               <DollarSign className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>Investasi Transparan</span>
             </div>
@@ -109,8 +109,8 @@ export function PricingPreviewSection() {
 
           {/* Toggle Switcher */}
           <div className="flex flex-col sm:items-end gap-2.5 shrink-0">
-            <span className="text-xs text-[#71717a] font-normal sm:text-right font-mono">
-              PILIH MODEL PENGERJAAN:
+            <span className="text-xs text-[#71717a] font-normal sm:text-right">
+              Pilih Model Pengerjaan:
             </span>
             <div className="inline-flex p-1 rounded-lg bg-[#020c24] border border-white/15">
               <button
@@ -150,14 +150,14 @@ export function PricingPreviewSection() {
             return (
               <div
                 key={plan.id}
-                className={`p-8 sm:p-10 flex flex-col justify-between space-y-8 transition-colors relative ${
+                className={`p-8 sm:p-10 flex flex-col justify-between transition-colors relative ${
                   isPopular ? "bg-[#020c24]/80" : "bg-[#000519] hover:bg-white/[0.015]"
                 }`}
               >
-                {/* Popular Badge */}
+                {/* Popular Badge (Floating di pojok kanan atas tanpa menggeser konten) */}
                 {isPopular && (
-                  <div className="absolute top-4 right-6 z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1]/30 border border-[#007FA1]/60 text-[#07DFFF] flex items-center gap-1.5 uppercase tracking-wider">
+                  <div className="absolute top-6 right-6 sm:top-8 sm:right-8 z-10 pointer-events-none">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#007FA1]/30 border border-[#007FA1]/60 text-[#07DFFF] flex items-center gap-1.5 uppercase tracking-wider">
                       <Sparkles className="w-3 h-3 text-[#07DFFF]" />
                       <span>Paling Diminati</span>
                     </span>
@@ -165,8 +165,8 @@ export function PricingPreviewSection() {
                 )}
 
                 <div className="space-y-6">
-                  {/* Plan Header */}
-                  <div className="space-y-1.5">
+                  {/* Plan Header - Tinggi seragam agar baris harga sejajar horizontal */}
+                  <div className={`space-y-1.5 min-h-[52px] sm:min-h-[56px] ${isPopular ? "pr-28 sm:pr-32" : ""}`}>
                     <h3 className="text-white font-semibold text-xl tracking-tight">
                       {plan.name}
                     </h3>
@@ -177,20 +177,20 @@ export function PricingPreviewSection() {
 
                   {/* Price Row */}
                   <div className="pt-4 border-t border-dashed border-white/15 space-y-1">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#71717a] block">
+                    <span className="text-[10px] uppercase tracking-wider text-[#71717a] block">
                       Estimasi Biaya Mulai
                     </span>
-                    <div className="text-3xl sm:text-4xl font-semibold text-white tracking-tight font-mono">
+                    <div className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
                       {price}
                     </div>
-                    <span className="text-xs font-mono text-[#07DFFF] block pt-1">
+                    <span className="text-xs text-[#07DFFF] block pt-1">
                       ⏱ {plan.duration}
                     </span>
                   </div>
 
                   {/* Deliverables */}
                   <div className="pt-5 border-t border-dashed border-white/15 space-y-3">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                    <span className="text-[10px] uppercase tracking-widest text-[#71717a] block font-semibold">
                       FITUR & LAYANAN TERMASUK:
                     </span>
                     <ul className="space-y-2.5">
@@ -204,8 +204,8 @@ export function PricingPreviewSection() {
                   </div>
                 </div>
 
-                {/* CTA Action */}
-                <div className="pt-6 border-t border-dashed border-white/15">
+                {/* CTA Action (Tanpa garis pemisah agar tidak menabrak daftar fitur) */}
+                <div className="pt-8">
                   <a
                     href={`https://wa.me/6283111030309?text=${encodeURIComponent(plan.waMessage)}`}
                     target="_blank"
@@ -245,10 +245,10 @@ export function PricingPreviewSection() {
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 4: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 5)
-            Memberikan ruang napas (breathing room) di akhir section tanpa garis tengah
+            Memberikan ruang napas (breathing room) di akhir section tanpa garis dobel
         ════════════════════════════════════════════════════════════════ */}
         <div
-          className="w-full border-t border-dashed border-white/15 h-[60px] lg:h-[80px]"
+          className="w-full h-[60px] lg:h-[80px]"
           aria-hidden="true"
         />
 

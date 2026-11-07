@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -91,19 +91,19 @@ export default function PricingPage() {
               </div>
 
               <div className="space-y-1 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase text-[#71717a] block">
+                <span className="text-[11px] uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
                 <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 500.000" : "Rp 250.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
+                <span className="text-xs text-[#07DFFF] block pt-1">
                   ⏱ 3 - 7 Hari Kerja
                 </span>
               </div>
 
               <div className="space-y-2.5 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                <span className="text-[11px] uppercase tracking-widest text-[#71717a] block font-semibold">
                   FITUR UTAMA:
                 </span>
                 <ul className="space-y-2">
@@ -142,7 +142,7 @@ export default function PricingPage() {
           {/* Card 2: Professional (Popular) */}
           <div className="rounded-2xl p-8 bg-[#020c24] border-2 border-[#007FA1] shadow-[0_16px_36px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-all duration-300 relative">
             <div className="absolute -top-3 left-6 z-10">
-              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-[#007FA1] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
+              <span className="px-3 py-1 rounded-full text-[10px] font-semibold bg-[#007FA1] text-white flex items-center gap-1 shadow-sm uppercase tracking-wider">
                 <Sparkles className="w-2.5 h-2.5" />
                 <span>Paling Populer &amp; Diminati</span>
               </span>
@@ -150,26 +150,26 @@ export default function PricingPage() {
 
             <div className="space-y-6">
               <div className="space-y-1.5">
-                <h3 className="text-xl font-semibold text-white tracking-tight">Paket Professional / Growth</h3>
+                <h3 className="text-xl font-semibold text-white tracking-tight">Paket Professional</h3>
                 <p className="text-[#71717a] text-xs font-normal">
                   Toko Online &amp; Dashboard Manajemen
                 </p>
               </div>
 
               <div className="space-y-1 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase text-[#71717a] block">
+                <span className="text-[11px] uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
                 <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 1.500.000" : "Rp 500.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
+                <span className="text-xs text-[#07DFFF] block pt-1">
                   ⏱ 10 - 20 Hari Kerja
                 </span>
               </div>
 
               <div className="space-y-2.5 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                <span className="text-[11px] uppercase tracking-widest text-[#71717a] block font-semibold">
                   FITUR UTAMA:
                 </span>
                 <ul className="space-y-2">
@@ -216,19 +216,19 @@ export default function PricingPage() {
               </div>
 
               <div className="space-y-1 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase text-[#71717a] block">
+                <span className="text-[11px] uppercase text-[#71717a] block">
                   Mulai Dari
                 </span>
                 <div className="text-3xl font-semibold text-white tracking-tight">
                   {billingType === "project" ? "Rp 3.500.000" : "Rp 950.000 /bln"}
                 </div>
-                <span className="text-xs font-mono text-[#07DFFF] block pt-1">
+                <span className="text-xs text-[#07DFFF] block pt-1">
                   ⏱ 21 - 45 Hari Kerja
                 </span>
               </div>
 
               <div className="space-y-2.5 pt-4 border-t border-white/[0.08]">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+                <span className="text-[11px] uppercase tracking-widest text-[#71717a] block font-semibold">
                   FITUR UTAMA:
                 </span>
                 <ul className="space-y-2">
@@ -280,7 +280,7 @@ export default function PricingPage() {
           <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#020c24] shadow-lg">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-white/[0.08] bg-[#020c24] text-[11px] font-mono uppercase tracking-wider text-[#71717a]">
+                <tr className="border-b border-white/[0.08] bg-[#020c24] text-[11px] uppercase tracking-wider text-[#71717a]">
                   <th className="py-4 px-6 font-semibold w-2/5">
                     Kategori &amp; Fitur
                   </th>
@@ -299,7 +299,7 @@ export default function PricingPage() {
                 {categories.map((category) => (
                   <React.Fragment key={category}>
                     <tr className="bg-white/[0.02] font-semibold text-[#07DFFF]">
-                      <td colSpan={4} className="py-3 px-6 text-[11px] font-mono uppercase tracking-wider">
+                      <td colSpan={4} className="py-3 px-6 text-[11px] uppercase tracking-wider">
                         {category}
                       </td>
                     </tr>
@@ -318,7 +318,7 @@ export default function PricingPage() {
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
                             ) : (
-                              <span className="font-mono text-[#a1a1aa]">{row.starter}</span>
+                              <span className="text-[#a1a1aa]">{row.starter}</span>
                             )}
                           </td>
                           <td className="py-3.5 px-4 text-center bg-[#007FA1]/[0.03]">
@@ -329,7 +329,7 @@ export default function PricingPage() {
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
                             ) : (
-                              <span className="font-mono font-semibold text-white">{row.pro}</span>
+                              <span className="font-semibold text-white">{row.pro}</span>
                             )}
                           </td>
                           <td className="py-3.5 px-4 text-center">
@@ -340,7 +340,7 @@ export default function PricingPage() {
                                 <X className="w-4 h-4 text-[#52525b] mx-auto" />
                               )
                             ) : (
-                              <span className="font-mono font-semibold text-white">{row.bundle}</span>
+                              <span className="font-semibold text-white">{row.bundle}</span>
                             )}
                           </td>
                         </tr>
@@ -370,7 +370,7 @@ export default function PricingPage() {
                 key={i}
                 className="rounded-2xl p-6 bg-[#020c24] border border-white/[0.08] hover:border-white/[0.18] space-y-3 transition-all"
               >
-                <div className="text-xs font-mono font-semibold text-[#07DFFF]">
+                <div className="text-xs font-semibold text-[#07DFFF]">
                   0{i + 1}
                 </div>
                 <h4 className="text-white font-semibold text-base tracking-tight">{term.titleId}</h4>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -56,14 +56,14 @@ export default function ServicesPage() {
         <div className="space-y-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div className="space-y-1">
-              <span className="text-xs font-mono uppercase tracking-wider text-[#71717a]">
+              <span className="text-xs uppercase tracking-wider text-[#71717a]">
                 KATALOG LAYANAN
               </span>
               <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
                 Pilihan Layanan &amp; Cakupan Pekerjaan
               </h2>
             </div>
-            <p className="text-xs sm:text-sm text-[#71717a] font-mono">
+            <p className="text-xs sm:text-sm text-[#71717a]">
               6 Pilihan Layanan Tersedia
             </p>
           </div>
@@ -78,10 +78,10 @@ export default function ServicesPage() {
                 <div className="space-y-6">
                   {/* Top Badge & Number */}
                   <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                    <span className="text-xs font-mono font-semibold text-[#07DFFF] px-3 py-1 rounded-full bg-[#007FA1]/10 border border-[#007FA1]/50">
+                    <span className="text-xs font-semibold text-[#07DFFF] px-3 py-1 rounded-full bg-[#007FA1]/10 border border-[#007FA1]/50">
                       0{index + 1} • {service.idealForId}
                     </span>
-                    <span className="text-xs font-mono text-[#71717a] flex items-center gap-1.5">
+                    <span className="text-xs text-[#71717a] flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5 text-[#07DFFF]" />
                       <span>{service.timeline}</span>
                     </span>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
 
                   {/* Deliverables Checklist */}
                   <div className="space-y-2.5 pt-4 border-t border-white/[0.08]">
-                    <span className="text-[11px] font-mono font-semibold text-[#71717a] uppercase tracking-wider block">
+                    <span className="text-[11px] font-semibold text-[#71717a] uppercase tracking-wider block">
                       Yang Anda Dapatkan (Deliverables):
                     </span>
                     <ul className="space-y-2">
@@ -117,7 +117,7 @@ export default function ServicesPage() {
                     {service.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2.5 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-[#a1a1aa]"
+                        className="px-2.5 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] text-[#a1a1aa]"
                       >
                         {tech}
                       </span>
@@ -128,7 +128,7 @@ export default function ServicesPage() {
                 {/* Price & Action */}
                 <div className="pt-6 border-t border-white/[0.08] mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
-                    <span className="text-[11px] text-[#71717a] block font-mono">
+                    <span className="text-[11px] text-[#71717a] block">
                       Estimasi Mulai Dari:
                     </span>
                     <span className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 className="rounded-2xl p-6 bg-[#020c24] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all duration-200"
               >
                 <div className="space-y-3">
-                  <div className="text-2xl font-mono font-semibold text-[#07DFFF]">
+                  <div className="text-2xl font-semibold text-[#07DFFF]">
                     {step.step}
                   </div>
                   <h4 className="text-white font-semibold text-base tracking-tight">
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                     {step.descId}
                   </p>
                 </div>
-                <div className="pt-4 border-t border-white/[0.08] mt-4 text-[11px] font-mono text-[#07DFFF]">
+                <div className="pt-4 border-t border-white/[0.08] mt-4 text-[11px] text-[#07DFFF]">
                   ⏱ {step.timeframe}
                 </div>
               </div>

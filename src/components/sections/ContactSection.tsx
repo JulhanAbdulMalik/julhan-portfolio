@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Mail, MessageCircle, MapPin, Clock, Copy, Check, ArrowUpRight } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { socialLinks } from "@/data/navigation";
 
 export function ContactSection() {
@@ -77,7 +76,7 @@ export function ContactSection() {
         <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
               <Mail className="w-3.5 h-3.5 text-[#007FA1]" />
               <span>Kontak Langsung</span>
             </div>
@@ -102,120 +101,92 @@ export function ContactSection() {
         ════════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-dashed divide-neutral-300">
           
-          {/* Sisi Kiri (lg: 5 cols): Saluran Kontak Langsung */}
-          <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8 bg-[#fafafa]/40">
+          {/* Sisi Kiri (lg: 5 cols): Saluran Kontak Langsung (Setiap baris dipisahkan garis putus-putus menyambung penuh) */}
+          <div className="lg:col-span-5 flex flex-col justify-between divide-y divide-dashed divide-neutral-300 bg-[#fafafa]/40">
             
-            {/* Contact Items Stack */}
-            <div className="space-y-6 divide-y divide-dashed divide-neutral-200">
-              
-              {/* Item 1: Email */}
-              <div className="flex items-start gap-4 pt-0">
-                <div className="w-11 h-11 rounded-xl bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div className="space-y-1 flex-1">
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
-                    EMAIL RESMI
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <a
-                      href="mailto:julhanabdulmalik@gmail.com"
-                      className="text-base sm:text-lg font-semibold text-[#000519] hover:text-[#007FA1] transition-colors tracking-tight"
-                    >
-                      julhanabdulmalik@gmail.com
-                    </a>
-                    <button
-                      type="button"
-                      onClick={handleCopyEmail}
-                      className="p-1 rounded text-[#71717a] hover:text-[#000519] transition-colors"
-                      title="Salin Email"
-                    >
-                      {copiedEmail ? (
-                        <Check className="w-4 h-4 text-emerald-600" />
-                      ) : (
-                        <Copy className="w-4 h-4" />
-                      )}
-                    </button>
-                  </div>
-                  <p className="text-xs text-[#52525b] leading-relaxed">
-                    Untuk proposal proyek resmi, dokumen RFP, &amp; kerja sama.
-                  </p>
-                </div>
+            {/* Item 1: Email */}
+            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/20 flex items-center justify-center shrink-0 mt-0.5">
+                <Mail className="w-5 h-5" />
               </div>
-
-              {/* Item 2: WhatsApp */}
-              <div className="flex items-start gap-4 pt-6">
-                <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                <div className="space-y-1 flex-1">
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
-                    WHATSAPP FAST-TRACK
-                  </span>
+              <div className="space-y-1 flex-1">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#71717a] block">
+                  EMAIL RESMI
+                </span>
+                <div className="flex items-center gap-2">
                   <a
-                    href={socialLinks.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base sm:text-lg font-semibold text-[#000519] hover:text-emerald-600 transition-colors tracking-tight block"
+                    href="mailto:julhanabdulmalik@gmail.com"
+                    className="text-base sm:text-lg font-semibold text-[#000519] hover:text-[#007FA1] transition-colors tracking-tight"
                   >
-                    +62 831-1103-0309
+                    julhanabdulmalik@gmail.com
                   </a>
-                  <p className="text-xs text-[#52525b] leading-relaxed">
-                    Respon cepat via pesan WhatsApp dalam jam kerja operasional.
-                  </p>
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="p-1 rounded text-[#71717a] hover:text-[#000519] transition-colors"
+                    title="Salin Email"
+                  >
+                    {copiedEmail ? (
+                      <Check className="w-4 h-4 text-emerald-600" />
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-              </div>
-
-              {/* Item 3: Headquarters */}
-              <div className="flex items-start gap-4 pt-6">
-                <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div className="space-y-1 flex-1">
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
-                    LOKASI &amp; BASIS
-                  </span>
-                  <p className="text-base sm:text-lg font-semibold text-[#000519] tracking-tight">
-                    Sukabumi, Jawa Barat
-                  </p>
-                  <p className="text-xs text-[#52525b] leading-relaxed">
-                    julhan.my.id • Zona Waktu WIB (UTC+7)
-                  </p>
-                </div>
+                <p className="text-xs text-[#52525b] leading-relaxed">
+                  Untuk proposal proyek resmi, dokumen RFP, &amp; kerja sama.
+                </p>
               </div>
             </div>
 
-            {/* Response time note & Socials */}
-            <div className="space-y-4 pt-6 border-t border-dashed border-neutral-300">
+            {/* Item 2: WhatsApp */}
+            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5">
+                <MessageCircle className="w-5 h-5" />
+              </div>
+              <div className="space-y-1 flex-1">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#71717a] block">
+                  WHATSAPP
+                </span>
+                <a
+                  href={socialLinks.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base sm:text-lg font-semibold text-[#000519] hover:text-emerald-600 transition-colors tracking-tight block"
+                >
+                  +62 831-1103-0309
+                </a>
+                <p className="text-xs text-[#52525b] leading-relaxed">
+                  Respon cepat via pesan WhatsApp dalam jam kerja operasional.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 3: Headquarters */}
+            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div className="space-y-1 flex-1">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#71717a] block">
+                  LOKASI &amp; BASIS
+                </span>
+                <p className="text-base sm:text-lg font-semibold text-[#000519] tracking-tight">
+                  Sukabumi, Jawa Barat
+                </p>
+                <p className="text-xs text-[#52525b] leading-relaxed">
+                  julhan.my.id • Zona Waktu WIB (UTC+7)
+                </p>
+              </div>
+            </div>
+
+            {/* Item 4: Response time note */}
+            <div className="p-6 sm:p-8 lg:p-10 flex items-center">
               <div className="flex items-center gap-2 text-xs text-[#52525b]">
                 <Clock className="w-4 h-4 text-[#71717a]" />
                 <span>
                   Waktu respon: Biasanya dalam 1 - 24 jam pada hari kerja.
                 </span>
-              </div>
-
-              <div className="flex items-center gap-3 pt-1">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[#71717a] font-semibold mr-1">
-                  IKUTI SAYA:
-                </span>
-                <Link
-                  href={socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 rounded-lg border border-black/10 hover:border-black/30 hover:bg-black/5 text-[#71717a] hover:text-[#000519] transition-all"
-                  aria-label="GitHub"
-                >
-                  <GithubIcon className="w-4 h-4" />
-                </Link>
-                <Link
-                  href={socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 rounded-lg border border-black/10 hover:border-black/30 hover:bg-black/5 text-[#71717a] hover:text-[#007FA1] transition-all"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon className="w-4 h-4" />
-                </Link>
               </div>
             </div>
 
@@ -237,7 +208,7 @@ export function ContactSection() {
               {/* Row 1: Full Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
+                  <label className="text-[11px] font-semibold uppercase tracking-wider text-[#52525b] block">
                     NAMA LENGKAP <span className="text-[#007FA1]">*</span>
                   </label>
                   <input
@@ -251,7 +222,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
+                  <label className="text-[11px] font-semibold uppercase tracking-wider text-[#52525b] block">
                     ALAMAT EMAIL <span className="text-[#007FA1]">*</span>
                   </label>
                   <input
@@ -267,7 +238,7 @@ export function ContactSection() {
 
               {/* Row 2: Service Type */}
               <div className="space-y-1.5">
-                <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
+                <label className="text-[11px] font-semibold uppercase tracking-wider text-[#52525b] block">
                   JENIS KEBUTUHAN / PROYEK
                 </label>
                 <select
@@ -286,7 +257,7 @@ export function ContactSection() {
 
               {/* Row 3: Message Details */}
               <div className="space-y-1.5">
-                <label className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#52525b] block">
+                <label className="text-[11px] font-semibold uppercase tracking-wider text-[#52525b] block">
                   DETAIL KEBUTUHAN PROYEK <span className="text-[#007FA1]">*</span>
                 </label>
                 <textarea

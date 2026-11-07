@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -79,25 +79,25 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-2xl mx-auto">
             <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
               <div className="text-2xl font-semibold text-[#07DFFF]">5+</div>
-              <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
+              <div className="text-[11px] text-[#71717a] mt-0.5">
                 Proyek Teruji
               </div>
             </div>
             <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
               <div className="text-2xl font-semibold text-white">25.5k+</div>
-              <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
+              <div className="text-[11px] text-[#71717a] mt-0.5">
                 Record Data Dikelola
               </div>
             </div>
             <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
               <div className="text-2xl font-semibold text-[#07DFFF]">100%</div>
-              <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
+              <div className="text-[11px] text-[#71717a] mt-0.5">
                 Ketepatan Waktu
               </div>
             </div>
             <div className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] text-center">
               <div className="text-2xl font-semibold text-white">3.92</div>
-              <div className="text-[11px] font-mono text-[#71717a] mt-0.5">
+              <div className="text-[11px] text-[#71717a] mt-0.5">
                 IPK Akademik TI
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function PortfolioPage() {
               >
                 <span>{cat.labelId}</span>
                 <span
-                  className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                  className={`px-1.5 py-0.2 rounded text-[10px] ${
                     isSelected
                       ? "bg-white/20 text-white font-semibold"
                       : "bg-white/[0.06] text-[#71717a]"
@@ -167,17 +167,17 @@ export default function PortfolioPage() {
                 {/* Status Badges Overlay */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                   {project.isConfidential ? (
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 flex items-center gap-1.5 backdrop-blur-md">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 flex items-center gap-1.5 backdrop-blur-md">
                       <ShieldAlert className="w-3 h-3 text-amber-400" />
                       <span>Confidential Showcase</span>
                     </span>
                   ) : (
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5 backdrop-blur-md">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5 backdrop-blur-md">
                       <CheckCircle2 className="w-3 h-3 text-emerald-400" />
                       <span>Production Live</span>
                     </span>
                   )}
-                  <span className="px-2 py-1 rounded-md text-[10px] font-mono bg-black/60 text-[#a1a1aa] border border-white/[0.1] backdrop-blur-md">
+                  <span className="px-2 py-1 rounded-md text-[10px] bg-black/60 text-[#a1a1aa] border border-white/[0.1] backdrop-blur-md">
                     {project.year}
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export default function PortfolioPage() {
                   {project.categories.map((cat) => (
                     <span
                       key={cat}
-                      className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md"
+                      className="px-2 py-0.5 rounded-md text-[10px] bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md"
                     >
                       {cat}
                     </span>
@@ -198,7 +198,7 @@ export default function PortfolioPage() {
               {/* Card Body */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
                 <div className="space-y-3">
-                  <div className="text-xs text-[#71717a] font-mono flex items-center gap-2">
+                  <div className="text-xs text-[#71717a] flex items-center gap-2">
                     <span className="font-semibold text-[#07DFFF]">
                       {project.client}
                     </span>
@@ -225,7 +225,7 @@ export default function PortfolioPage() {
                       <span className="text-base font-semibold text-white tracking-tight">
                         {m.value}
                       </span>
-                      <span className="text-[10px] font-mono text-[#71717a] truncate mt-0.5">
+                      <span className="text-[10px] text-[#71717a] truncate mt-0.5">
                         {m.labelId}
                       </span>
                     </div>
@@ -234,7 +234,7 @@ export default function PortfolioPage() {
 
                 {/* Tech Stack Pills */}
                 <div className="space-y-2">
-                  <div className="text-[11px] font-mono text-[#71717a] flex items-center gap-1.5 uppercase tracking-wider">
+                  <div className="text-[11px] text-[#71717a] flex items-center gap-1.5 uppercase tracking-wider">
                     <Cpu className="w-3.5 h-3.5 text-[#07DFFF]" />
                     <span>Teknologi Utama:</span>
                   </div>
@@ -242,7 +242,7 @@ export default function PortfolioPage() {
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2.5 py-0.5 rounded-md text-[11px] font-mono bg-white/[0.04] border border-white/[0.08] text-[#a1a1aa]"
+                        className="px-2.5 py-0.5 rounded-md text-[11px] bg-white/[0.04] border border-white/[0.08] text-[#a1a1aa]"
                       >
                         {tech}
                       </span>
@@ -330,15 +330,15 @@ export default function PortfolioPage() {
               {/* Modal Header */}
               <div className="space-y-2 pr-8">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-mono font-semibold text-[#07DFFF]">
+                  <span className="text-xs font-semibold text-[#07DFFF]">
                     {activeModalProject.client}
                   </span>
                   <span className="text-xs text-[#71717a]">•</span>
-                  <span className="text-xs text-[#71717a] font-mono">
+                  <span className="text-xs text-[#71717a]">
                     {activeModalProject.year}
                   </span>
                   {activeModalProject.isConfidential && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
                       Confidential System
                     </span>
                   )}
@@ -346,7 +346,7 @@ export default function PortfolioPage() {
                 <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
                   {activeModalProject.title}
                 </h3>
-                <p className="text-xs text-[#71717a] font-mono">
+                <p className="text-xs text-[#71717a]">
                   Peran Pengembang: {activeModalProject.roleId}
                 </p>
               </div>
@@ -398,7 +398,7 @@ export default function PortfolioPage() {
                       <div className="text-base sm:text-lg font-semibold text-[#07DFFF] tracking-tight">
                         {m.value}
                       </div>
-                      <div className="text-[10px] font-mono text-[#71717a] mt-1 leading-tight">
+                      <div className="text-[10px] text-[#71717a] mt-1 leading-tight">
                         {m.labelId}
                       </div>
                     </div>
@@ -434,7 +434,7 @@ export default function PortfolioPage() {
                   {activeModalProject.architectureId.map((arch, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#a1a1aa] leading-relaxed font-mono"
+                      className="p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#a1a1aa] leading-relaxed"
                     >
                       {arch}
                     </div>
@@ -451,7 +451,7 @@ export default function PortfolioPage() {
                   {activeModalProject.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#020c24] border border-white/[0.08] text-[#a1a1aa]"
+                      className="px-2.5 py-1 rounded-md text-xs bg-[#020c24] border border-white/[0.08] text-[#a1a1aa]"
                     >
                       {tech}
                     </span>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -20,18 +20,18 @@ export default function NotFoundPage() {
               <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
               <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
               <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-              <span className="text-xs font-mono text-[#71717a] ml-2 flex items-center gap-1.5">
+              <span className="text-xs text-[#71717a] ml-2 flex items-center gap-1.5">
                 <Terminal className="w-3.5 h-3.5 text-[#07DFFF]" />
                 <span>bash - 404 Route Not Found - 80x24</span>
               </span>
             </div>
-            <span className="text-[10px] font-mono text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">
+            <span className="text-[10px] text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">
               STATUS: 404
             </span>
           </div>
 
           {/* Terminal Body */}
-          <div className="p-5 sm:p-7 font-mono text-xs sm:text-[13px] leading-relaxed space-y-3 select-text">
+          <div className="p-5 sm:p-7 text-xs sm:text-[13px] leading-relaxed space-y-3 select-text">
             <div className="text-[#71717a]">
               <span className="text-emerald-400">julhan@production-server</span>
               :<span className="text-[#07DFFF]">~</span>$ curl -i
@@ -63,7 +63,7 @@ export default function NotFoundPage() {
 
         {/* Big 404 Heading & Subtitle */}
         <div className="space-y-3">
-          <h1 className="text-6xl sm:text-7xl font-semibold tracking-tight text-white font-mono">
+          <h1 className="text-6xl sm:text-7xl font-semibold tracking-tight text-white">
             4<span className="text-[#07DFFF]">0</span>4
           </h1>
           <h2 className="text-xl sm:text-2xl font-semibold text-white">

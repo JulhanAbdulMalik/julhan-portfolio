@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -61,22 +61,22 @@ export function BlogPostClient({
         {/* Article Header & Meta */}
         <div className="space-y-6 max-w-4xl">
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="px-3 py-1 rounded-md text-xs font-mono font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
+            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
               {post.category}
             </span>
-            <span className="flex items-center gap-1.5 text-xs text-[#71717a] font-mono">
+            <span className="flex items-center gap-1.5 text-xs text-[#71717a]">
               <Calendar className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>{post.publishedAt}</span>
             </span>
             <span className="text-[#71717a] text-xs">•</span>
-            <span className="flex items-center gap-1.5 text-xs text-[#71717a] font-mono">
+            <span className="flex items-center gap-1.5 text-xs text-[#71717a]">
               <Clock className="w-3.5 h-3.5 text-[#07DFFF]" />
               <span>
                 {post.readTimeMinutes} Menit Baca
               </span>
             </span>
             <span className="text-[#71717a] text-xs">•</span>
-            <span className="flex items-center gap-1.5 text-xs text-[#71717a] font-mono">
+            <span className="flex items-center gap-1.5 text-xs text-[#71717a]">
               <Eye className="w-3.5 h-3.5 text-[#71717a]" />
               <span>{post.viewsCount.toLocaleString()} views</span>
             </span>
@@ -106,11 +106,11 @@ export function BlogPostClient({
                 <span className="text-sm font-semibold text-white">
                   {post.author.name}
                 </span>
-                <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/50">
+                <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/50">
                   Author &amp; Reviewer
                 </span>
               </div>
-              <span className="text-xs text-[#71717a] font-mono">
+              <span className="text-xs text-[#71717a]">
                 {post.author.roleId}
               </span>
             </div>
@@ -812,11 +812,11 @@ export function useDataFetcher(apiEndpoint: string) {
                     <h3 className="text-lg font-semibold text-white tracking-tight">
                       {post.author.name}
                     </h3>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-[#007FA1]/15 text-[#07DFFF] border border-[#007FA1]/50">
                       Author
                     </span>
                   </div>
-                  <p className="text-xs text-[#71717a] font-mono">
+                  <p className="text-xs text-[#71717a]">
                     {post.author.roleId}
                   </p>
                   <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed pt-2 font-normal">
@@ -833,7 +833,7 @@ export function useDataFetcher(apiEndpoint: string) {
                   href={`/blog/${prevPost.slug}`}
                   className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-left group"
                 >
-                  <span className="text-[11px] font-mono text-[#71717a] flex items-center gap-1 group-hover:text-[#07DFFF]">
+                  <span className="text-[11px] text-[#71717a] flex items-center gap-1 group-hover:text-[#07DFFF]">
                     <ArrowLeft className="w-3 h-3" />
                     <span>Artikel Sebelumnya</span>
                   </span>
@@ -850,7 +850,7 @@ export function useDataFetcher(apiEndpoint: string) {
                   href={`/blog/${nextPost.slug}`}
                   className="p-4 rounded-xl bg-[#020c24] border border-white/[0.08] hover:border-white/[0.2] transition-all flex flex-col space-y-1 text-right group"
                 >
-                  <span className="text-[11px] font-mono text-[#71717a] flex items-center justify-end gap-1 group-hover:text-[#07DFFF]">
+                  <span className="text-[11px] text-[#71717a] flex items-center justify-end gap-1 group-hover:text-[#07DFFF]">
                     <span>Artikel Selanjutnya</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </span>

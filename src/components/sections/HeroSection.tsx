@@ -140,7 +140,7 @@ export function HeroSection() {
               </span>
               <span className="text-[11px] font-medium text-[#a1a1aa]">Solusi Digital</span>
             </div>
-            <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-semibold uppercase border border-emerald-500/25">
+            <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-semibold uppercase border border-emerald-500/25">
               Active
             </span>
           </div>
@@ -156,13 +156,13 @@ export function HeroSection() {
 
           <div className="flex items-center justify-between pt-2 mt-2 border-t border-white/[0.06]">
             <div className="flex -space-x-1.5">
-              <span className="w-5 h-5 rounded-full bg-[#1b2644] border border-[#020c24] text-[9px] flex items-center justify-center font-mono text-white/80">
+              <span className="w-5 h-5 rounded-full bg-[#1b2644] border border-[#020c24] text-[9px] flex items-center justify-center text-white/80">
                 JM
               </span>
-              <span className="w-5 h-5 rounded-full bg-[#273456] border border-[#020c24] text-[9px] flex items-center justify-center font-mono text-white/80">
+              <span className="w-5 h-5 rounded-full bg-[#273456] border border-[#020c24] text-[9px] flex items-center justify-center text-white/80">
                 PT
               </span>
-              <span className="w-5 h-5 rounded-full bg-[#34446d] border border-[#020c24] text-[9px] flex items-center justify-center font-mono text-white/80">
+              <span className="w-5 h-5 rounded-full bg-[#34446d] border border-[#020c24] text-[9px] flex items-center justify-center text-white/80">
                 ID
               </span>
             </div>
@@ -170,7 +170,7 @@ export function HeroSection() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-2.5 h-2.5 fill-current" />
               ))}
-              <span className="text-[10px] font-semibold text-white font-mono ml-0.5">5.0</span>
+              <span className="text-[10px] font-semibold text-white ml-0.5">5.0</span>
             </div>
           </div>
         </div>

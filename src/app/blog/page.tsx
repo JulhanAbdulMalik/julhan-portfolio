@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
@@ -121,7 +121,7 @@ export default function BlogListPage() {
                 >
                   <span>{cat.labelId}</span>
                   <span
-                    className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                    className={`px-1.5 py-0.2 rounded text-[10px] ${
                       isSelected ? "bg-white/20 text-white font-semibold" : "bg-white/[0.06] text-[#71717a]"
                     }`}
                   >
@@ -153,13 +153,13 @@ export default function BlogListPage() {
 
                   {/* Category pill on top left */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-md text-[10px] font-mono font-semibold bg-black/70 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md">
+                    <span className="px-3 py-1 rounded-md text-[10px] font-semibold bg-black/70 text-[#07DFFF] border border-[#007FA1]/50 backdrop-blur-md">
                       {post.category}
                     </span>
                   </div>
 
                   {/* Reading time on top right */}
-                  <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-mono bg-black/70 text-[#a1a1aa] border border-white/[0.1] backdrop-blur-md">
+                  <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] bg-black/70 text-[#a1a1aa] border border-white/[0.1] backdrop-blur-md">
                     <Clock className="w-3 h-3 text-[#07DFFF]" />
                     <span>
                       {post.readTimeMinutes} Menit Baca
@@ -171,7 +171,7 @@ export default function BlogListPage() {
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
                   <div className="space-y-3">
                     {/* Meta bar: Date & Views */}
-                    <div className="flex items-center gap-3 text-xs text-[#71717a] font-mono">
+                    <div className="flex items-center gap-3 text-xs text-[#71717a]">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-[#07DFFF]" />
                         <span>{post.publishedAt}</span>
@@ -201,7 +201,7 @@ export default function BlogListPage() {
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-0.5 rounded-md text-[11px] font-mono bg-white/[0.04] text-[#71717a] border border-white/[0.06]"
+                        className="px-2.5 py-0.5 rounded-md text-[11px] bg-white/[0.04] text-[#71717a] border border-white/[0.06]"
                       >
                         #{tag}
                       </span>
@@ -222,7 +222,7 @@ export default function BlogListPage() {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-xs font-semibold text-white">{post.author.name}</span>
-                        <span className="text-[10px] text-[#71717a] font-mono">Reviewer Dicoding</span>
+                        <span className="text-[10px] text-[#71717a]">Reviewer Dicoding</span>
                       </div>
                     </div>
 

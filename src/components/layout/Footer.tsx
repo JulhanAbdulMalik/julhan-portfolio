@@ -35,24 +35,16 @@ export function Footer() {
               <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
                 Membangun website &amp; aplikasi mobile yang benar-benar bekerja untuk bisnis nyata.
               </p>
-              <div>
-                <p className="text-xs text-[#71717a] font-medium font-mono uppercase tracking-wider">
-                  JULHAN ABDUL MALIK
-                </p>
-                <p className="text-xs text-[#07DFFF] mt-0.5">
-                  Web &amp; Mobile App Developer • Berbasis di Sukabumi, Jawa Barat
-                </p>
-              </div>
             </div>
 
             {/* Big Email & WhatsApp Fast Track */}
             <div className="space-y-2 pt-2">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#71717a] block font-semibold">
+              <span className="text-[10px] uppercase tracking-widest text-[#71717a] block font-semibold">
                 SALURAN KOMUNIKASI RESMI
               </span>
               <Link
                 href="mailto:julhanabdulmalik@gmail.com"
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white hover:text-[#07DFFF] transition-colors tracking-tight leading-none block font-mono"
+                className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white hover:text-[#07DFFF] transition-colors tracking-tight leading-none block"
               >
                 julhanabdulmalik<span className="text-[#07DFFF]">@gmail.com</span>
               </Link>
@@ -60,7 +52,7 @@ export function Footer() {
                 href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#a1a1aa] hover:text-white transition-colors block font-mono pt-1"
+                className="text-sm text-[#a1a1aa] hover:text-white transition-colors block pt-1"
               >
                 +62 831-1103-0309
               </Link>
@@ -91,7 +83,7 @@ export function Footer() {
 
           {/* Col 2 — Navigation Menu (3 columns on lg) */}
           <div className="lg:col-span-3 p-8 sm:p-10 lg:p-12 space-y-4">
-            <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#71717a] block">
               NAVIGASI UTAMA
             </span>
             <nav className="flex flex-col space-y-2.5">
@@ -116,50 +108,31 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Col 3 — Layanan & Ikuti Saya (3 columns on lg) */}
-          <div className="lg:col-span-3 p-8 sm:p-10 lg:p-12 space-y-6">
-            <div className="space-y-3">
-              <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
-                LAYANAN SAYA
-              </span>
-              <div className="flex flex-col space-y-2.5">
-                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
-                  Website Profesional
-                </Link>
-                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
-                  Aplikasi Mobile (Flutter)
-                </Link>
-                <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-white transition-colors">
-                  Sistem Admin Dashboard
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-3 pt-3 border-t border-dashed border-white/10">
-              <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#71717a] block">
-                IKUTI SAYA
-              </span>
-              <div className="flex flex-col space-y-2">
-                <Link
-                  href={socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#07DFFF] hover:underline transition-all inline-flex items-center gap-1"
-                >
-                  <span>LinkedIn</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-                <Link
-                  href={socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#07DFFF] hover:underline transition-all inline-flex items-center gap-1"
-                >
-                  <span>GitHub</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
+          {/* Col 3 — Layanan Saya (3 columns on lg, seimbang dengan Navigasi Utama) */}
+          <div className="lg:col-span-3 p-8 sm:p-10 lg:p-12 space-y-4">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#71717a] block">
+              LAYANAN SAYA
+            </span>
+            <nav className="flex flex-col space-y-2.5">
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Landing Page &amp; Web Profil
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Aplikasi Mobile (Flutter)
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Toko Online &amp; E-Commerce
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Sistem Admin Dashboard
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Bundle Web + Mobile App
+              </Link>
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Portal Konten &amp; Blog Modern
+              </Link>
+            </nav>
           </div>
 
         </div>
@@ -196,8 +169,8 @@ export function Footer() {
             ROW 3: Signature Watermark
             Watermark tipografi arsitektur besar
         ════════════════════════════════════════════════════════════════ */}
-        <div className="overflow-hidden border-b border-dashed border-white/15 py-4 sm:py-6 text-center select-none bg-[#000519]">
-          <p className="footer-watermark leading-none text-center">
+        <div className="overflow-hidden py-4 sm:py-6 text-center select-none bg-[#000519]">
+          <p className="footer-watermark text-[3rem] sm:text-[5rem] lg:text-[7rem] leading-none text-center tracking-[0.05em] text-white/10">
             JULHAN A MALIK
           </p>
         </div>

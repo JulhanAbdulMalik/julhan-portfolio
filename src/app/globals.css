@@ -60,20 +60,25 @@ a {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   SCROLLBAR
+   SCROLLBAR — Ultra-tipis (2px) & Tersembunyi (Hanya Muncul saat Kursor ke Slider)
 ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 2px;
+  height: 2px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--canvas-dark);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #007FA1;
+  background: transparent;
   border-radius: 9999px;
+  transition: background-color 0.2s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #07DFFF;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #007FA1;
 }
 
 /* Selection */
