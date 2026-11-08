@@ -11,9 +11,10 @@ export interface TOCItem {
 
 interface TableOfContentsProps {
   items: TOCItem[];
+  theme?: "light" | "dark";
 }
 
-export function TableOfContents({ items }: TableOfContentsProps) {
+export function TableOfContents({ items, theme = "light" }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
@@ -54,10 +55,26 @@ export function TableOfContents({ items }: TableOfContentsProps) {
     }
   };
 
+  const isDark = theme === "dark";
+
   return (
-    <div className="p-5 rounded-2xl bg-[#020c24] border border-white/[0.08] sticky top-28 space-y-4">
-      <div className="flex items-center gap-2 pb-3 border-b border-white/[0.08] text-white font-semibold text-xs tracking-wider uppercase">
-        <ListCollapse className="w-4 h-4 text-[#07DFFF]" />
+    <div
+      className={`p-5 rounded-xl border sticky top-28 space-y-4 ${
+        isDark
+          ? "bg-[#020c24] border-white/[0.08]"
+          : "bg-white border-neutral-200/90 shadow-xs"
+      }`}
+    >
+      <div
+        className={`flex items-center gap-2 pb-3 border-b font-semibold text-xs tracking-wider uppercase ${
+          isDark
+            ? "border-white/[0.08] text-white"
+            : "border-neutral-200 text-[#000519]"
+        }`}
+      >
+        <ListCollapse
+          className={`w-4 h-4 ${isDark ? "text-[#07DFFF]" : "text-[#007FA1]"}`}
+        />
         <span>Daftar Isi Artikel</span>
       </div>
 
@@ -73,8 +90,12 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                 item.level === 3 ? "pl-5" : ""
               } ${
                 isActive
-                  ? "text-white bg-[#007FA1]/30 font-semibold border-l-2 border-[#007FA1]"
-                  : "text-[#71717a] hover:text-white hover:bg-white/[0.03]"
+                  ? isDark
+                    ? "text-white bg-[#007FA1]/30 font-semibold border-l-2 border-[#007FA1]"
+                    : "text-[#007FA1] bg-[#007FA1]/10 font-semibold border-l-2 border-[#007FA1]"
+                  : isDark
+                  ? "text-[#71717a] hover:text-white hover:bg-white/[0.03]"
+                  : "text-[#52525b] hover:text-[#000519] hover:bg-neutral-100"
               }`}
             >
               {item.title}

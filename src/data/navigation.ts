@@ -5,10 +5,9 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { name: "Beranda", href: "/" },
-  { name: "Layanan", href: "/services" },
-  { name: "Harga", href: "/pricing" },
   { name: "Portfolio", href: "/#portfolio" },
-  { name: "Blog", href: "/blog" },
+  { name: "Layanan", href: "/services" },
+  { name: "Artikel", href: "/artikel" },
 ];
 
 export const techPills = [

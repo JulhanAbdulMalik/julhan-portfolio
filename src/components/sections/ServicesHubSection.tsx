@@ -3,39 +3,67 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Layers, ArrowUpRight, Clock, CheckCircle2 } from "lucide-react";
+import {
+  Layers,
+  ArrowUpRight,
+  Clock,
+  CheckCircle2,
+  GraduationCap,
+  MessageCircle,
+} from "lucide-react";
 
 export function ServicesHubSection() {
   const services = [
     {
       id: "landing-page",
       category: "Web Development",
-      title: "Website Profil & Landing Page UMKM",
-      desc: "Website modern, ultra cepat, mobile friendly, dan fokus konversi penjualan. Menggunakan Next.js dan Tailwind CSS dengan skor SEO 100%.",
+      title: "Website Bisnis & Profil Usaha",
+      desc: "Website modern, cepat, elegan, dan fokus meningkatkan kepercayaan calon klien. Menampilkan profil perusahaan, legalitas usaha, dan tombol chat WhatsApp otomatis.",
       image: "/images/projects/discussion-forum.svg",
-      price: "Mulai Rp 500.000",
-      time: "3 - 7 Hari",
-      features: ["Next.js 15", "Tailwind CSS", "SEO 100%", "Mobile Responsive", "Free Domain & Hosting Setup"],
-    },
-    {
-      id: "mobile-app",
-      category: "Mobile App",
-      title: "Aplikasi Mobile Android (Flutter)",
-      desc: "Aplikasi mobile multiplatform performa native, UI responsif, state management Provider/Bloc, integrasi REST API, dan siap publish ke Google Play Store.",
-      image: "/images/projects/panenkita.svg",
+      originalPrice: "Rp 4.000.000",
       price: "Mulai Rp 2.500.000",
-      time: "14 - 30 Hari",
-      features: ["Flutter", "Dart", "Play Store Ready", "REST API Backend", "Garansi Maintenance 30 Hari"],
+      time: "± 15 Hari Kerja",
+      features: [
+        "Next.js 16",
+        "Mobile Friendly",
+        "SEO Google 100%",
+        "Domain & Cloud Server",
+        "Garansi 30 Hari",
+      ],
     },
     {
-      id: "ecommerce-dashboard",
-      category: "Enterprise & E-Commerce",
-      title: "Toko Online & Admin Dashboard",
-      desc: "Katalog produk, pembayaran otomatis QRIS/Bank, manajemen database berskala besar, analitik penjualan real-time, dan ekspor laporan Excel/PDF.",
+      id: "coffee-shop",
+      category: "F&B & Restaurant System",
+      title: "Website Coffee Shop & Restaurant",
+      desc: "Solusi terpadu bisnis kuliner: website landing page estetik, e-menu QR code nomor meja, pemesanan dine-in/takeaway, pembayaran QRIS otomatis, cetak nota digital, dan dashboard admin rekap laporan omzet.",
+      image: "/images/projects/coffee-shop.svg",
+      originalPrice: "Rp 9.000.000",
+      price: "Mulai Rp 5.500.000",
+      time: "25 - 45 Hari Kerja",
+      features: [
+        "E-Menu & QR Meja",
+        "Pemesanan & QRIS",
+        "Nota Struk Digital",
+        "Admin Rekap Laporan",
+        "Garansi 60 Hari",
+      ],
+    },
+    {
+      id: "ecommerce",
+      category: "E-Commerce & Ordering",
+      title: "Toko Online & Pemesanan Otomatis",
+      desc: "Sistem jualan online mandiri tanpa potongan komisi marketplace. Dilengkapi katalog produk interaktif, keranjang belanja, dan checkout pembayaran QRIS/Bank otomatis.",
       image: "/images/projects/yuwanyie-picnic.svg",
-      price: "Mulai Rp 1.500.000",
-      time: "10 - 20 Hari",
-      features: ["Next.js 15", "PostgreSQL", "QRIS & Bank", "Dashboard Analitik", "Ekspor Excel/PDF"],
+      originalPrice: "Rp 9.500.000",
+      price: "Mulai Rp 5.800.000",
+      time: "30 - 60 Hari Kerja",
+      features: [
+        "Katalog Interaktif",
+        "QRIS & Bank Gateway",
+        "Database PostgreSQL",
+        "Admin Dashboard",
+        "Garansi 60 Hari",
+      ],
     },
   ];
 
@@ -45,7 +73,7 @@ export function ServicesHubSection() {
       className="pt-0 pb-0 px-6 sm:px-10 lg:px-16 xl:px-24 text-[#000519] relative bg-white border-b border-dashed border-neutral-300"
     >
       {/* ── Main Unified Architectural Grid Table (Kotak Siku 90° + Garis Strip Putus-Putus / wpu.id 1:1) ── */}
-      <div className="max-w-[84rem] mx-auto w-full border border-dashed border-neutral-300 bg-white rounded-none shadow-none">
+      <div className="max-w-[84rem] mx-auto w-full border-x border-t border-dashed border-neutral-300 bg-white rounded-none shadow-none">
         
         {/* ════════════════════════════════════════════════════════════════
             ROW 0: Top Spacer Row (Baris Margin Kosong di Awal Section 4)
@@ -84,111 +112,198 @@ export function ServicesHubSection() {
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
-            ROW 2: 3 Featured Services Columns (Tabel 3 Kolom Siku 90° wpu.id - UI Section 4 Asli)
-            Setiap kolom dipisahkan garis putus-putus presisi tinggi
+            ROW 2: 3 Layanan Unggulan Grid (Tabel Siku 90° wpu.id - 3 Kolom Simetris)
+            Hanya 3 layanan unggulan utama di Halaman Beranda
         ════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-dashed divide-neutral-300 border-b border-dashed border-neutral-300">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="p-8 sm:p-10 flex flex-col justify-between space-y-6 bg-white hover:bg-[#fafafa]/60 transition-colors group"
-            >
-              <div className="space-y-5">
-                {/* Image Frame with Status Badge */}
-                <div className="relative aspect-[16/10] w-full bg-neutral-100 rounded-xl overflow-hidden border border-black/[0.06] shadow-sm">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    unoptimized
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-dashed border-neutral-300">
+          {services.map((service, idx) => {
+            const isLastColLg = (idx + 1) % 3 === 0;
+            const isLastColMd = (idx + 1) % 2 === 0;
+            const isThirdItem = idx === 2;
 
-                  {/* Delivery Time Badge overlay */}
-                  <div className="absolute top-3 left-3 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-semibold backdrop-blur-md border shadow-sm bg-white/95 border-emerald-500/40 text-emerald-800">
-                      <Clock className="w-3 h-3 text-emerald-600" />
-                      <span>{service.time}</span>
-                    </span>
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="space-y-2.5">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#007FA1] block">
-                    {service.category}
-                  </span>
-
-                  <h3 className="text-lg sm:text-xl font-semibold text-[#000519] group-hover:text-[#007FA1] transition-colors leading-snug tracking-tight">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed line-clamp-3 font-normal">
-                    {service.desc}
-                  </p>
-                </div>
-              </div>
-
-              {/* Bottom Card Area: Features & Action links */}
-              <div className="pt-5 border-t border-dashed border-neutral-200 space-y-4">
-                {/* Features pills */}
-                <div className="flex flex-wrap gap-1.5">
-                  {service.features.map((feat) => (
-                    <span
-                      key={feat}
-                      className="px-2 py-0.5 rounded-md bg-[#000519]/5 text-[10px] font-medium text-[#404040] border border-black/[0.04]"
-                    >
-                      {feat}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Price & Action Link */}
-                <div className="flex items-center justify-between pt-1">
-                  <div className="space-y-0.5">
-                    <span className="text-[10px] text-[#71717a] block uppercase tracking-wider">Estimasi Biaya</span>
-                    <span className="text-xs font-semibold text-[#000519]">{service.price}</span>
-                  </div>
-
+            return (
+              <div
+                key={service.id}
+                className={`p-7 sm:p-8 lg:p-9 flex flex-col justify-between space-y-6 bg-white hover:bg-[#fafafa]/80 transition-colors group border-b border-dashed border-neutral-300 lg:border-b-0 ${
+                  isThirdItem ? "md:col-span-2 lg:col-span-1 md:border-b-0" : ""
+                } ${
+                  isLastColLg ? "lg:border-r-0" : "lg:border-r border-dashed border-neutral-300"
+                } ${
+                  isLastColMd ? "md:border-r-0" : "md:border-r border-dashed border-neutral-300"
+                }`}
+              >
+                <div className="space-y-5">
+                  {/* Cover Image Frame with Delivery Time Badge */}
                   <Link
-                    href="/services"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-black/[0.04] hover:bg-[#000519] text-xs font-semibold text-[#000519] hover:text-white transition-all group/link"
+                    href={`/services#${service.id}`}
+                    className="relative aspect-[16/10] w-full bg-neutral-100 rounded-xl overflow-hidden border border-black/[0.06] shadow-sm block group/img"
                   >
-                    <span>Konsultasi</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      unoptimized
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+
+                    {/* Delivery Time Badge overlay */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-semibold backdrop-blur-md border shadow-sm bg-white/95 border-emerald-500/40 text-emerald-800">
+                        <Clock className="w-3 h-3 text-emerald-600" />
+                        <span>{service.time}</span>
+                      </span>
+                    </div>
                   </Link>
+
+                  {/* Details */}
+                  <div className="space-y-2.5">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#007FA1] block">
+                      {service.category}
+                    </span>
+
+                    <Link
+                      href={`/services#${service.id}`}
+                      className="block"
+                    >
+                      <h3 className="text-lg sm:text-xl font-semibold text-[#000519] group-hover:text-[#007FA1] transition-colors leading-snug tracking-tight">
+                        {service.title}
+                      </h3>
+                    </Link>
+
+                    <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed line-clamp-3 font-normal">
+                      {service.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom Card Area: Features & Price */}
+                <div className="pt-5 border-t border-dashed border-neutral-200 space-y-4">
+                  {/* Features pills */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {service.features.map((feat) => (
+                      <span
+                        key={feat}
+                        className="px-2 py-0.5 rounded-md bg-[#000519]/5 text-[10px] font-medium text-[#404040] border border-black/[0.04]"
+                      >
+                        {feat}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Price & Action Button (Sistem Button Identik Halaman /artikel) */}
+                  <div className="flex items-center justify-between pt-1">
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] text-[#71717a] block uppercase tracking-wider">
+                        Estimasi Investasi
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[11px] text-[#a1a1aa] line-through">
+                          {service.originalPrice}
+                        </span>
+                        <span className="text-sm sm:text-base font-semibold text-[#000519]">
+                          {service.price}
+                        </span>
+                      </div>
+                    </div>
+
+                    <Link
+                      href={`/services#${service.id}`}
+                      aria-label={`Lihat detail layanan ${service.title}`}
+                      className="p-2 sm:p-2.5 rounded-lg bg-neutral-100 group-hover:bg-[#007FA1] text-[#000519] group-hover:text-white transition-all shadow-xs shrink-0 flex items-center justify-center cursor-pointer"
+                      title="Lihat Detail Layanan"
+                    >
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
-            ROW 3: Bottom Callout Bar (Konten Asli Layanan)
-            Menghubungkan ke halaman rincian seluruh layanan
+            ROW 3: Special Educational Institution Callout Banner
+            Program Kemitraan Digital Sekolah & Yayasan (Investasi Awal Rp 0,-)
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-6 sm:p-8 lg:p-10 border-b border-dashed border-neutral-300 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#fafafa]/50">
+        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 bg-[#f8fafc] relative overflow-hidden">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="space-y-4 max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600/10 text-emerald-700 border border-emerald-600/30 w-fit">
+                <GraduationCap className="w-3.5 h-3.5 text-emerald-700" />
+                <span>Program Khusus Sekolah &amp; Yayasan Pendidikan</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#000519] tracking-tight leading-snug">
+                Biaya Pembuatan Awal{" "}
+                <span className="text-emerald-700 underline decoration-emerald-500/40 underline-offset-4">
+                  Rp 0,- (Gratis)
+                </span>
+                . Sistem Informasi Sekolah Modern &amp; Siap Pakai.
+              </h3>
+
+              <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed font-normal">
+                Khusus untuk Sekolah, Madrasah, dan Pesantren: Kami bangunkan sistem informasi dan portal data sekolah kustom tanpa biaya pembuatan di awal. Seluruh modul dan alur kerja dirancang fleksibel menyesuaikan kebutuhan serta sistem yang sedang berjalan di sekolah Anda saat ini.
+              </p>
+
+              {/* Highlights 4 items */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+                {[
+                  "Investasi Awal Rp 0,- (Tanpa Biaya Pembuatan Software)",
+                  "Gratis Cloud Hosting, Setup Domain Sekolah, & SSL",
+                  "Fitur Sistem Kustom Menyesuaikan Kebutuhan Sekolah",
+                  "Pelatihan Guru & Operator TU sampai Mahir",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#334155]">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Action Card */}
+            <div className="p-6 rounded-xl bg-white border border-neutral-200/80 shadow-sm flex flex-col justify-between gap-4 shrink-0 lg:w-[320px]">
+              <div className="space-y-1">
+                <span className="text-[10px] uppercase tracking-wider text-emerald-700 font-semibold block">
+                  Skema Kemitraan Fleksibel
+                </span>
+                <p className="text-xs text-[#52525b] leading-relaxed">
+                  Skema sewa dan pemeliharaan disesuaikan dengan kapasitas dan jumlah siswa sekolah Anda.
+                </p>
+              </div>
+
+              <a
+                href={`https://wa.me/6283111030309?text=${encodeURIComponent(
+                  "Halo Julhan & Tim, saya dari pihak Sekolah/Yayasan Pendidikan ingin konsultasi mengenai Program Sistem Data Sekolah dengan Biaya Pembuatan Awal Rp 0,-."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm transition-all group"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Konsultasi Program Sekolah</span>
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ════════════════════════════════════════════════════════════════
+            ROW 4: Tombol Navigasi ke Halaman Layanan (Simple & Clean)
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#fafafa]/50">
           <p className="text-xs sm:text-sm text-[#52525b]">
-            Memiliki kebutuhan sistem kustom atau spesifikasi khusus di luar daftar di atas?
+            Ingin melihat seluruh pilihan paket dan spesifikasi layanan lainnya?
           </p>
 
           <Link
             href="/services"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg bg-transparent hover:bg-black/5 border border-dashed border-neutral-400 hover:border-[#000519] text-xs sm:text-sm font-semibold text-[#000519] transition-all duration-200 group shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#007FA1] hover:bg-[#006b88] text-white text-xs sm:text-sm font-semibold transition-all shadow-sm group shrink-0"
           >
-            <span>Lihat Rincian Seluruh Layanan & Alur Kerja</span>
-            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#000519] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+            <span>Lihat Semua Layanan</span>
+            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
         </div>
-
-        {/* ════════════════════════════════════════════════════════════════
-            ROW 4: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 4)
-            Memberikan ruang napas (breathing room) di akhir section tanpa garis dobel
-        ════════════════════════════════════════════════════════════════ */}
-        <div
-          className="w-full h-[60px] lg:h-[80px]"
-          aria-hidden="true"
-        />
 
       </div>
     </section>

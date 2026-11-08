@@ -90,17 +90,14 @@ export function Footer() {
               <Link href="/" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Beranda
               </Link>
-              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
-                Layanan
-              </Link>
               <Link href="/#portfolio" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Portfolio
               </Link>
-              <Link href="/pricing" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
-                Harga
+              <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Layanan
               </Link>
-              <Link href="/blog" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
-                Blog
+              <Link href="/artikel" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
+                Artikel
               </Link>
               <Link href="/#contact" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
                 Kontak
@@ -130,7 +127,7 @@ export function Footer() {
                 Bundle Web + Mobile App
               </Link>
               <Link href="/services" className="text-sm text-[#a1a1aa] hover:text-[#07DFFF] transition-colors">
-                Portal Konten &amp; Blog Modern
+                Portal Konten &amp; Artikel Publikasi
               </Link>
             </nav>
           </div>

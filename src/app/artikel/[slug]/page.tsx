@@ -29,15 +29,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${post.titleId} - Blog Julhan Abdul Malik`,
+    title: `${post.titleId} — Artikel Julhan Abdul Malik`,
     description: post.excerptId,
     authors: [{ name: post.author.name }],
     keywords: post.tags,
     openGraph: {
       title: post.titleId,
       description: post.excerptId,
-      url: `https://julhan.my.id/blog/${post.slug}`,
-      siteName: "Julhan Abdul Malik | Portfolio & Engineering Blog",
+      url: `https://julhan.my.id/artikel/${post.slug}`,
+      siteName: "Julhan Abdul Malik | Portfolio & Artikel Software Engineering",
       images: [
         {
           url: post.coverImage,

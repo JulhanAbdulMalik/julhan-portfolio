@@ -21,6 +21,8 @@ export interface PortfolioProject {
   roleEn: string;
   taglineId: string;
   taglineEn: string;
+  problemId?: string;
+  impactId?: string;
   descriptionId: string;
   descriptionEn: string;
   image: string;
@@ -65,6 +67,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "Platform enterprise monitoring perkuliahan & sinkronisasi data kurikulum skala 28 program studi.",
     taglineEn:
       "Enterprise academic lecture monitoring & curriculum sync platform across 28 university departments.",
+    problemId:
+      "Sebelumnya, rekapitulasi ribuan jam perkuliahan dan kurikulum 28 program studi masih menggunakan spreadsheet manual terpisah, rentan redudansi data, dan proses audit akreditasi memakan waktu berminggu-minggu.",
+    impactId:
+      "Kini, seluruh 25.500+ sesi kuliah tervalidasi otomatis secara real-time, audit dosen terdokumentasi akurat, dan pimpinan kampus mendapatkan dashboard analitik instan.",
     descriptionId:
       "Sistem portal monitoring kurikulum dan aktivitas perkuliahan terintegrasi di Universitas Nusa Putra. Dirancang untuk mengelola dan memvalidasi volume data perkuliahan yang masif, dashboard analitik real-time pimpinan, serta otomatisasi audit log perkuliahan dosen.",
     descriptionEn:
@@ -148,6 +154,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "Ekosistem supply chain pertanian digital penghubung petani lokal langsung ke pasar grosir & ritel.",
     taglineEn:
       "Digital agricultural supply chain ecosystem directly connecting local farmers to wholesale and retail markets.",
+    problemId:
+      "Sebelumnya, rantai pasok komoditas petani sangat panjang melewati banyak tengkulak, transparansi harga pasar harian sangat minim, dan pencatatan hasil panen masih di buku tulis fisik.",
+    impactId:
+      "Kini, petani terhubung langsung ke pembeli skala besar, harga pasar terupdate real-time via aplikasi mobile, dan efisiensi waktu transaksi meningkat hingga 60%.",
     descriptionId:
       "Aplikasi mobile multi-platform berbasis Flutter dipadukan dengan web admin dashboard untuk memangkas rantai pasok komoditas pertanian. Membantu petani mendapatkan transparansi harga pasar harian, pencatatan hasil panen, dan pesanan langsung dari pembeli skala besar.",
     descriptionEn:
@@ -228,6 +238,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "Platform web reservasi & rental paket piknik estetik dengan sistem checkout QRIS otomatis.",
     taglineEn:
       "Aesthetic picnic experience booking platform & automated QRIS checkout system.",
+    problemId:
+      "Sebelumnya, proses reservasi paket dekorasi piknik mengandalkan chat WhatsApp manual satu per satu, rawan bentrok jadwal slot, dan pengecekan bukti transfer memakan waktu lama.",
+    impactId:
+      "Kini, pelanggan dapat memilih set dekorasi & slot kalender secara visual, pembayaran QRIS otomatis terverifikasi instan, serta pemesanan berjalan mandiri 24 jam nonstop.",
     descriptionId:
       "Platform web interaktif dan sistem reservasi online otomatis untuk layanan sewa paket piknik estetik. Menghadirkan katalog set dekorasi, pemilihan jadwal slot real-time, integrasi pembayaran QRIS dinamis, serta admin dashboard analitik berbasis Supabase.",
     descriptionEn:
@@ -307,6 +321,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "Landing page interaktif kampanye game edukasi pelestarian lingkungan dengan 1.000+ pemain.",
     taglineEn:
       "Interactive educational game landing page for environmental preservation with 1,000+ players.",
+    problemId:
+      "Sebelumnya, sosialisasi game edukasi lingkungan sulit menjangkau target audiens luas karena belum memiliki portal showcase resmi dan materi trailer yang terintegrasi.",
+    impactId:
+      "Kini, landing page sinematik berhasil menarik 1.000+ pemain aktif terdaftar dengan waktu muat ultra cepat di bawah 1.2 detik di seluruh perangkat.",
     descriptionId:
       "Website showcase resmi dan landing page promosi untuk game bertema kelestarian alam hasil kolaborasi riset edukasi dengan Universitas Negeri Padang. Menampilkan trailer interaktif, walkthrough gameplay, papan informasi karakter, dan direct download link.",
     descriptionEn:
@@ -379,6 +397,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "Aplikasi forum komunitas developer dengan Redux centralized state & automated testing 100%.",
     taglineEn:
       "Developer community forum application with centralized Redux state & 100% automated test coverage.",
+    problemId:
+      "Sebelumnya, sistem forum diskusi komunitas sering mengalami kendala inkonsistensi state mutation dan latensi saat interaksi voting thread dalam skala masif.",
+    impactId:
+      "Kini, sistem berjalan stabil dengan centralized Redux Toolkit state terpusat, cakupan automated testing 100%, dan navigasi diskusi yang sangat responsif.",
     descriptionId:
       "Aplikasi web forum diskusi modern berstandar industri enterprise yang dibangun untuk mendemonstrasikan keunggulan arsitektur React profesional. Mencakup centralized state Redux Toolkit, asynchronous thunk actions, automated unit/integration testing dengan Jest & RTL, serta dokumentasi visual Storybook.",
     descriptionEn:

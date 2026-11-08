@@ -338,6 +338,34 @@ export function PortfolioPreviewSection() {
               </p>
             </div>
 
+            {/* Dampak Transformasi Nyata (Problem vs Solution) */}
+            {(activeModalProject.problemId || activeModalProject.impactId) && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 p-4 sm:p-4.5 rounded-xl bg-[#020c24] border border-white/[0.08]">
+                {activeModalProject.problemId && (
+                  <div className="space-y-1.5">
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/10 text-rose-300 border border-rose-500/20 uppercase tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+                      Tantangan Awal (Sebelum)
+                    </span>
+                    <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
+                      {activeModalProject.problemId}
+                    </p>
+                  </div>
+                )}
+                {activeModalProject.impactId && (
+                  <div className="space-y-1.5 border-t sm:border-t-0 sm:border-l border-white/[0.08] pt-3 sm:pt-0 sm:pl-3.5">
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 uppercase tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                      Dampak Solusi (Sesudah)
+                    </span>
+                    <p className="text-xs text-[#e4e4e7] leading-relaxed font-normal">
+                      {activeModalProject.impactId}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Metrics Grid */}
             {activeModalProject.metrics &&
               activeModalProject.metrics.length > 0 && (

@@ -2,14 +2,14 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Mail, MessageCircle, MapPin, Clock, Copy, Check, ArrowUpRight } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Clock, Copy, Check, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { socialLinks } from "@/data/navigation";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    serviceType: "Website Profil / Landing Page",
+    serviceType: "Website Bisnis & Profil Usaha",
     message: "",
   });
 
@@ -58,7 +58,7 @@ export function ContactSection() {
       className="pt-0 pb-0 px-6 sm:px-10 lg:px-16 xl:px-24 text-[#000519] relative bg-white border-b border-dashed border-neutral-300"
     >
       {/* ── Main Unified Architectural Grid Table (Kotak Siku 90° + Garis Strip Putus-Putus / wpu.id 1:1) ── */}
-      <div className="max-w-[84rem] mx-auto w-full border border-dashed border-neutral-300 bg-white rounded-none shadow-none">
+      <div className="max-w-[84rem] mx-auto w-full border-x border-b border-dashed border-neutral-300 bg-white rounded-none shadow-none">
         
         {/* ════════════════════════════════════════════════════════════════
             ROW 0: Top Spacer Row (Baris Margin Kosong di Awal Section 6)
@@ -246,12 +246,16 @@ export function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 text-sm text-[#000519] bg-white focus:outline-none focus:border-[#007FA1] focus:ring-2 focus:ring-[#007FA1]/10 transition-all cursor-pointer"
                 >
-                  <option value="Website Profil / Landing Page">Website Profil Bisnis &amp; Landing Page</option>
-                  <option value="Aplikasi Mobile Android (Flutter)">Aplikasi Mobile Android (Flutter)</option>
-                  <option value="Toko Online & E-Commerce">Toko Online &amp; E-Commerce</option>
-                  <option value="Sistem Manajemen & Admin Dashboard">Sistem Manajemen &amp; Admin Dashboard</option>
-                  <option value="Bundle Web + Mobile App">Bundle Lengkap Web + Mobile App</option>
-                  <option value="Konsultasi Teknis & Arsitektur">Konsultasi Teknis &amp; Diskusi Kustom</option>
+                  <option value="Website Bisnis & Profil Usaha">Website Bisnis &amp; Profil Usaha</option>
+                  <option value="Website Coffee Shop & Restaurant">Website Coffee Shop &amp; Restaurant</option>
+                  <option value="Toko Online & Pemesanan Otomatis">Toko Online &amp; Pemesanan Otomatis</option>
+                  <option value="Sistem Kasir & Dashboard Operasional">Sistem Kasir &amp; Dashboard Operasional</option>
+                  <option value="Aplikasi Mobile Android & iOS (Flutter)">Aplikasi Mobile Android &amp; iOS (Flutter)</option>
+                  <option value="Bundle Ekosistem Web + Mobile App">Bundle Ekosistem Web + Mobile App</option>
+                  <option value="Program Kemitraan Sekolah & Yayasan (Rp 0,-)">Program Kemitraan Sekolah &amp; Yayasan (Rp 0,-)</option>
+                  <option value="Renovasi & Optimasi Website Lama">Renovasi &amp; Optimasi Website Lama</option>
+                  <option value="Layanan Maintenance & Tim IT Bulanan">Layanan Maintenance &amp; Tim IT Bulanan</option>
+                  <option value="Konsultasi Kustom & Arsitektur Sistem">Konsultasi Kustom &amp; Arsitektur Sistem</option>
                 </select>
               </div>
 
@@ -280,16 +284,31 @@ export function ContactSection() {
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
 
-              {/* Privacy note */}
-              <p className="text-center text-[11px] text-[#71717a] font-normal pt-1">
-                Kerahasiaan data dan ide proyek Anda terjamin 100%. Tidak akan disebarluaskan.
-              </p>
+              {/* De-risking & Trust Guarantees */}
+              <div className="pt-2 text-center space-y-2">
+                <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-xs text-[#52525b]">
+                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    100% Gratis Konsultasi Awal
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    Tanpa Komitmen Pembelian
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                    <Clock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    Respon Cepat &lt; 1 Jam (Jam Kerja)
+                  </span>
+                </div>
+
+                <p className="text-[11px] text-[#71717a] font-normal">
+                  Kerahasiaan data dan ide proyek bisnis Anda terjamin 100%. Tidak akan disebarluaskan.
+                </p>
+              </div>
             </form>
-
           </div>
-
         </div>
-
+ 
         {/* ════════════════════════════════════════════════════════════════
             ROW 3: Bottom Spacer Row (Baris Margin Kosong di Akhir Section 6)
             Memberikan ruang napas (breathing room) di akhir section tanpa garis tengah

@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesHubSection } from "@/components/sections/ServicesHubSection";
 import { PortfolioPreviewSection } from "@/components/sections/PortfolioPreviewSection";
-import { PricingPreviewSection } from "@/components/sections/PricingPreviewSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -20,10 +19,7 @@ export default function Home() {
       {/* 4. Services Section (Light Grid - 3 Columns) */}
       <ServicesHubSection />
 
-      {/* 5. Pricing Section (Dark) */}
-      <PricingPreviewSection />
-
-      {/* 6. Contact Section (Light + Grid) */}
+      {/* 5. Contact Section (Light + Grid) */}
       <ContactSection />
     </div>
   );

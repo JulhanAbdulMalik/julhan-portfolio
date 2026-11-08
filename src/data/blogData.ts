@@ -40,13 +40,13 @@ export const blogCategories = [
 
 export const defaultAuthor: Author = {
   name: "Julhan Abdul Malik",
-  roleId: "Web & Mobile App Developer • Academy Code Reviewer",
-  roleEn: "Web & Mobile App Developer • Academy Code Reviewer",
-  avatar: "/images/profile/avatar-dummy.svg",
+  roleId: "Software Engineer",
+  roleEn: "Software Engineer",
+  avatar: "/julhan-foto-profile.jpg",
   bioId:
-    "Developer independen berbasis di Sukabumi dengan IPK 3.92, bersertifikasi BNSP, dan telah me-review 258+ submission proyek pemrograman di Dicoding Indonesia. Berpengalaman membangun sistem enterprise kampus hingga aplikasi mobile produksi.",
+    "Software Engineer dengan fokus pada pembangunan arsitektur web modern performa tinggi (Next.js) dan aplikasi mobile (Flutter) berkualitas produksi.",
   bioEn:
-    "Independent developer based in Sukabumi with a 3.92 GPA, BNSP certified, and reviewed 258+ software engineering submissions at Dicoding Indonesia. Experienced in architecting enterprise academic portals to production mobile apps.",
+    "Software Engineer focused on architecting modern high-performance web systems (Next.js) and production-grade mobile apps (Flutter).",
 };
 
 export const blogPosts: BlogPost[] = [
@@ -74,33 +74,6 @@ export const blogPosts: BlogPost[] = [
       { id: "analisis-biaya-cloud", title: "5. Analisis Biaya Server & Pemeliharaan", level: 2 },
       { id: "rekomendasi-matriks", title: "6. Rekomendasi Berdasarkan Model Bisnis", level: 2 },
       { id: "kesimpulan", title: "7. Kesimpulan & Tindakan Selanjutnya", level: 2 },
-    ],
-  },
-  {
-    id: "dicoding-code-review",
-    slug: "review-258-proyek-web-dicoding-kesalahan-coding",
-    titleId: "Review 258+ Proyek Web di Dicoding: 5 Kesalahan Coding React & JS yang Sering Terjadi",
-    titleEn: "Reviewing 258+ Web Projects at Dicoding: 5 Most Common React & JS Coding Mistakes",
-    excerptId:
-      "Sebagai Academy Code Reviewer di Dicoding yang telah memeriksa 258+ submission siswa, berikut 5 kesalahan arsitektur React dan JavaScript yang paling sering ditemui serta standar clean code solusinya.",
-    excerptEn:
-      "As an Academy Code Reviewer at Dicoding who examined 258+ student project submissions, here are the 5 most frequent React and JavaScript architectural pitfalls along with enterprise clean code solutions.",
-    category: "Code Review & Best Practice",
-    publishedAt: "25 Oktober 2024",
-    readTimeMinutes: 9,
-    tags: ["React.js", "Clean Code", "Dicoding Reviewer", "JavaScript", "Code Review"],
-    coverImage: "/images/blog/code-review-dicoding.svg",
-    author: defaultAuthor,
-    viewsCount: 2380,
-    toc: [
-      { id: "pengantar-reviewer", title: "1. Pengantar: Pengalaman sebagai Code Reviewer", level: 2 },
-      { id: "kesalahan-1-mutasi-state", title: "2. Kesalahan #1: Direct State Mutation", level: 2 },
-      { id: "kesalahan-2-useeffect-loop", title: "3. Kesalahan #2: Infinite Loop pada useEffect", level: 2 },
-      { id: "kesalahan-3-prop-drilling", title: "4. Kesalahan #3: Prop Drilling Tanpa State Management", level: 2 },
-      { id: "kesalahan-4-async-error-handling", title: "5. Kesalahan #4: Pengabaian Error & Loading State", level: 2 },
-      { id: "kesalahan-5-semantic-html", title: "6. Kesalahan #5: Div Soup & Pengabaian Aksesibilitas", level: 2 },
-      { id: "checklist-clean-code", title: "7. Checklist Clean Code Sebelum Production", level: 2 },
-      { id: "kesimpulan", title: "8. Kesimpulan", level: 2 },
     ],
   },
 ];

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="coffeeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1917"/>
+      <stop offset="60%" stop-color="#181512"/>
+      <stop offset="100%" stop-color="#0C0A09"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="warmCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#1C1917"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" rx="16" fill="url(#coffeeBg)"/>
+  
+  <!-- Browser Chrome Top Bar -->
+  <rect width="800" height="42" rx="16" fill="#141210" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <circle cx="28" cy="21" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="46" cy="21" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="64" cy="21" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="400" y="26" fill="#A8A29E" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">kopisenja.id • Modern Coffee Shop &amp; Restaurant Web System (Next.js 16 + PostgreSQL)</text>
+
+  <!-- Left: Mobile Storefront & QR Digital Menu -->
+  <g transform="translate(35, 65)">
+    <!-- Smartphone Frame -->
+    <rect width="330" height="400" rx="16" fill="#141210" stroke="#D97706" stroke-opacity="0.3" stroke-width="1.5"/>
+    
+    <!-- Hero Banner -->
+    <rect x="12" y="12" width="306" height="110" rx="10" fill="#451A03" fill-opacity="0.4"/>
+    <text x="28" y="42" fill="#FBBF24" font-family="Inter, sans-serif" font-size="14" font-weight="700">☕ Kopi Senja &amp; Roastery</text>
+    <text x="28" y="62" fill="#D6D3D1" font-family="Inter, sans-serif" font-size="10">Artisan Coffee, Pastry, &amp; Cozy Space</text>
+    <g transform="translate(28, 76)">
+      <rect width="105" height="24" rx="6" fill="url(#amberGrad)"/>
+      <text x="52" y="16" fill="#1C1917" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Scan QR Menu</text>
+    </g>
+
+    <!-- Menu Items Grid -->
+    <text x="20" y="148" fill="#F59E0B" font-family="Inter, sans-serif" font-size="11" font-weight="700">POPULAR SIGNATURES</text>
+    
+    <!-- Item 1 -->
+    <g transform="translate(16, 160)">
+      <rect width="298" height="60" rx="8" fill="url(#warmCard)" stroke="#FFFFFF" stroke-opacity="0.05"/>
+      <rect x="10" y="10" width="40" height="40" rx="6" fill="#78350F" fill-opacity="0.5"/>
+      <text x="30" y="34" fill="#FDE68A" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">☕</text>
+      <text x="60" y="28" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="600">Aren Creamy Cold Brew</text>
+      <text x="60" y="44" fill="#A8A29E" font-family="Inter, sans-serif" font-size="9">Espresso, Fresh Milk, Gula Aren</text>
+      <text x="288" y="36" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="end">28K</text>
+    </g>
+
+    <!-- Item 2 -->
+    <g transform="translate(16, 228)">
+      <rect width="298" height="60" rx="8" fill="url(#warmCard)" stroke="#FFFFFF" stroke-opacity="0.05"/>
+      <rect x="10" y="10" width="40" height="40" rx="6" fill="#78350F" fill-opacity="0.5"/>
+      <text x="30" y="34" fill="#FDE68A" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">🥐</text>
+      <text x="60" y="28" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="600">Butter Almond Croissant</text>
+      <text x="60" y="44" fill="#A8A29E" font-family="Inter, sans-serif" font-size="9">Freshly Baked Daily Pastry</text>
+      <text x="288" y="36" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="end">32K</text>
+    </g>
+
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(16, 298)">
+      <rect width="298" height="85" rx="8" fill="#1C1917" stroke="#D97706" stroke-opacity="0.2"/>
+      <text x="14" y="20" fill="#FBBF24" font-family="Inter, sans-serif" font-size="10" font-weight="600">✓ Sistem F&amp;B All-in-One:</text>
+      <text x="14" y="36" fill="#D6D3D1" font-family="Inter, sans-serif" font-size="9">✓ E-Menu QR Meja, Order Dine-In &amp; Takeaway</text>
+      <text x="14" y="52" fill="#D6D3D1" font-family="Inter, sans-serif" font-size="9">✓ Bayar QRIS Otomatis &amp; Struk Nota Digital</text>
+      <text x="14" y="68" fill="#D6D3D1" font-family="Inter, sans-serif" font-size="9">✓ Admin Kasir/Dapur &amp; Rekap Omzet Excel</text>
+    </g>
+  </g>
+
+  <!-- Right: Location, Ambiance & Operational Hours -->
+  <g transform="translate(395, 65)">
+    <rect width="370" height="400" rx="16" fill="#141210" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    
+    <!-- Ambience Banner -->
+    <rect x="18" y="18" width="334" height="150" rx="10" fill="#292524" stroke="#FFFFFF" stroke-opacity="0.05"/>
+    <text x="36" y="50" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="15" font-weight="700">Ambiance &amp; Work From Cafe</text>
+    <text x="36" y="72" fill="#A8A29E" font-family="Inter, sans-serif" font-size="11">Fast Wi-Fi 100Mbps • Stop Kontak di Tiap Meja • AC Dingin</text>
+    
+    <!-- Ambience Visual Mock Badges -->
+    <g transform="translate(36, 92)">
+      <rect width="88" height="54" rx="6" fill="#1C1917" stroke="#D97706" stroke-opacity="0.3"/>
+      <text x="44" y="25" fill="#FBBF24" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Indoor AC</text>
+      <text x="44" y="42" fill="#78716C" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">No Smoking</text>
+    </g>
+    <g transform="translate(132, 92)">
+      <rect width="88" height="54" rx="6" fill="#1C1917" stroke="#D97706" stroke-opacity="0.3"/>
+      <text x="44" y="25" fill="#FBBF24" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Outdoor Area</text>
+      <text x="44" y="42" fill="#78716C" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">Garden Vibe</text>
+    </g>
+    <g transform="translate(228, 92)">
+      <rect width="88" height="54" rx="6" fill="#1C1917" stroke="#D97706" stroke-opacity="0.3"/>
+      <text x="44" y="25" fill="#FBBF24" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">VIP Room</text>
+      <text x="44" y="42" fill="#78716C" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">Meeting / Event</text>
+    </g>
+
+    <!-- Operational Hours & Maps -->
+    <g transform="translate(18, 185)">
+      <rect width="334" height="85" rx="10" fill="url(#warmCard)" stroke="#FFFFFF" stroke-opacity="0.05"/>
+      <text x="18" y="28" fill="#FBBF24" font-family="Inter, sans-serif" font-size="11" font-weight="700">📍 Lokasi &amp; Jam Operasional</text>
+      <text x="18" y="48" fill="#E7E5E4" font-family="Inter, sans-serif" font-size="10">Senin - Minggu: 08.00 - 23.00 WIB</text>
+      <text x="18" y="66" fill="#A8A29E" font-family="Inter, sans-serif" font-size="10">Jl. Suryakencana No. 45, Sukabumi • Terhubung Google Maps</text>
+    </g>
+
+    <!-- Order CTA Action Bar -->
+    <g transform="translate(18, 285)">
+      <rect width="334" height="95" rx="10" fill="#451A03" fill-opacity="0.3" stroke="#D97706" stroke-opacity="0.3"/>
+      <text x="18" y="30" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Tingkatkan Omset Resto &amp; Kafe</text>
+      <text x="18" y="48" fill="#D6D3D1" font-family="Inter, sans-serif" font-size="10">Pemesanan mandiri bebas potongan komisi aplikasi 20-30%.</text>
+      
+      <g transform="translate(18, 60)">
+        <rect width="298" height="26" rx="6" fill="url(#amberGrad)"/>
+        <text x="149" y="17" fill="#1C1917" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Buka di Google Maps &amp; WhatsApp</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

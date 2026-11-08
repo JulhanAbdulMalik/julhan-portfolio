@@ -21,10 +21,10 @@ export function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Cek apakah posisi scroll berada di Section 1 (Hero)
+      // Cek apakah posisi scroll berada di Section 1 (Hero) - hanya berlaku di halaman yang memiliki hero (homepage)
       const heroEl = document.getElementById("hero");
-      const heroThreshold = heroEl ? heroEl.offsetHeight - 80 : window.innerHeight - 80;
-      setIsInsideHero(currentScrollY < heroThreshold);
+      const isHeroActive = Boolean(heroEl && currentScrollY < (heroEl.offsetHeight - 80));
+      setIsInsideHero(isHeroActive);
 
       // Status scrolled jika lewat dari 20px
       setScrolled(currentScrollY > 20);
@@ -54,7 +54,7 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [pathname]);
 
   // Lock body scroll when overlay is active
   useEffect(() => {

@@ -49,7 +49,7 @@ export function AboutSection() {
             </div>
 
             <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-2xl">
-              Julhan Abdul Malik adalah Web & Mobile App Developer profesional berbasis di Sukabumi, Jawa Barat. Berfokus menghadirkan sistem web scalable dan aplikasi mobile Flutter dengan arsitektur kode bersih, keamanan teruji, dan performa tinggi.
+              Julhan Abdul Malik adalah seorang Software Engineer berbasis di Sukabumi, Jawa Barat. Bersama tim software engineer, kami mendevelop sistem web scalable dan aplikasi mobile cross-platform (Next.js &amp; Flutter) dengan arsitektur clean code, optimasi database, serta infrastruktur cloud modern untuk menghadirkan solusi digital yang high-performance, aman, dan siap mendukung pertumbuhan bisnis maupun instansi nyata.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export function AboutSection() {
                     Julhan Abdul Malik
                   </h3>
                   <p className="text-xs text-[#71717a] mt-0.5 font-normal">
-                    Web & Mobile Developer
+                    Software Engineer
                   </p>
                 </div>
 
@@ -140,7 +140,7 @@ export function AboutSection() {
           {/* Row A - Col 2: Journey Story (Top Middle) - DIBUAT LEBIH TINGGI */}
           <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300 lg:border-r">
             <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
-              Dimulai dari ketertarikan mendalam pada software architecture dan clean code, saya telah menangani berbagai sistem dari level UMKM hingga portal institusi skala puluhan ribu data aktif dengan reliabilitas tinggi.
+              Bersama tim software engineer, kami telah menangani berbagai proyek mulai dari kebutuhan digitalisasi UMKM hingga sistem instansi yang mengelola puluhan ribu data aktif secara stabil.
             </p>
           </div>
 
@@ -251,13 +251,13 @@ export function AboutSection() {
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#000519] tracking-tight">
               Prinsip kerja yang{" "}
-              <span className="text-[#007FA1]">saya pegang.</span>
+              <span className="text-[#007FA1]">kami pegang.</span>
             </h3>
           </div>
 
           {/* Bagian Bawah: Deskripsi */}
           <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal">
-            Komitmen profesional untuk memastikan setiap proyek yang dibangun kokoh, aman, terstandarisasi, dan dapat diskalakan untuk jangka panjang.
+            Komitmen kami bersama tim untuk memastikan setiap aplikasi yang dibangun bekerja dengan baik, aman, dan mudah dirawat dalam jangka panjang.
           </p>
         </div>
 
