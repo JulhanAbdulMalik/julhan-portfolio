@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 
 const plusJakartaSans = localFont({
   src: "./fonts/PlusJakartaSans-Variable.woff2",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     title: "Julhan Abdul Malik — Web & Mobile App Developer",
     description: "Jasa pembuatan website profesional dan aplikasi mobile siap pakai untuk bisnis & UMKM.",
     images: ["/images/og/og-cover.svg"],
-    creator: "@julhanmalik",
+    creator: "@julhan_a_malik",
   },
   robots: {
     index: true,
@@ -64,7 +65,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
@@ -79,10 +85,12 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} font-sans antialiased min-h-screen flex flex-col`}
         style={{ backgroundColor: "#000519", color: "#ffffff" }}
       >
-        <Navbar />
-        <div className="flex-1">{children}</div>
-        <Footer />
-        <BackToTop />
+        <SmoothScrollProvider>
+          <Navbar />
+          <div className="flex-1">{children}</div>
+          <Footer />
+          <BackToTop />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

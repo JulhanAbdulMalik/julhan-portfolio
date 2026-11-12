@@ -80,7 +80,7 @@ export default function ArticleListPage() {
             <div className="space-y-4 w-full">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
                 <BookOpen className="w-3.5 h-3.5 text-[#07DFFF]" />
-                <span>Basis Pengetahuan &amp; Artikel Rekayasa Software</span>
+                <span> Knowledge Base &amp; Software Engineering Articles</span>
               </div>
 
               <h1 className="text-[2rem] sm:text-[2.8rem] lg:text-[3.5rem] xl:text-[4rem] font-semibold text-white leading-[1.08] tracking-[-0.03em] w-full">
@@ -351,14 +351,6 @@ export default function ArticleListPage() {
                     </span>
                     <p className="text-xs text-[#a1a1aa] max-w-[220px] leading-relaxed">
                       Artikel teknis dan dokumentasi arsitektur sistem berikutnya sedang disusun.
-                    </p>
-                  </div>
-                  <div className="hidden lg:flex flex-col items-center justify-center p-8 text-center bg-[#fafafa]/30 min-h-[380px] space-y-2.5">
-                    <span className="text-[11px] font-semibold text-[#a1a1aa] uppercase tracking-wider">
-                      Segera Hadir
-                    </span>
-                    <p className="text-xs text-[#a1a1aa] max-w-[220px] leading-relaxed">
-                      Eksplorasi kode, best practices, dan studi kasus proyek produksi.
                     </p>
                   </div>
                 </>

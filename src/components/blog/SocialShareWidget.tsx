@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Share2, Link2, Check, MessageSquare } from "lucide-react";
 import { LinkedinIcon, InstagramIcon } from "@/components/ui/Icons";
+import { socialLinks } from "@/data/navigation";
 
 interface SocialShareWidgetProps {
   title: string;
@@ -34,7 +35,7 @@ export function SocialShareWidget({ title, slug, theme = "light" }: SocialShareW
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${title} - Baca artikel selengkapnya: ${canonicalUrl}`)}`;
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonicalUrl)}`;
-  const instagramUrl = "https://www.instagram.com/";
+  const instagramUrl = socialLinks.instagram;
 
   return (
     <div

@@ -11,61 +11,73 @@ import {
   GraduationCap,
   MessageCircle,
 } from "lucide-react";
+import { servicesList } from "@/data/servicesData";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export function ServicesHubSection() {
-  const services = [
-    {
-      id: "landing-page",
+  const showcaseMeta: Record<
+    string,
+    { category: string; image: string; highlightFeatures: string[] }
+  > = {
+    "landing-page": {
       category: "Web Development",
-      title: "Website Bisnis & Profil Usaha",
-      desc: "Website modern, cepat, elegan, dan fokus meningkatkan kepercayaan calon klien. Menampilkan profil perusahaan, legalitas usaha, dan tombol chat WhatsApp otomatis.",
-      image: "/images/projects/discussion-forum.svg",
-      originalPrice: "Rp 4.000.000",
-      price: "Mulai Rp 2.500.000",
-      time: "± 15 Hari Kerja",
-      features: [
+      image: "/images/projects/web-bisnis.webp",
+      highlightFeatures: [
         "Next.js 16",
         "Mobile Friendly",
-        "SEO Google 100%",
-        "Domain & Cloud Server",
+        "SEO Google",
+        "Cloud VPS",
         "Garansi 30 Hari",
       ],
     },
-    {
-      id: "coffee-shop",
+    "coffee-shop": {
       category: "F&B & Restaurant System",
-      title: "Website Coffee Shop & Restaurant",
-      desc: "Solusi terpadu bisnis kuliner: website landing page estetik, e-menu QR code nomor meja, pemesanan dine-in/takeaway, pembayaran QRIS otomatis, cetak nota digital, dan dashboard admin rekap laporan omzet.",
-      image: "/images/projects/coffee-shop.svg",
-      originalPrice: "Rp 9.000.000",
-      price: "Mulai Rp 5.500.000",
-      time: "25 - 45 Hari Kerja",
-      features: [
+      image: "/images/projects/web-coffeshop.webp",
+      highlightFeatures: [
         "E-Menu & QR Meja",
-        "Pemesanan & QRIS",
-        "Nota Struk Digital",
-        "Admin Rekap Laporan",
+        "Kasir & Print Thermal",
+        "QRIS Otomatis",
+        "Admin Omzet",
         "Garansi 60 Hari",
       ],
     },
-    {
-      id: "ecommerce",
+    ecommerce: {
       category: "E-Commerce & Ordering",
-      title: "Toko Online & Pemesanan Otomatis",
-      desc: "Sistem jualan online mandiri tanpa potongan komisi marketplace. Dilengkapi katalog produk interaktif, keranjang belanja, dan checkout pembayaran QRIS/Bank otomatis.",
-      image: "/images/projects/yuwanyie-picnic.svg",
-      originalPrice: "Rp 9.500.000",
-      price: "Mulai Rp 5.800.000",
-      time: "30 - 60 Hari Kerja",
-      features: [
-        "Katalog Interaktif",
+      image: "/images/projects/web-ecommerce.webp",
+      highlightFeatures: [
+        "Katalog & Filter",
         "QRIS & Bank Gateway",
-        "Database PostgreSQL",
+        "PostgreSQL",
         "Admin Dashboard",
         "Garansi 60 Hari",
       ],
     },
-  ];
+  };
+
+  const featuredServices = ["landing-page", "coffee-shop", "ecommerce"]
+    .map((id) => {
+      const data = servicesList.find((s) => s.id === id);
+      if (!data) return null;
+      const meta = showcaseMeta[id];
+      return {
+        id: data.id,
+        category: meta.category,
+        title: data.titleId,
+        desc: data.shortDescId,
+        image: meta.image,
+        time: data.timeline,
+        features: meta.highlightFeatures,
+      };
+    })
+    .filter(Boolean) as {
+    id: string;
+    category: string;
+    title: string;
+    desc: string;
+    image: string;
+    time: string;
+    features: string[];
+  }[];
 
   return (
     <section
@@ -88,7 +100,10 @@ export function ServicesHubSection() {
             ROW 1: Header Row (Layanan Unggulan: Judul di Atas, Deskripsi di Bawah)
             Satu blok utuh presisi seperti Section 2
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
+        <MotionFadeIn
+          delay={0.05}
+          className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5"
+        >
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
@@ -109,21 +124,22 @@ export function ServicesHubSection() {
           <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-none">
             Solusi pengembangan menyeluruh dari riset, arsitektur database, desain antarmuka, hingga cloud deployment bergaransi resmi.
           </p>
-        </div>
+        </MotionFadeIn>
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 2: 3 Layanan Unggulan Grid (Tabel Siku 90° wpu.id - 3 Kolom Simetris)
             Hanya 3 layanan unggulan utama di Halaman Beranda
         ════════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-dashed border-neutral-300">
-          {services.map((service, idx) => {
+          {featuredServices.map((service, idx) => {
             const isLastColLg = (idx + 1) % 3 === 0;
             const isLastColMd = (idx + 1) % 2 === 0;
             const isThirdItem = idx === 2;
 
             return (
-              <div
+              <MotionFadeIn
                 key={service.id}
+                delay={idx * 0.1}
                 className={`p-7 sm:p-8 lg:p-9 flex flex-col justify-between space-y-6 bg-white hover:bg-[#fafafa]/80 transition-colors group border-b border-dashed border-neutral-300 lg:border-b-0 ${
                   isThirdItem ? "md:col-span-2 lg:col-span-1 md:border-b-0" : ""
                 } ${
@@ -176,7 +192,7 @@ export function ServicesHubSection() {
                   </div>
                 </div>
 
-                {/* Bottom Card Area: Features & Price */}
+                {/* Bottom Card Area: Features & Action */}
                 <div className="pt-5 border-t border-dashed border-neutral-200 space-y-4">
                   {/* Features pills */}
                   <div className="flex flex-wrap gap-1.5">
@@ -190,33 +206,29 @@ export function ServicesHubSection() {
                     ))}
                   </div>
 
-                  {/* Price & Action Button (Sistem Button Identik Halaman /artikel) */}
+                  {/* Investment Scope & Action Button */}
                   <div className="flex items-center justify-between pt-1">
                     <div className="space-y-0.5">
-                      <span className="text-[10px] text-[#71717a] block uppercase tracking-wider">
-                        Estimasi Investasi
+                      <span className="text-[10px] text-[#71717a] block uppercase tracking-wider font-semibold">
+                        Biaya Investasi
                       </span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[11px] text-[#a1a1aa] line-through">
-                          {service.originalPrice}
-                        </span>
-                        <span className="text-sm sm:text-base font-semibold text-[#000519]">
-                          {service.price}
-                        </span>
-                      </div>
+                      <span className="text-xs sm:text-sm font-semibold text-[#007FA1]">
+                        Kustom Sesuai Kebutuhan
+                      </span>
                     </div>
 
                     <Link
                       href={`/services#${service.id}`}
-                      aria-label={`Lihat detail layanan ${service.title}`}
-                      className="p-2 sm:p-2.5 rounded-lg bg-neutral-100 group-hover:bg-[#007FA1] text-[#000519] group-hover:text-white transition-all shadow-xs shrink-0 flex items-center justify-center cursor-pointer"
-                      title="Lihat Detail Layanan"
+                      aria-label={`Konsultasi gratis untuk layanan ${service.title}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#007FA1] hover:bg-[#006b88] text-white text-xs font-semibold transition-all shadow-xs group/btn cursor-pointer"
+                      title="Konsultasi Gratis"
                     >
-                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <span>Konsultasi Gratis</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </Link>
                   </div>
                 </div>
-              </div>
+              </MotionFadeIn>
             );
           })}
         </div>
@@ -225,7 +237,10 @@ export function ServicesHubSection() {
             ROW 3: Special Educational Institution Callout Banner
             Program Kemitraan Digital Sekolah & Yayasan (Investasi Awal Rp 0,-)
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 bg-[#f8fafc] relative overflow-hidden">
+        <MotionFadeIn
+          delay={0.12}
+          className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 bg-[#f8fafc] relative overflow-hidden"
+        >
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div className="space-y-4 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600/10 text-emerald-700 border border-emerald-600/30 w-fit">
@@ -286,12 +301,15 @@ export function ServicesHubSection() {
               </a>
             </div>
           </div>
-        </div>
+        </MotionFadeIn>
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 4: Tombol Navigasi ke Halaman Layanan (Simple & Clean)
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#fafafa]/50">
+        <MotionFadeIn
+          delay={0.1}
+          className="p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-[#fafafa]/50"
+        >
           <p className="text-xs sm:text-sm text-[#52525b]">
             Ingin melihat seluruh pilihan paket dan spesifikasi layanan lainnya?
           </p>
@@ -303,7 +321,7 @@ export function ServicesHubSection() {
             <span>Lihat Semua Layanan</span>
             <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
-        </div>
+        </MotionFadeIn>
 
       </div>
     </section>

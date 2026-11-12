@@ -9,13 +9,13 @@ import {
   ShieldAlert,
   Info,
   X,
-  Layers,
-  Cpu,
-  Check,
+  CheckCircle2,
+  MessageCircle,
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
 import { portfolioProjects, PortfolioProject } from "@/data/portfolioData";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export function PortfolioPreviewSection() {
   const [showAll, setShowAll] = useState(false);
@@ -48,33 +48,33 @@ export function PortfolioPreviewSection() {
     switch (project.id) {
       case "cdu-portal":
         return {
-          category: "Website Application",
+          category: "Sistem Informasi & Monitoring",
           isConfidential: true,
           liveUrl: project.liveUrl || "https://curriculum.julhan.my.id",
         };
       case "panenkita":
         return {
-          category: "Web & Mobile Application",
+          category: "Web & Mobile Agritech SCM",
           isConfidential: false,
-          liveUrl: project.liveUrl || "https://panenkita.web.id",
+          liveUrl: project.liveUrl || "https://panenkita.web.id/",
         };
       case "yuwanyie-picnic":
         return {
-          category: "Website Application",
+          category: "Full-Stack Web & Business System",
           isConfidential: false,
-          liveUrl: project.liveUrl || "https://yuwanyiepicnic.com",
+          liveUrl: project.liveUrl || "https://yuwanyie-picnic.com",
         };
       case "bhumi":
         return {
-          category: "Website Application & Edu Game",
+          category: "Landing Page & Game Edukasi",
           isConfidential: false,
-          liveUrl: project.liveUrl || "https://gamebhumi.com",
+          liveUrl: project.liveUrl || "https://bhumi.web.id",
         };
       case "discussion-forum":
         return {
-          category: "Website Application",
+          category: "Web App Forum Diskusi (React Expert)",
           isConfidential: false,
-          liveUrl: project.liveUrl || "https://discussion-forum-julhan.vercel.app",
+          liveUrl: project.liveUrl || "https://discussion-forum-app-expert-end.vercel.app",
         };
       default:
         return {
@@ -99,7 +99,10 @@ export function PortfolioPreviewSection() {
         />
 
         {/* ROW 1: Header Row (Judul dibuat satu baris rapi) */}
-        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-white/15 flex flex-col justify-center space-y-4 sm:space-y-5">
+        <MotionFadeIn
+          delay={0.05}
+          className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-white/15 flex flex-col justify-center space-y-4 sm:space-y-5"
+        >
           <div className="space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/20 text-[#07DFFF] border border-[#007FA1]/40 w-fit">
               <FolderKanban className="w-3.5 h-3.5 text-[#07DFFF]" />
@@ -117,36 +120,39 @@ export function PortfolioPreviewSection() {
             Sistem production-ready yang dibangun dengan standar kode industri
             dan aktif digunakan oleh puluhan ribu pengguna nyata.
           </p>
-        </div>
+        </MotionFadeIn>
 
         {/* ROW 2: Horizontal Project List (Menampilkan 3 Proyek Teratas secara Default) */}
         <div className="divide-y divide-dashed divide-white/15 border-b border-dashed border-white/15">
-          {displayedProjects.map((project) => {
+          {displayedProjects.map((project, idx) => {
             const meta = getProjectMeta(project);
 
             return (
-              <div
+              <MotionFadeIn
                 key={project.id}
+                delay={idx * 0.08}
                 className="p-8 sm:p-10 lg:p-12 flex flex-col md:flex-row md:items-center justify-between gap-6 lg:gap-10 hover:bg-white/[0.015] transition-all duration-300 group relative"
               >
-                {/* Left Column: Mockup Thumbnail Frame — TANPA OUTLINE & TANPA LABEL OVERLAY */}
-                <div className="relative w-full md:w-[240px] lg:w-[280px] aspect-[16/10] rounded-xl overflow-hidden bg-[#020c24] shrink-0">
+                {/* Left Column: Mockup Thumbnail Frame — Bersih, Jelas, Tanpa Shadow Overlay */}
+                <div className="relative w-full md:w-[240px] lg:w-[280px] aspect-[16/10] rounded-xl overflow-hidden bg-[#020c24] shrink-0 border border-white/10">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     unoptimized
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#000519]/60 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 {/* Middle Column: Details & Tech Stack */}
                 <div className="flex-1 space-y-3">
-                  {/* Category Badge */}
-                  <div>
+                  {/* Category & Timeline Badge */}
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="px-2.5 py-0.5 rounded-full bg-[#007FA1]/30 border border-[#007FA1]/50 text-[#07DFFF] text-[11px] font-medium">
                       {meta.category}
+                    </span>
+                    <span className="text-[11px] font-medium text-[#71717a]">
+                      {project.year}
                     </span>
                   </div>
 
@@ -210,7 +216,7 @@ export function PortfolioPreviewSection() {
                     </div>
                   )}
                 </div>
-              </div>
+              </MotionFadeIn>
             );
           })}
         </div>
@@ -257,132 +263,186 @@ export function PortfolioPreviewSection() {
         <div className="w-full h-[60px] lg:h-[80px]" aria-hidden="true" />
       </div>
 
-      {/* ── MODAL DETAIL ARSITEKTUR ── */}
-      {activeModalProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
-          onClick={() => setActiveModalProject(null)}
-        >
-          <div
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#000519] border border-white/20 rounded-2xl p-6 sm:p-8 md:p-10 space-y-6 text-white shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Tombol Tutup (X) */}
-            <button
-              onClick={() => setActiveModalProject(null)}
-              className="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-[#a1a1aa] hover:text-white flex items-center justify-center transition-colors"
-              aria-label="Tutup Modal"
-            >
-              <X className="w-5 h-5" />
-            </button>
+      {/* ── MODAL DETAIL ARSITEKTUR & STUDI KASUS (Clean White Blueprint Style) ── */}
+      {activeModalProject && (() => {
+        const activeModalMeta = getProjectMeta(activeModalProject);
 
-            {/* Modal Header */}
-            <div className="space-y-2 pr-10">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-semibold text-[#07DFFF]">
-                  {activeModalProject.client}
-                </span>
-                <span className="text-xs text-[#71717a]">•</span>
-                <span className="text-xs text-[#71717a]">
-                  {activeModalProject.year}
-                </span>
-                {activeModalProject.isConfidential ? (
-                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                    Confidential System
+        return (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
+            onClick={() => setActiveModalProject(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-portfolio-title"
+          >
+            <div
+              className="relative w-full max-w-4xl lg:max-w-5xl max-h-[90vh] bg-white border border-neutral-200/90 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-[#000519] animate-in zoom-in-95 duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header Bar */}
+              <div className="p-6 sm:p-7 border-b border-dashed border-neutral-200 bg-white relative flex flex-col gap-3 shrink-0">
+                {/* Close Button */}
+                <button
+                  type="button"
+                  onClick={() => setActiveModalProject(null)}
+                  className="absolute top-5 right-5 w-8 h-8 rounded-lg border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 text-[#71717a] hover:text-[#000519] flex items-center justify-center transition-colors cursor-pointer"
+                  aria-label="Tutup Detail Studi Kasus"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+
+                <div className="flex flex-wrap items-center gap-2 pr-10">
+                  <span className="text-xs font-semibold text-[#007FA1] px-2.5 py-0.5 rounded-md bg-[#007FA1]/10 border border-[#007FA1]/20">
+                    {activeModalMeta.category}
                   </span>
-                ) : (
-                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                    Production System
+                  <span className="text-xs font-medium text-[#52525b] px-2.5 py-0.5 rounded-md bg-neutral-100 border border-neutral-200">
+                    {activeModalProject.client} • {activeModalProject.year}
                   </span>
+                  {activeModalProject.isConfidential ? (
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg text-xs font-semibold border bg-amber-50 text-amber-800 border-amber-500/30">
+                      <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Sistem Tertutup (Confidential)</span>
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg text-xs font-semibold border bg-emerald-50 text-emerald-800 border-emerald-500/30">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Sistem Berjalan (Production)</span>
+                    </span>
+                  )}
+                </div>
+
+              <div className="space-y-1">
+                <h3
+                  id="modal-portfolio-title"
+                  className="text-xl sm:text-2xl font-bold text-[#000519] tracking-tight leading-snug pr-8"
+                >
+                  {activeModalProject.title}
+                </h3>
+
+                <p className="text-xs sm:text-[13px] text-[#52525b]">
+                  <strong className="text-[#000519] font-medium">Peran Pengembang:</strong>{" "}
+                  {activeModalProject.roleId}
+                </p>
+              </div>
+            </div>
+
+            {/* Modal Scrollable Body */}
+            <div
+              data-lenis-prevent
+              className="p-6 sm:p-7 space-y-5 overflow-y-auto bg-white text-[#000519] divide-y divide-dashed border-neutral-200"
+            >
+              {/* Mockup Preview & Confidential Notice */}
+              <div className="space-y-3">
+                {/* Browser Mockup Frame with Full Width Edge-to-Edge & Scrollable Preview */}
+                <div className="relative w-full rounded-xl bg-neutral-100 border border-neutral-200/90 overflow-hidden shadow-xs">
+                  {/* Browser Mockup Top Bar */}
+                  <div className="px-3.5 py-2 bg-neutral-100/90 border-b border-neutral-200 flex items-center justify-between text-xs text-[#71717a] select-none">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80 inline-block" />
+                    </div>
+                    <div className="px-3 py-0.5 rounded-md bg-white border border-neutral-200/80 text-[11px] font-mono text-[#52525b] truncate max-w-[240px] sm:max-w-md">
+                      {activeModalProject.liveUrl
+                        ? activeModalProject.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+                        : activeModalProject.title}
+                    </div>
+                    <span className="text-[11px] text-[#71717a] font-medium hidden sm:inline-flex items-center gap-1">
+                      ↕ Scroll preview
+                    </span>
+                  </div>
+
+                  {/* Scrollable Frame: Full Width Edge-to-Edge with Vertical Scroll (Balanced Sweet Spot Height) */}
+                  <div
+                    data-lenis-prevent
+                    className="w-full h-[260px] sm:h-[310px] md:h-[340px] overflow-y-auto overscroll-contain bg-white"
+                  >
+                    <Image
+                      src={activeModalProject.image}
+                      alt={activeModalProject.title}
+                      width={1920}
+                      height={1080}
+                      unoptimized
+                      priority
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                </div>
+
+                {activeModalProject.isConfidential && activeModalProject.confidentialNoticeId && (
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/80 border border-amber-200/80 text-xs text-amber-900 leading-relaxed flex items-start gap-3">
+                    <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <div className="space-y-0.5">
+                      <span className="font-semibold text-amber-950 block">
+                        Kebijakan Privasi Data &amp; Akses Sistem Tertutup:
+                      </span>
+                      <p className="text-amber-800/90 leading-relaxed font-normal">
+                        {activeModalProject.confidentialNoticeId}
+                      </p>
+                    </div>
+                  </div>
                 )}
               </div>
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-                {activeModalProject.title}
-              </h3>
-              <p className="text-xs text-[#71717a]">
-                Peran Pengembang: {activeModalProject.roleId}
-              </p>
-            </div>
 
-            {/* Mockup Preview */}
-            <div className="relative w-full h-48 sm:h-64 rounded-xl bg-[#020c24] overflow-hidden flex items-center justify-center p-4">
-              <Image
-                src={activeModalProject.image}
-                alt={activeModalProject.title}
-                width={600}
-                height={300}
-                unoptimized
-                className="w-full h-full object-contain"
-              />
-            </div>
+              {/* Tentang Proyek & Latar Belakang */}
+              <div className="pt-5 space-y-1.5">
+                <span className="text-xs font-semibold text-[#007FA1] block">
+                  Tentang Proyek &amp; Latar Belakang
+                </span>
+                <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed font-normal">
+                  {activeModalProject.descriptionId}
+                </p>
+              </div>
 
-            {/* Confidential Notice */}
-            {activeModalProject.isConfidential &&
-              activeModalProject.confidentialNoticeId && (
-                <div className="p-4 rounded-xl bg-amber-500/[0.08] border border-amber-500/30 text-xs text-[#d4d4d8] leading-relaxed">
-                  <span className="font-semibold text-amber-300 block mb-1">
-                    Kebijakan Privasi Data Akademik:
+              {/* Tantangan Awal vs Dampak Solusi (Problem vs Impact) */}
+              {(activeModalProject.problemId || activeModalProject.impactId) && (
+                <div className="pt-5 space-y-2.5">
+                  <span className="text-xs font-semibold text-[#007FA1] block">
+                    Tantangan Awal vs Dampak Transformasi Solusi:
                   </span>
-                  {activeModalProject.confidentialNoticeId}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {activeModalProject.problemId && (
+                      <div className="p-3.5 sm:p-4 rounded-xl bg-rose-50/60 border border-rose-200/80 space-y-1.5">
+                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-100 text-rose-800 border border-rose-200">
+                          <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                          Tantangan Awal (Sebelum)
+                        </span>
+                        <p className="text-xs text-[#475569] leading-relaxed font-normal">
+                          {activeModalProject.problemId}
+                        </p>
+                      </div>
+                    )}
+                    {activeModalProject.impactId && (
+                      <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 border border-emerald-200/80 space-y-1.5">
+                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                          Dampak Solusi (Sesudah)
+                        </span>
+                        <p className="text-xs text-[#1e293b] leading-relaxed font-medium">
+                          {activeModalProject.impactId}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
-            {/* Project Description */}
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-white flex items-center gap-2 tracking-tight">
-                <Layers className="w-4 h-4 text-[#07DFFF]" />
-                <span>Tentang Proyek &amp; Latar Belakang</span>
-              </h4>
-              <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed font-normal">
-                {activeModalProject.descriptionId}
-              </p>
-            </div>
-
-            {/* Dampak Transformasi Nyata (Problem vs Solution) */}
-            {(activeModalProject.problemId || activeModalProject.impactId) && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 p-4 sm:p-4.5 rounded-xl bg-[#020c24] border border-white/[0.08]">
-                {activeModalProject.problemId && (
-                  <div className="space-y-1.5">
-                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/10 text-rose-300 border border-rose-500/20 uppercase tracking-wider">
-                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
-                      Tantangan Awal (Sebelum)
-                    </span>
-                    <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
-                      {activeModalProject.problemId}
-                    </p>
-                  </div>
-                )}
-                {activeModalProject.impactId && (
-                  <div className="space-y-1.5 border-t sm:border-t-0 sm:border-l border-white/[0.08] pt-3 sm:pt-0 sm:pl-3.5">
-                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 uppercase tracking-wider">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                      Dampak Solusi (Sesudah)
-                    </span>
-                    <p className="text-xs text-[#e4e4e7] leading-relaxed font-normal">
-                      {activeModalProject.impactId}
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Metrics Grid */}
-            {activeModalProject.metrics &&
-              activeModalProject.metrics.length > 0 && (
-                <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-white tracking-tight">
-                    Metrik &amp; Capaian Kinerja
-                  </h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {/* Metrik & Capaian Kinerja */}
+              {activeModalProject.metrics && activeModalProject.metrics.length > 0 && (
+                <div className="pt-5 space-y-2.5">
+                  <span className="text-xs font-semibold text-[#007FA1] block">
+                    Metrik &amp; Capaian Kinerja:
+                  </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                     {activeModalProject.metrics.map((m, idx) => (
                       <div
                         key={idx}
-                        className="p-3 rounded-xl bg-[#020c24] border border-white/[0.08]"
+                        className="p-3 sm:p-3.5 rounded-xl bg-[#fafafa]/80 hover:bg-white border border-neutral-200/80 transition-all text-center sm:text-left"
                       >
-                        <div className="text-base sm:text-lg font-semibold text-[#07DFFF] tracking-tight">
+                        <div className="text-lg sm:text-xl font-bold text-[#007FA1] tracking-tight">
                           {m.value}
                         </div>
-                        <div className="text-[10px] text-[#71717a] mt-1 leading-tight">
+                        <div className="text-[11px] text-[#52525b] mt-0.5 leading-tight">
                           {m.labelId}
                         </div>
                       </div>
@@ -391,101 +451,129 @@ export function PortfolioPreviewSection() {
                 </div>
               )}
 
-            {/* Core Features */}
-            {activeModalProject.featuresId &&
-              activeModalProject.featuresId.length > 0 && (
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white tracking-tight">
-                    Fitur-Fitur Kunci Sistem
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              {/* Fitur-Fitur Kunci Sistem */}
+              {activeModalProject.featuresId && activeModalProject.featuresId.length > 0 && (
+                <div className="pt-5 space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-semibold text-[#007FA1] block">
+                      Fitur-Fitur Kunci Sistem:
+                    </span>
+                    <span className="text-[11px] font-medium text-[#71717a] px-2 py-0.5 rounded-md bg-neutral-100 border border-neutral-200">
+                      {activeModalProject.featuresId.length} Fitur Terintegrasi
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                     {activeModalProject.featuresId.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2.5 p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#d4d4d8]"
+                        className="p-3 sm:p-3.5 rounded-xl bg-[#fafafa]/80 hover:bg-[#fafafa] border border-neutral-200/80 hover:border-[#007FA1]/30 flex items-start gap-2.5 text-xs sm:text-[13px] text-[#334155] leading-snug transition-all"
                       >
-                        <Check className="w-3.5 h-3.5 text-[#07DFFF] shrink-0 mt-0.5" />
-                        <span>{feature}</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="font-medium text-[#1e293b]">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-            {/* Architecture Highlights */}
-            {activeModalProject.architectureId &&
-              activeModalProject.architectureId.length > 0 && (
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white flex items-center gap-2 tracking-tight">
-                    <Cpu className="w-4 h-4 text-[#07DFFF]" />
-                    <span>Sorotan Arsitektur &amp; Rekayasa</span>
-                  </h4>
-                  <div className="space-y-2">
+              {/* Sorotan Arsitektur & Rekayasa */}
+              {activeModalProject.architectureId && activeModalProject.architectureId.length > 0 && (
+                <div className="pt-5 space-y-2.5">
+                  <span className="text-xs font-semibold text-[#007FA1] block">
+                    Sorotan Arsitektur &amp; Rekayasa:
+                  </span>
+                  <div className="space-y-2 pt-1">
                     {activeModalProject.architectureId.map((arch, idx) => (
                       <div
                         key={idx}
-                        className="p-3 rounded-xl bg-[#020c24] border border-white/[0.06] text-xs text-[#a1a1aa] leading-relaxed"
+                        className="p-3 sm:p-3.5 rounded-xl bg-[#f8fafc] border border-neutral-200/80 text-xs sm:text-[13px] text-[#334155] leading-relaxed flex items-start gap-3"
                       >
-                        {arch}
+                        <span className="w-5 h-5 rounded-md bg-[#007FA1]/10 text-[#007FA1] text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                          0{idx + 1}
+                        </span>
+                        <span>{arch}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-            {/* Full Tech Stack Pills */}
-            {activeModalProject.techStack && (
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold text-white tracking-tight">
-                  Tech Stack Lengkap
-                </h4>
-                <div className="flex flex-wrap gap-1.5">
-                  {activeModalProject.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-1 rounded-md text-xs bg-[#020c24] border border-white/[0.08] text-[#a1a1aa]"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Standar Teknologi & Tech Stack Lengkap */}
+              {activeModalProject.techStack && (
+                <div className="pt-5 space-y-2">
+                  <span className="text-xs font-semibold text-[#007FA1] block">
+                    Standar Teknologi &amp; Tech Stack:
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {activeModalProject.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded-md bg-[#000519]/5 text-[11px] font-medium text-[#404040] border border-black/[0.04]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
-            {/* Modal Footer */}
-            <div className="pt-4 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3">
-              <div className="text-xs text-[#71717a]">
-                Tertarik membangun sistem sekelas ini untuk bisnis Anda?
+            {/* Modal Sticky Action Bar */}
+            <div className="p-5 sm:p-6 border-t border-dashed border-neutral-200 bg-[#fafafa] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shrink-0">
+              <div className="space-y-0.5 max-w-sm">
+                <span className="block text-xs font-semibold text-[#000519]">
+                  Tertarik mendiskusikan sistem serupa?
+                </span>
+                <p className="text-[11px] text-[#71717a]">
+                  Konsultasikan arsitektur, integrasi fitur, dan estimasi waktu pengembangan bisnis Anda.
+                </p>
               </div>
-              <div className="flex items-center gap-2 w-full sm:w-auto">
-                {activeModalProject.liveUrl &&
-                  !activeModalProject.isConfidential && (
-                    <a
-                      href={activeModalProject.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-lg text-xs font-semibold bg-white/10 hover:bg-white/15 text-white transition-all flex items-center justify-center gap-1.5"
-                    >
-                      <span>Live Demo</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  )}
+
+              <div className="flex flex-wrap items-center justify-end gap-2 w-full sm:w-auto sm:self-center ml-auto">
+                {activeModalProject.playStoreUrl && (
+                  <a
+                    href={activeModalProject.playStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 rounded-lg border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                    title="Buka di Google Play Store"
+                  >
+                    <span>Google Play</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
+                {activeModalProject.liveUrl && !activeModalProject.isConfidential && (
+                  <a
+                    href={activeModalProject.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg border border-[#007FA1]/30 bg-[#007FA1]/10 hover:bg-[#007FA1]/20 text-[#007FA1] text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
                 <a
                   href={`https://wa.me/6283111030309?text=${encodeURIComponent(
                     `Halo Mas Julhan, saya melihat studi kasus ${activeModalProject.title} di portfolio Anda dan tertarik mendiskusikan sistem serupa.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial px-5 py-2.5 rounded-lg text-xs font-semibold bg-[#007FA1] hover:bg-[#00A2C9] text-white transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="px-4 sm:px-5 py-2 rounded-lg bg-[#007FA1] hover:bg-[#006b88] text-white text-xs font-semibold transition-all shadow-xs flex items-center justify-center gap-1.5 group text-center cursor-pointer"
                 >
+                  <MessageCircle className="w-3.5 h-3.5" />
                   <span>Konsultasikan Sistem Serupa</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-      )}
+      );
+    })()}
     </section>
   );
 }

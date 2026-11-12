@@ -693,7 +693,7 @@ export async function processBookingOrder(payload: OrderPayload) {
                     </a>
 
                     <Link
-                      href="/portfolio"
+                      href="/#portfolio"
                       className="w-full py-2.5 rounded-lg text-xs font-semibold bg-[#fafafa] border border-neutral-200 hover:border-neutral-400 hover:bg-neutral-100 text-[#000519] transition-all flex items-center justify-center gap-2 shadow-xs cursor-pointer"
                     >
                       <FolderGit2 className="w-3.5 h-3.5 text-[#71717a]" />

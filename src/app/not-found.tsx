@@ -6,7 +6,11 @@ import { Terminal, Home, Briefcase, Layers, ArrowRight } from "lucide-react";
 
 export default function NotFoundPage() {
   return (
-    <div className="min-h-screen bg-[#000519] text-white pt-32 pb-20 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden flex items-center justify-center">
+    <div
+      id="hero"
+      data-full-dark="true"
+      className="min-h-screen bg-[#000519] text-white pt-32 pb-20 px-6 sm:px-10 lg:px-16 xl:px-24 relative overflow-hidden flex items-center justify-center"
+    >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-rose-500/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-2/3 right-1/4 w-[400px] h-[400px] bg-[#007FA1]/50 rounded-full blur-[130px] pointer-events-none" />
@@ -87,7 +91,7 @@ export default function NotFoundPage() {
           </Link>
 
           <Link
-            href="/portfolio"
+            href="/#portfolio"
             className="p-3.5 rounded-2xl bg-[#020c24] border border-white/[0.08] hover:border-[#007FA1] text-[#a1a1aa] hover:text-white transition-all flex items-center justify-center gap-2 group"
           >
             <Briefcase className="w-4 h-4 text-[#07DFFF] group-hover:scale-110 transition-transform" />

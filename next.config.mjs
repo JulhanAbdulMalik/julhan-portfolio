@@ -12,6 +12,16 @@ const nextConfig = {
         destination: "/artikel/:slug*",
         permanent: true,
       },
+      {
+        source: "/portfolio",
+        destination: "/#portfolio",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "/#contact",
+        permanent: true,
+      },
     ];
   },
 };

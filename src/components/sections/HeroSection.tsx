@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Star } from "lucide-react";
 import { socialLinks } from "@/data/navigation";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export function HeroSection() {
   return (
@@ -140,7 +141,7 @@ export function HeroSection() {
               </span>
               <span className="text-[11px] font-medium text-[#a1a1aa]">Digital Solutions</span>
             </div>
-            <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-semibold uppercase border border-emerald-500/25">
+            <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-semibold border border-emerald-500/25">
               Active
             </span>
           </div>
@@ -223,7 +224,11 @@ export function HeroSection() {
       </motion.div>
 
       {/* ── Main Centered Editorial Content Area ── */}
-      <div className="max-w-[84rem] mx-auto w-full relative z-10 my-auto py-2 flex flex-col items-center justify-center text-center">
+      <MotionFadeIn
+        direction="up"
+        delay={0.1}
+        className="max-w-[84rem] mx-auto w-full relative z-10 my-auto py-2 flex flex-col items-center justify-center text-center"
+      >
         <h1 className="text-[2rem] sm:text-[2.9rem] md:text-[3.6rem] lg:text-[4.2rem] xl:text-[4.8rem] font-semibold text-white leading-[1.14] sm:leading-[1.15] tracking-[-0.03em] max-w-6xl">
           Wujudkan ide bisnis
           <br />
@@ -235,10 +240,14 @@ export function HeroSection() {
         <p className="max-w-2xl lg:max-w-[680px] xl:max-w-[720px] text-sm sm:text-base lg:text-[15px] xl:text-[16px] text-[#a1a1aa] leading-relaxed font-normal mt-8 sm:mt-10 lg:mt-12">
           Membantu bisnis dan startup membangun website modern serta aplikasi mobile berkinerja tinggi, cepat, aman, dan dirancang untuk mempermudah operasional bisnis Anda.
         </p>
-      </div>
+      </MotionFadeIn>
 
       {/* ── Bottom Bar: Identity & CTA (wpu.id signature layout) ── */}
-      <div className="max-w-[84rem] mx-auto w-full pt-4 sm:pt-6 border-t border-dashed border-white/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 relative z-10">
+      <MotionFadeIn
+        direction="up"
+        delay={0.25}
+        className="max-w-[84rem] mx-auto w-full pt-4 sm:pt-6 border-t border-dashed border-white/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 relative z-10"
+      >
         {/* Bottom Left: Brand Signature */}
         <div className="flex items-center gap-3">
           <span className="w-6 h-[1.5px] bg-[#007FA1] inline-block shrink-0" />
@@ -262,7 +271,7 @@ export function HeroSection() {
             <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
           </Link>
         </div>
-      </div>
+      </MotionFadeIn>
     </section>
   );
 }

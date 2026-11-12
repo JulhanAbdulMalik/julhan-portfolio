@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { User, ArrowUpRight, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { User, ArrowDownToLine, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import { socialLinks } from "@/data/navigation";
 import { LinkedinIcon, GithubIcon } from "@/components/ui/Icons";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export function AboutSection() {
   return (
@@ -32,7 +32,10 @@ export function AboutSection() {
         ════════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-dashed border-neutral-300 lg:min-h-[410px] xl:min-h-[440px]">
           {/* Sisi Kiri (lg: 8 cols): Badge + Judul Besar di Atas, Deskripsi di Bawah */}
-          <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 xl:p-14 lg:border-r border-dashed border-neutral-300 flex flex-col justify-center space-y-5 sm:space-y-6">
+          <MotionFadeIn
+            delay={0.05}
+            className="lg:col-span-8 p-8 sm:p-10 lg:p-12 xl:p-14 lg:border-r border-dashed border-neutral-300 flex flex-col justify-center space-y-5 sm:space-y-6"
+          >
             <div className="space-y-3.5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
                 <User className="w-3.5 h-3.5 text-[#007FA1]" />
@@ -51,10 +54,13 @@ export function AboutSection() {
             <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-2xl">
               Julhan Abdul Malik adalah seorang Software Engineer berbasis di Sukabumi, Jawa Barat. Bersama tim software engineer, kami mendevelop sistem web scalable dan aplikasi mobile cross-platform (Next.js &amp; Flutter) dengan arsitektur clean code, optimasi database, serta infrastruktur cloud modern untuk menghadirkan solusi digital yang high-performance, aman, dan siap mendukung pertumbuhan bisnis maupun instansi nyata.
             </p>
-          </div>
+          </MotionFadeIn>
 
           {/* Sisi Kanan (lg: 4 cols): Foto dan Nama (Margin Dipertebal Sesuai Revisi) */}
-          <div className="lg:col-span-4 p-7 sm:p-8 lg:p-10 xl:p-11 flex flex-col justify-between bg-[#fafafa]/50 border-t lg:border-t-0 border-dashed border-neutral-300">
+          <MotionFadeIn
+            delay={0.15}
+            className="lg:col-span-4 p-7 sm:p-8 lg:p-10 xl:p-11 flex flex-col justify-between bg-[#fafafa]/50 border-t lg:border-t-0 border-dashed border-neutral-300"
+          >
             <div className="w-full h-full flex flex-col justify-between space-y-4">
               {/* Photo Box: Mengisi ruang kotak secara presisi dan proporsional dengan margin lebih tebal */}
               <div className="w-full flex-1 min-h-[250px] sm:min-h-[270px] lg:min-h-[290px] xl:min-h-[300px] rounded-xl overflow-hidden bg-neutral-100 relative shadow-sm border border-black/[0.08] group">
@@ -102,7 +108,7 @@ export function AboutSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </MotionFadeIn>
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
@@ -115,7 +121,10 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-dashed border-neutral-300">
           
           {/* Column 1: Quote Block (Full Height, spans 2 rows on lg) */}
-          <div className="lg:col-span-4 lg:row-span-2 p-8 sm:p-10 lg:p-12 pt-10 sm:pt-12 lg:pt-14 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300 bg-[#fafafa]/50 relative overflow-hidden">
+          <MotionFadeIn
+            delay={0.1}
+            className="lg:col-span-4 lg:row-span-2 p-8 sm:p-10 lg:p-12 pt-10 sm:pt-12 lg:pt-14 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300 bg-[#fafafa]/50 relative overflow-hidden"
+          >
             {/* Tanda Kutip Besar di Belakang (Font Plus Jakarta Sans, Opacity Rendah, Berjarak Aman dari Batas Atas) */}
             <span
               aria-hidden="true"
@@ -135,24 +144,33 @@ export function AboutSection() {
                 — Julhan Abdul Malik
               </p>
             </div>
-          </div>
+          </MotionFadeIn>
 
           {/* Row A - Col 2: Journey Story (Top Middle) - DIBUAT LEBIH TINGGI */}
-          <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300 lg:border-r">
+          <MotionFadeIn
+            delay={0.15}
+            className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300 lg:border-r"
+          >
             <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
               Bersama tim software engineer, kami telah menangani berbagai proyek mulai dari kebutuhan digitalisasi UMKM hingga sistem instansi yang mengelola puluhan ribu data aktif secara stabil.
             </p>
-          </div>
+          </MotionFadeIn>
 
           {/* Row A - Col 3: Credentials Story (Top Right) - DIBUAT LEBIH TINGGI */}
-          <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300">
+          <MotionFadeIn
+            delay={0.2}
+            className="lg:col-span-4 p-8 sm:p-10 lg:p-12 min-h-[190px] sm:min-h-[220px] flex items-center border-b border-dashed border-neutral-300"
+          >
             <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
               Berpengalaman sebagai Academy Code Reviewer di Dicoding Indonesia dan bersertifikasi BNSP, memastikan setiap deliverable memiliki standar keamanan, maintainability, serta performa tinggi.
             </p>
-          </div>
+          </MotionFadeIn>
 
           {/* Row B - Col 2: Tech Badges Strip (Bottom Middle) - DIBUAT PENDEK / RAMPING */}
-          <div className="lg:col-span-4 py-3.5 px-3 sm:py-4 sm:px-4 lg:px-2 xl:px-4 min-h-[72px] sm:min-h-[78px] bg-[#fafafa]/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300">
+          <MotionFadeIn
+            delay={0.25}
+            className="lg:col-span-4 py-3.5 px-3 sm:py-4 sm:px-4 lg:px-2 xl:px-4 min-h-[72px] sm:min-h-[78px] bg-[#fafafa]/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300"
+          >
             <div className="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-2 lg:gap-1.5 xl:gap-2">
               <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Next.js 15</span>
               <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">TypeScript</span>
@@ -160,23 +178,53 @@ export function AboutSection() {
               <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">PostgreSQL</span>
               <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Prisma ORM</span>
             </div>
-          </div>
+          </MotionFadeIn>
 
-          {/* Row B - Col 3: Solid Dark CTA Box (Bottom Right) - DIBUAT PENDEK / RAMPING */}
-          <Link
-            href="/#portfolio"
-            className="lg:col-span-4 py-3.5 px-6 sm:py-4 sm:px-8 min-h-[72px] sm:min-h-[78px] bg-[#000519] hover:bg-[#020c24] text-white flex items-center justify-between gap-4 transition-all duration-200 group cursor-pointer"
+          {/* Row B - Col 3: Dual CV Download Action (ATS & Design) */}
+          <MotionFadeIn
+            delay={0.3}
+            className="lg:col-span-4 min-h-[72px] sm:min-h-[78px] bg-[#000519] grid grid-cols-2 divide-x divide-dashed divide-white/15"
           >
-            <div className="space-y-0.5">
-              <span className="text-[10px] text-[#a1a1aa] block uppercase tracking-wider">
-                Explore Works
-              </span>
-              <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors line-clamp-1">
-                Lihat Portfolio & Studi Kasus
-              </span>
-            </div>
-            <ArrowUpRight className="w-4 h-4 text-white shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </Link>
+            {/* Opsi 1: Unduh CV ATS */}
+            <a
+              href="/cv-julhan-abdul-malik-ats.pdf"
+              download="CV_Julhan_Abdul_Malik_ATS.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-3 px-3.5 sm:py-3.5 sm:px-5 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
+              title="Unduh CV Format ATS (Ramah Sistem Rekrutmen)"
+            >
+              <div className="space-y-0.5 min-w-0">
+                <span className="text-[10px] text-[#a1a1aa] block tracking-wide">
+                  Format ATS
+                </span>
+                <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block">
+                  CV ATS
+                </span>
+              </div>
+              <ArrowDownToLine className="w-4 h-4 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
+            </a>
+
+            {/* Opsi 2: Unduh CV Desain */}
+            <a
+              href="/cv-julhan-abdul-malik-design.pdf"
+              download="CV_Julhan_Abdul_Malik_Design.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-3 px-3.5 sm:py-3.5 sm:px-5 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
+              title="Unduh CV Format Desain Kreatif & Visual"
+            >
+              <div className="space-y-0.5 min-w-0">
+                <span className="text-[10px] text-[#a1a1aa] block tracking-wide">
+                  Desain Kreatif
+                </span>
+                <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block">
+                  CV Desain
+                </span>
+              </div>
+              <ArrowDownToLine className="w-4 h-4 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
+            </a>
+          </MotionFadeIn>
 
         </div>
 
@@ -185,63 +233,53 @@ export function AboutSection() {
             Dipisahkan rapi dengan garis vertikal strip putus-putus
         ════════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-dashed divide-neutral-300 border-b border-dashed border-neutral-300">
-          {/* Metric 1 */}
-          <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
-              YEARS OF EXPERIENCE
-            </span>
-            <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
-              3+
-            </div>
-            <p className="text-xs text-[#52525b] leading-relaxed font-normal">
-              Membangun sistem web modern & aplikasi mobile siap pakai.
-            </p>
-          </div>
-
-          {/* Metric 2 */}
-          <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
-              CODE REVIEWS COMPLETED
-            </span>
-            <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
-              258+
-            </div>
-            <p className="text-xs text-[#52525b] leading-relaxed font-normal">
-              Submission code reviewer di Dicoding Indonesia.
-            </p>
-          </div>
-
-          {/* Metric 3 */}
-          <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
-              CLIENT SATISFACTION
-            </span>
-            <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
-              100%
-            </div>
-            <p className="text-xs text-[#52525b] leading-relaxed font-normal">
-              Kepuasan klien & sistem stabil berjalan di live production.
-            </p>
-          </div>
-
-          {/* Metric 4 */}
-          <div className="p-8 sm:p-10 text-left space-y-2">
-            <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
-              CAMPUS RECORDS MANAGED
-            </span>
-            <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
-              25K+
-            </div>
-            <p className="text-xs text-[#52525b] leading-relaxed font-normal">
-              Baris data aktif dikelola pada sistem portal kampus.
-            </p>
-          </div>
+          {[
+            {
+              label: "YEARS OF EXPERIENCE",
+              value: "3+",
+              desc: "Membangun sistem web modern & aplikasi mobile siap pakai.",
+            },
+            {
+              label: "CODE REVIEWS COMPLETED",
+              value: "258+",
+              desc: "Submission code reviewer di Dicoding Indonesia.",
+            },
+            {
+              label: "CLIENT SATISFACTION",
+              value: "100%",
+              desc: "Kepuasan klien & sistem stabil berjalan di live production.",
+            },
+            {
+              label: "CAMPUS RECORDS MANAGED",
+              value: "25K+",
+              desc: "Baris data aktif dikelola pada sistem portal kampus.",
+            },
+          ].map((metric, idx) => (
+            <MotionFadeIn
+              key={metric.label}
+              delay={idx * 0.08}
+              className="p-8 sm:p-10 text-left space-y-2 bg-white hover:bg-[#fafafa]/50 transition-colors"
+            >
+              <span className="text-[11px] tracking-widest uppercase text-[#71717a] block font-semibold">
+                {metric.label}
+              </span>
+              <div className="text-4xl sm:text-5xl font-bold text-[#007FA1] tracking-tight">
+                {metric.value}
+              </div>
+              <p className="text-xs text-[#52525b] leading-relaxed font-normal">
+                {metric.desc}
+              </p>
+            </MotionFadeIn>
+          ))}
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 5: Standar Profesional Header (Satu Blok Utuh: Judul di Atas, Deskripsi di Bawah)
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-8 sm:p-10 lg:p-12 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
+        <MotionFadeIn
+          delay={0.08}
+          className="p-8 sm:p-10 lg:p-12 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5"
+        >
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
@@ -259,60 +297,52 @@ export function AboutSection() {
           <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal">
             Komitmen kami bersama tim untuk memastikan setiap aplikasi yang dibangun bekerja dengan baik, aman, dan mudah dirawat dalam jangka panjang.
           </p>
-        </div>
+        </MotionFadeIn>
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 6: 3 Principles Columns (01, 02, 03)
             3 Kolom Prinsip dengan Garis Strip Putus-Putus
         ════════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-dashed divide-neutral-300">
-          {/* Principle 01 */}
-          <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
-              01
-            </span>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#007FA1]" />
-              <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
-                Arsitektur Bersih & Teruji
-              </h4>
-            </div>
-            <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
-              Struktur kode modular, type-safe dengan TypeScript, dan terstandarisasi. Memudahkan pengembangan fitur baru di masa depan tanpa merombak sistem dari nol.
-            </p>
-          </div>
-
-          {/* Principle 02 */}
-          <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
-              02
-            </span>
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-[#007FA1]" />
-              <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
-                Transparan & Tepat Waktu
-              </h4>
-            </div>
-            <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
-              Estimasi timeline realistis dengan update progres rutin. Seluruh hak cipta kode sumber dan akses cloud diserahkan 100% tanpa biaya tersembunyi.
-            </p>
-          </div>
-
-          {/* Principle 03 */}
-          <div className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors">
-            <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
-              03
-            </span>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#007FA1]" />
-              <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
-                Berorientasi Nilai Bisnis
-              </h4>
-            </div>
-            <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
-              Teknologi adalah alat, pertumbuhan bisnis Anda adalah tujuannya. Setiap antarmuka dirancang untuk konversi, dan backend dioptimalkan untuk efisiensi operasional.
-            </p>
-          </div>
+          {[
+            {
+              num: "01",
+              icon: <CheckCircle2 className="w-4 h-4 text-[#007FA1]" />,
+              title: "Arsitektur Bersih & Teruji",
+              desc: "Struktur kode modular, type-safe dengan TypeScript, dan terstandarisasi. Memudahkan pengembangan fitur baru di masa depan tanpa merombak sistem dari nol.",
+            },
+            {
+              num: "02",
+              icon: <Zap className="w-4 h-4 text-[#007FA1]" />,
+              title: "Transparan & Tepat Waktu",
+              desc: "Estimasi timeline realistis dengan update progres rutin. Seluruh hak cipta kode sumber dan akses cloud diserahkan 100% tanpa biaya tersembunyi.",
+            },
+            {
+              num: "03",
+              icon: <ShieldCheck className="w-4 h-4 text-[#007FA1]" />,
+              title: "Berorientasi Nilai Bisnis",
+              desc: "Teknologi adalah alat, pertumbuhan bisnis Anda adalah tujuannya. Setiap antarmuka dirancang untuk konversi, dan backend dioptimalkan untuk efisiensi operasional.",
+            },
+          ].map((principle, idx) => (
+            <MotionFadeIn
+              key={principle.num}
+              delay={idx * 0.1}
+              className="p-8 sm:p-10 space-y-3 bg-white hover:bg-[#fafafa]/60 transition-colors"
+            >
+              <span className="text-2xl sm:text-3xl font-semibold text-[#d4d4d4] block">
+                {principle.num}
+              </span>
+              <div className="flex items-center gap-2">
+                {principle.icon}
+                <h4 className="text-base sm:text-lg font-semibold text-[#000519]">
+                  {principle.title}
+                </h4>
+              </div>
+              <p className="text-xs sm:text-sm text-[#52525b] leading-relaxed">
+                {principle.desc}
+              </p>
+            </MotionFadeIn>
+          ))}
         </div>
 
         {/* ════════════════════════════════════════════════════════════════

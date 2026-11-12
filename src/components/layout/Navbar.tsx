@@ -21,9 +21,12 @@ export function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Cek apakah posisi scroll berada di Section 1 (Hero) - hanya berlaku di halaman yang memiliki hero (homepage)
+      // Cek apakah posisi scroll berada di Section 1 (Hero) - atau halaman full dark canvas (seperti 404)
       const heroEl = document.getElementById("hero");
-      const isHeroActive = Boolean(heroEl && currentScrollY < (heroEl.offsetHeight - 80));
+      const isFullDarkPage = heroEl?.dataset?.fullDark === "true";
+      const isHeroActive = Boolean(
+        heroEl && (isFullDarkPage || currentScrollY < (heroEl.offsetHeight - 80))
+      );
       setIsInsideHero(isHeroActive);
 
       // Status scrolled jika lewat dari 20px
@@ -155,7 +158,7 @@ export function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0.35 }}
               onClick={() => setMenuOpen(false)}
               className="fixed inset-0 z-40 bg-black/25 backdrop-blur-[2px] cursor-pointer"
               aria-label="Tutup panel menu"
@@ -163,10 +166,11 @@ export function Navbar() {
 
             {/* 2. Drawer Menu Setengah Halaman (Liquid Glass Kanan) */}
             <motion.div
+              data-lenis-prevent
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 280 }}
+              transition={{ duration: 0.48, ease: [0.16, 1, 0.3, 1] }}
               className="fixed top-0 right-0 bottom-0 z-40 w-full sm:w-[480px] md:w-[540px] lg:w-[38vw] xl:w-[35vw] bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-l border-white/80 shadow-[-20px_0_60px_rgba(0,0,0,0.15)] flex flex-col justify-between pt-24 pb-8 sm:pb-10 px-6 sm:px-10 lg:px-12 overflow-y-auto"
             >
               {/* Inner Content Stack */}

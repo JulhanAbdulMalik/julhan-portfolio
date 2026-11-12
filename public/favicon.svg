@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Dark Midnight Navy Squircle -->
+  <rect width="64" height="64" rx="16" fill="#000519"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#007FA1" stroke-width="2" stroke-opacity="0.7"/>
+
+  <!-- Bold Minimalist "J" Monogram -->
+  <path
+    d="M 33 15 H 40 V 38 C 40 44.627 34.627 50 28 50 C 21.373 50 16 44.627 16 38 H 23 C 23 40.761 25.239 43 28 43 C 30.761 43 33 40.761 33 38 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Signature Cyan Dot (. from julhan.my.id) -->
+  <circle cx="46" cy="45" r="4.5" fill="#07DFFF"/>
+</svg>
+

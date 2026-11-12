@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { Mail, MessageCircle, MapPin, Clock, Copy, Check, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { socialLinks } from "@/data/navigation";
+import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -73,7 +73,11 @@ export function ContactSection() {
             ROW 1: Header Row (Kontak Langsung: Judul di Atas, Deskripsi di Bawah)
             Satu blok utuh presisi seperti Section 2
         ════════════════════════════════════════════════════════════════ */}
-        <div className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5">
+        <MotionFadeIn
+          direction="up"
+          delay={0.05}
+          className="p-8 sm:p-10 lg:p-12 xl:p-14 border-b border-dashed border-neutral-300 flex flex-col justify-center space-y-4 sm:space-y-5"
+        >
           {/* Bagian Atas: Badge + Judul */}
           <div className="space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/25 w-fit">
@@ -93,7 +97,7 @@ export function ContactSection() {
           <p className="text-sm sm:text-base text-[#52525b] leading-relaxed font-normal max-w-none">
             Punya pertanyaan teknis, rencana proyek website atau aplikasi mobile, atau ingin mendiskusikan estimasi biaya? Saya siap membantu.
           </p>
-        </div>
+        </MotionFadeIn>
 
         {/* ════════════════════════════════════════════════════════════════
             ROW 2: 2-Column Split: Direct Channels (Kiri) & Interactive Form (Kanan)
@@ -105,7 +109,7 @@ export function ContactSection() {
           <div className="lg:col-span-5 flex flex-col justify-between divide-y divide-dashed divide-neutral-300 bg-[#fafafa]/40">
             
             {/* Item 1: Email */}
-            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+            <MotionFadeIn direction="up" delay={0.1} className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
               <div className="w-11 h-11 rounded-xl bg-[#007FA1]/10 text-[#007FA1] border border-[#007FA1]/20 flex items-center justify-center shrink-0 mt-0.5">
                 <Mail className="w-5 h-5" />
               </div>
@@ -137,10 +141,10 @@ export function ContactSection() {
                   Untuk proposal proyek resmi, dokumen RFP, &amp; kerja sama.
                 </p>
               </div>
-            </div>
+            </MotionFadeIn>
 
             {/* Item 2: WhatsApp */}
-            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+            <MotionFadeIn direction="up" delay={0.16} className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
               <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5">
                 <MessageCircle className="w-5 h-5" />
               </div>
@@ -160,10 +164,10 @@ export function ContactSection() {
                   Respon cepat via pesan WhatsApp dalam jam kerja operasional.
                 </p>
               </div>
-            </div>
+            </MotionFadeIn>
 
             {/* Item 3: Headquarters */}
-            <div className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
+            <MotionFadeIn direction="up" delay={0.22} className="p-8 sm:p-10 lg:p-12 flex items-start gap-4">
               <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -178,22 +182,26 @@ export function ContactSection() {
                   julhan.my.id • Zona Waktu WIB (UTC+7)
                 </p>
               </div>
-            </div>
+            </MotionFadeIn>
 
             {/* Item 4: Response time note */}
-            <div className="p-6 sm:p-8 lg:p-10 flex items-center">
+            <MotionFadeIn direction="up" delay={0.28} className="p-6 sm:p-8 lg:p-10 flex items-center">
               <div className="flex items-center gap-2 text-xs text-[#52525b]">
                 <Clock className="w-4 h-4 text-[#71717a]" />
                 <span>
                   Waktu respon: Biasanya dalam 1 - 24 jam pada hari kerja.
                 </span>
               </div>
-            </div>
+            </MotionFadeIn>
 
           </div>
 
           {/* Sisi Kanan (lg: 7 cols): Form Interaktif WhatsApp */}
-          <div className="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6 bg-white">
+          <MotionFadeIn
+            direction="up"
+            delay={0.15}
+            className="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6 bg-white"
+          >
             <div className="space-y-1.5">
               <h3 className="text-xl sm:text-2xl font-semibold text-[#000519] tracking-tight">
                 Kirimkan Pesan Langsung
@@ -306,7 +314,7 @@ export function ContactSection() {
                 </p>
               </div>
             </form>
-          </div>
+          </MotionFadeIn>
         </div>
  
         {/* ════════════════════════════════════════════════════════════════
