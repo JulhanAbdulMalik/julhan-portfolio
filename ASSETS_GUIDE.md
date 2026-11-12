@@ -8,14 +8,16 @@ Website ini telah dibangun dengan standar **Zero Broken Images**. Seluruh placeh
 
 | Lokasi File Saat Ini                          | Digunakan Pada                                    | Rekomendasi Resolusi     | Format Ideal            |
 | --------------------------------------------- | ------------------------------------------------- | ------------------------ | ----------------------- |
-| `public/images/profile/avatar-dummy.svg`      | Foto Profil di Hero, About Me, Blog, Author Badge | 400 x 400 px (Rasio 1:1) | `.jpg`, `.png`, `.webp` |
-| `public/images/projects/cdu-portal.svg`       | Mockup Proyek CDU Portal (Nusa Putra)             | 1280 x 720 px (16:9)     | `.webp`, `.png`, `.jpg` |
-| `public/images/projects/panenkita.svg`        | Mockup Proyek PanenKita (Agritech Flutter)        | 1280 x 720 px (16:9)     | `.webp`, `.png`, `.jpg` |
-| `public/images/projects/yuwanyie-picnic.svg`  | Mockup Proyek Yuwanyie Picnic (F&B)               | 1280 x 720 px (16:9)     | `.webp`, `.png`, `.jpg` |
-| `public/images/projects/bhumi.svg`            | Mockup Proyek Bhumi Game (Eco-game)               | 1280 x 720 px (16:9)     | `.webp`, `.png`, `.jpg` |
-| `public/images/projects/discussion-forum.svg` | Mockup Proyek Discussion Forum (React Expert)     | 1280 x 720 px (16:9)     | `.webp`, `.png`, `.jpg` |
-| `public/images/blog/tech-stack-guide.svg`     | Cover Artikel Tech Stack Guide                    | 1200 x 630 px            | `.webp`, `.jpg`         |
-| `public/images/blog/code-review-dicoding.svg` | Cover Artikel Code Review Dicoding                | 1200 x 630 px            | `.webp`, `.jpg`         |
+| `public/julhan-foto-profile.jpg`              | Foto Profil di About Section, Artikel, Author     | 400 x 400 px (Rasio 1:1) | `.jpg`, `.png`, `.webp` |
+| `public/images/projects/cdu-portal.png`       | Mockup Proyek CDU Portal (Nusa Putra)             | 1920 x 1080 px (16:9)    | `.png`, `.webp`         |
+| `public/images/projects/panenkita.png`        | Mockup Proyek PanenKita (Agritech Flutter)        | 1920 x 1080 px (16:9)    | `.png`, `.webp`         |
+| `public/images/projects/yuwanyie-picnic.png`  | Mockup Proyek Yuwanyie Picnic (F&B)               | 1920 x 1080 px (16:9)    | `.png`, `.webp`         |
+| `public/images/projects/bhumi.png`            | Mockup Proyek Bhumi Game (Eco-game)               | 1920 x 1080 px (16:9)    | `.png`, `.webp`         |
+| `public/images/projects/discussion-forum.png` | Mockup Proyek Discussion Forum (React Expert)     | 1920 x 1080 px (16:9)    | `.png`, `.webp`         |
+| `public/images/projects/web-bisnis.webp`      | Cover Layanan Website Bisnis & Profil Usaha       | 1280 x 800 px (16:10)    | `.webp`, `.png`         |
+| `public/images/projects/web-coffeshop.webp`   | Cover Layanan Website Coffee Shop & Resto         | 1280 x 800 px (16:10)    | `.webp`, `.png`         |
+| `public/images/projects/web-ecommerce.webp`   | Cover Layanan Toko Online & Pemesanan Otomatis    | 1280 x 800 px (16:10)    | `.webp`, `.png`         |
+| `public/images/blog/tech-stack-guide.svg`     | Cover Artikel Tech Stack Guide                    | 1200 x 630 px            | `.svg`, `.webp`, `.jpg` |
 | `public/images/og/og-cover.svg`               | Social Media Share Banner (WA, X, LinkedIn)       | 1200 x 630 px            | `.png`, `.jpg`, `.svg`  |
 
 ---
