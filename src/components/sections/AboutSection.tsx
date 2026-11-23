@@ -6,6 +6,7 @@ import { User, ArrowDownToLine, CheckCircle2, ShieldCheck, Zap } from "lucide-re
 import { socialLinks } from "@/data/navigation";
 import { LinkedinIcon, GithubIcon } from "@/components/ui/Icons";
 import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
+import { TechLogoSlider } from "@/components/sections/TechLogoSlider";
 
 export function AboutSection() {
   return (
@@ -166,18 +167,12 @@ export function AboutSection() {
             </p>
           </MotionFadeIn>
 
-          {/* Row B - Col 2: Tech Badges Strip (Bottom Middle) - DIBUAT PENDEK / RAMPING */}
+          {/* Row B - Col 2: Tech Logo Slider (Bottom Middle) */}
           <MotionFadeIn
             delay={0.25}
-            className="lg:col-span-4 py-3.5 px-3 sm:py-4 sm:px-4 lg:px-2 xl:px-4 min-h-[72px] sm:min-h-[78px] bg-[#fafafa]/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300"
+            className="lg:col-span-4 py-4 px-4 sm:py-5 sm:px-5 lg:px-3 xl:px-5 min-h-[72px] sm:min-h-[88px] bg-[#fafafa]/40 flex items-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300 overflow-hidden"
           >
-            <div className="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-2 lg:gap-1.5 xl:gap-2">
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Next.js 15</span>
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">TypeScript</span>
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Flutter</span>
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">PostgreSQL</span>
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000519]/5 text-[10px] sm:text-[11px] font-medium text-[#18181b] border border-black/[0.04] whitespace-nowrap">Prisma ORM</span>
-            </div>
+            <TechLogoSlider />
           </MotionFadeIn>
 
           {/* Row B - Col 3: Dual CV Download Action (ATS & Design) */}

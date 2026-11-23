@@ -462,3 +462,19 @@ a {
   letter-spacing: -0.025em;
   line-height: 1.05;
 }
+
+/* ─────────────────────────────────────────────────────────
+   TECH LOGO INFINITE SCROLL SLIDER
+───────────────────────────────────────────────────────── */
+@keyframes tech-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-tech-scroll {
+  animation: tech-scroll 20s linear infinite;
+}
+
+.animate-tech-scroll:hover {
+  animation-play-state: paused;
+}
