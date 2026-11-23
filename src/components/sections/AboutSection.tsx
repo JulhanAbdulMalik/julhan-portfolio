@@ -167,18 +167,18 @@ export function AboutSection() {
             </p>
           </MotionFadeIn>
 
-          {/* Row B - Col 2: Tech Logo Slider (Bottom Middle) */}
+          {/* Row B - Col 2: Tech Logo Slider (Bottom Middle) - Dibuat Ramping & Pendek */}
           <MotionFadeIn
             delay={0.25}
-            className="lg:col-span-4 py-4 px-4 sm:py-5 sm:px-5 lg:px-3 xl:px-5 min-h-[72px] sm:min-h-[88px] bg-[#fafafa]/40 flex items-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300 overflow-hidden"
+            className="lg:col-span-4 py-2 sm:py-2.5 px-3 sm:px-4 min-h-[54px] sm:min-h-[60px] bg-[#fafafa]/40 flex items-center border-b lg:border-b-0 lg:border-r border-dashed border-neutral-300 overflow-hidden"
           >
             <TechLogoSlider />
           </MotionFadeIn>
 
-          {/* Row B - Col 3: Dual CV Download Action (ATS & Design) */}
+          {/* Row B - Col 3: Dual CV Download Action (ATS & Design) - Sejajar & Ramping */}
           <MotionFadeIn
             delay={0.3}
-            className="lg:col-span-4 min-h-[72px] sm:min-h-[78px] bg-[#000519] grid grid-cols-2 divide-x divide-dashed divide-white/15"
+            className="lg:col-span-4 min-h-[54px] sm:min-h-[60px] bg-[#000519] grid grid-cols-2 divide-x divide-dashed divide-white/15"
           >
             {/* Opsi 1: Unduh CV ATS */}
             <a
@@ -186,18 +186,18 @@ export function AboutSection() {
               download="CV_Julhan_Abdul_Malik_ATS.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-3 px-3.5 sm:py-3.5 sm:px-5 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
+              className="py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
               title="Unduh CV Format ATS (Ramah Sistem Rekrutmen)"
             >
               <div className="space-y-0.5 min-w-0">
-                <span className="text-[10px] text-[#a1a1aa] block tracking-wide">
+                <span className="text-[9px] sm:text-[10px] text-[#a1a1aa] block tracking-wide leading-tight">
                   Format ATS
                 </span>
-                <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block">
+                <span className="text-xs sm:text-[13px] font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block leading-tight">
                   CV ATS
                 </span>
               </div>
-              <ArrowDownToLine className="w-4 h-4 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
+              <ArrowDownToLine className="w-3.5 h-3.5 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
             </a>
 
             {/* Opsi 2: Unduh CV Desain */}
@@ -206,18 +206,18 @@ export function AboutSection() {
               download="CV_Julhan_Abdul_Malik_Design.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-3 px-3.5 sm:py-3.5 sm:px-5 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
+              className="py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-between gap-2 hover:bg-[#020c24] text-white transition-all duration-200 group cursor-pointer"
               title="Unduh CV Format Desain Kreatif & Visual"
             >
               <div className="space-y-0.5 min-w-0">
-                <span className="text-[10px] text-[#a1a1aa] block tracking-wide">
+                <span className="text-[9px] sm:text-[10px] text-[#a1a1aa] block tracking-wide leading-tight">
                   Desain Kreatif
                 </span>
-                <span className="text-xs sm:text-sm font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block">
+                <span className="text-xs sm:text-[13px] font-semibold tracking-tight text-white group-hover:text-[#07DFFF] transition-colors truncate block leading-tight">
                   CV Desain
                 </span>
               </div>
-              <ArrowDownToLine className="w-4 h-4 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
+              <ArrowDownToLine className="w-3.5 h-3.5 text-white/80 shrink-0 group-hover:translate-y-0.5 group-hover:text-[#07DFFF] transition-all" />
             </a>
           </MotionFadeIn>
 
