@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, CredlyIcon } from "@/components/ui/Icons";
 import { navItems, socialLinks } from "@/data/navigation";
 
 export function Navbar() {
@@ -273,6 +273,16 @@ export function Navbar() {
                         aria-label="LinkedIn"
                       >
                         <LinkedinIcon className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={socialLinks.credly}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1 rounded-md hover:bg-black/5 text-[#52525b] hover:text-[#FF6B00] transition-colors"
+                        aria-label="Credly"
+                        title="Credly Verified Credentials"
+                      >
+                        <CredlyIcon className="w-4 h-4" />
                       </a>
                     </div>
                   </div>

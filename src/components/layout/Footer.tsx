@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, InstagramIcon, CredlyIcon } from "@/components/ui/Icons";
 import { socialLinks } from "@/data/navigation";
 import { servicesList } from "@/data/servicesData";
 import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
@@ -92,6 +92,16 @@ export function Footer() {
                 className="p-2 rounded-lg border border-white/15 hover:border-white/40 hover:bg-white/10 text-[#a1a1aa] hover:text-[#E1306C] transition-all"
               >
                 <InstagramIcon className="w-4 h-4" />
+              </Link>
+              <Link
+                href={socialLinks.credly}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Credly Julhan Abdul Malik"
+                title="Credly Verified Credentials & Badges"
+                className="p-2 rounded-lg border border-white/15 hover:border-[#FF6B00]/60 hover:bg-[#FF6B00]/10 text-[#a1a1aa] hover:text-[#FF6B00] transition-all"
+              >
+                <CredlyIcon className="w-4 h-4" />
               </Link>
             </div>
           </MotionFadeIn>

@@ -464,17 +464,22 @@ a {
 }
 
 /* ─────────────────────────────────────────────────────────
-   TECH LOGO INFINITE SCROLL SLIDER
+   TECH LOGO INFINITE SCROLL SLIDER (Seamless & Zero-Jerk)
 ───────────────────────────────────────────────────────── */
 @keyframes tech-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-tech-scroll {
-  animation: tech-scroll 18s linear infinite;
+  animation: tech-scroll 22s linear infinite;
+  will-change: transform;
 }
 
-.animate-tech-scroll:hover {
+.tech-slider-container:hover .animate-tech-scroll {
   animation-play-state: paused;
 }

@@ -112,25 +112,34 @@ function LogoItem({ logo }: { logo: TechLogo }) {
 }
 
 export function TechLogoSlider() {
-  // Duplikasi logo untuk transisi infinite scroll mulus
-  const logos = [...techLogos, ...techLogos];
+  // Gunakan 4 clone track identik dengan translateX(-100%)
+  // Menjamin animasi looping 100% mulus (seamless), tanpa jeda atau lompatan pixel sedikit pun
+  const tracks = [0, 1, 2, 3];
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden tech-slider-container">
       {/* Left fade mask */}
       <div
-        className="pointer-events-none absolute left-0 top-0 z-10 h-full w-10 bg-gradient-to-r from-[#fafafa] to-transparent"
+        className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 sm:w-10 bg-gradient-to-r from-[#fafafa] to-transparent"
         aria-hidden="true"
       />
       {/* Right fade mask */}
       <div
-        className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-[#fafafa] to-transparent"
+        className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 sm:w-10 bg-gradient-to-l from-[#fafafa] to-transparent"
         aria-hidden="true"
       />
 
-      <div className="flex animate-tech-scroll gap-6 sm:gap-7 items-center w-max">
-        {logos.map((logo, idx) => (
-          <LogoItem key={`${logo.name}-${idx}`} logo={logo} />
+      <div className="flex w-max items-center">
+        {tracks.map((trackIdx) => (
+          <div
+            key={`track-${trackIdx}`}
+            className="flex shrink-0 animate-tech-scroll items-center gap-6 sm:gap-7 pr-6 sm:pr-7"
+            aria-hidden={trackIdx > 0 ? "true" : undefined}
+          >
+            {techLogos.map((logo, idx) => (
+              <LogoItem key={`t${trackIdx}-${logo.name}-${idx}`} logo={logo} />
+            ))}
+          </div>
         ))}
       </div>
     </div>

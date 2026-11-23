@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { User, ArrowDownToLine, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import { socialLinks } from "@/data/navigation";
-import { LinkedinIcon, GithubIcon } from "@/components/ui/Icons";
+import { LinkedinIcon, GithubIcon, CredlyIcon } from "@/components/ui/Icons";
 import { MotionFadeIn } from "@/components/motion/MotionFadeIn";
 import { TechLogoSlider } from "@/components/sections/TechLogoSlider";
 
@@ -105,6 +105,16 @@ export function AboutSection() {
                     className="p-1.5 rounded-lg border border-black/10 hover:border-black/30 hover:bg-black/5 text-[#71717a] hover:text-[#000519] transition-all"
                   >
                     <LinkedinIcon className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href={socialLinks.credly}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Credly Julhan Abdul Malik"
+                    title="Credly Verified Credentials & Badges"
+                    className="p-1.5 rounded-lg border border-black/10 hover:border-black/30 hover:bg-black/5 text-[#71717a] hover:text-[#000519] transition-all"
+                  >
+                    <CredlyIcon className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
