@@ -70,7 +70,6 @@ const techLogos: TechLogo[] = [
 function LogoItem({ logo }: { logo: TechLogo }) {
   const [currentSrc, setCurrentSrc] = useState(logo.src);
   const [hasError, setHasError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
 
   const handleError = () => {
     // Jika path lokal bermasalah, otomatis coba CDN fallback
@@ -98,15 +97,12 @@ function LogoItem({ logo }: { logo: TechLogo }) {
           <img
             src={currentSrc}
             alt=""
-            onLoad={() => setLoaded(true)}
             onError={(e) => {
               // Sembunyikan seketika agar tidak memunculkan icon gambar rusak bawaan browser
               e.currentTarget.style.display = "none";
               handleError();
             }}
-            className={`w-full h-full object-contain transition-opacity duration-300 ${
-              loaded ? "opacity-100" : "opacity-0"
-            }`}
+            className="w-full h-full object-contain"
             draggable={false}
           />
         </div>
